@@ -1,0 +1,16 @@
+name: 2026worldcup-dashboard
+
+services:
+  web:
+    build:
+      context: .
+      target: serve
+    image: ghcr.io/julianchun/2026worldcup-dashboard:latest
+    ports:
+      - "8080:80"
+    environment:
+      # remote (default) = always-fresh data proxied from the live site.
+      # bundled = baked-in snapshot. self = updater sidecar (docker-compose.self.yml).
+      DATA_SOURCE: remote
+      REMOTE_DATA_HOST: julianchun.github.io/2026worldcup-dashboard
+    restart: unless-stopped

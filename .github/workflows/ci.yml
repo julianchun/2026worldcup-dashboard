@@ -1,0 +1,38 @@
+# Lint, build, smoke-test and a11y-audit every pull request.
+# (smoke.mjs/a11y.mjs resolve Chrome from common Linux/macOS paths, including
+# /usr/bin/google-chrome on GitHub's ubuntu-latest runners.)
+name: CI
+
+on:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  ci:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v6
+        with:
+          node-version: '25'
+          cache: npm
+      - run: npm ci
+      - run: npm run lint
+      - run: npm run build
+      - name: Smoke test (every route, console/page errors)
+        run: |
+          npm run preview &  # serves dist on http://localhost:4173/
+          for i in $(seq 1 30); do
+            curl -fsS http://localhost:4173/ >/dev/null 2>&1 && break
+            sleep 1
+          done
+          npm run smoke
+      - name: Accessibility audit (axe-core, serves dist itself)
+        run: npm run a11y
