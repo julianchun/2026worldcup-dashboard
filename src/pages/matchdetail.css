@@ -251,6 +251,98 @@ a.md-side {
   gap: 7px;
 }
 
+/* prediction context */
+.md-pc-card {
+  margin-top: 14px;
+}
+.md-pc-head {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+  align-items: start;
+  gap: 10px;
+}
+.md-pc-team {
+  min-width: 0;
+  display: grid;
+  gap: 7px;
+}
+.md-pc-record {
+  font-weight: 750;
+  color: var(--text-2);
+  font-size: 0.92rem;
+}
+.md-pc-form,
+.md-pc-mini,
+.md-pc-alert {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.md-pc-mini {
+  color: var(--text-3);
+  font-size: 0.78rem;
+}
+.md-form {
+  display: inline-grid;
+  place-items: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 999px;
+  font-size: 0.76rem;
+  font-weight: 800;
+  color: white;
+}
+.md-form-w {
+  background: #14845f;
+}
+.md-form-d {
+  background: #71717a;
+}
+.md-form-l {
+  background: #b42318;
+}
+.md-pc-vs {
+  align-self: center;
+  color: var(--text-3);
+  font-size: 0.76rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+.md-pc-metrics {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+  margin-top: 14px;
+}
+.md-pc-metrics > div {
+  min-width: 0;
+  border: 1px solid var(--border);
+  border-radius: var(--r-sm);
+  padding: 8px;
+}
+.md-pc-metrics .lbl,
+.md-pc-metrics .val {
+  display: block;
+}
+.md-pc-metrics .lbl {
+  color: var(--text-3);
+  font-size: 0.76rem;
+  margin-bottom: 3px;
+}
+.md-pc-metrics .val {
+  font-weight: 750;
+  font-size: 0.9rem;
+  overflow-wrap: anywhere;
+}
+.md-pc-alert {
+  margin-top: 10px;
+}
+@media (min-width: 760px) {
+  .md-pc-metrics {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
 /* --- lineups --- */
 .md-pitch-card {
   padding: 14px 10px 16px;

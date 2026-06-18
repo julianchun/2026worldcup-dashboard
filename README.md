@@ -18,7 +18,7 @@ README in [繁體中文](README.zh.md)
 - 🔍 **Schedule** filterable by team(s), stage, and venue; filters live in the URL, so views are shareable
 - 📊 **Group tables** computed with the official FIFA tiebreakers, plus the ranking of third-placed teams (top 8 of 12 advance) with qualification colour-coding
 - 🪜 **Knockout bracket** as a centre-converging tree that fills in automatically as teams qualify, with no horizontal scrolling; reflows to a round-by-round list on phones
-- 📋 **Match pages**: venue facts, kick-off weather forecast (typical-climate fallback for far-off dates), full referee crew, starting line-ups drawn on an SVG pitch with formations, goal timeline, and TV channels for your country
+- 📋 **Match pages**: prediction context, venue facts, kick-off weather forecast (typical-climate fallback for far-off dates), full referee crew, starting line-ups drawn on an SVG pitch with formations, goal timeline, and TV channels for your country
 
 ### 👕 Teams & players
 
@@ -38,6 +38,7 @@ README in [繁體中文](README.zh.md)
 ### 📊 Stats & predictions
 
 - 👟 **Golden-boot table** and tournament stats, updated throughout the competition
+- 🧭 **Prediction context** computed from reliable tournament data: recent form, ranking edge, rest, travel, weather availability, fair-play score, and active suspensions
 - 🎲 **User predictions**: enter your own match scores locally, use official final scores for completed fixtures, and see projected group tables update from your picks. No AI odds or model-generated match probabilities are shown.
 
 ### 🌍 Languages
@@ -71,6 +72,7 @@ All data comes from free, authoritative sources, with no API keys anywhere:
 | Wikipedia | official 26-player squads (numbers, caps, goals, clubs, coaches) |
 | Open-Meteo | hourly stadium weather forecasts and base-camp geocoding |
 | Hand-curated files | venues, broadcasters, base camps, climate normals, team colours |
+| Computed locally | standings, tournament stats, suspensions, rest/travel context, prediction-context JSON |
 
 **Automatic updates** (GitHub Actions, included in this repo):
 
@@ -106,7 +108,7 @@ npm run preview
 | `npm run dev` | Vite dev server at `localhost:5173` |
 | `npm run build` | type-check and production build into `dist/` |
 | `npm run preview` | serve the built `dist/` locally |
-| `npm run update` | refresh all tournament data (FIFA, Wikipedia, Open-Meteo) into `public/data/` |
+| `npm run update` | refresh all tournament data (FIFA, Wikipedia, Open-Meteo) and computed context into `public/data/` |
 | `npm run gencron` | regenerate the CI cron schedule from the match calendar |
 | `npm run genmap` | rebuild the venues map from Natural Earth source data |
 | `npm run typecheck` | TypeScript type check (`tsc -b`, no emit) |

@@ -1,6 +1,6 @@
 import { useMemo } from 'react'
 import { Link, useParams } from 'react-router-dom'
-import type { Lang, MatchSide, Official, TeamLineup } from '../types'
+import type { Lang, MatchSide, Official, PredictionTeamContext, TeamLineup } from '../types'
 import { DATA_FALLBACK, useI18n } from '../i18n'
 import { useSettings } from '../settings/SettingsContext'
 import { useAppData } from '../data/DataContext'
@@ -91,6 +91,39 @@ interface GoalRow {
   pen: boolean
 }
 
+function fmtSigned(n: number | null, suffix = '') {
+  if (n === null) return '—'
+  if (n === 0) return `0${suffix}`
+  return `${n > 0 ? '+' : ''}${n}${suffix}`
+}
+
+function TeamContextColumn({ ctx }: { ctx: PredictionTeamContext | null }) {
+  if (!ctx) return <div className="md-pc-team muted">TBD</div>
+  const record = `${ctx.wins}-${ctx.draws}-${ctx.losses}`
+  return (
+    <div className="md-pc-team">
+      <TeamName code={ctx.code} flagSize={20} bold />
+      <div className="md-pc-record tnum">{record}</div>
+      <div className="md-pc-form">
+        {ctx.form.length ? (
+          ctx.form.map((x, i) => (
+            <span key={`${x}-${i}`} className={`md-form md-form-${x.toLowerCase()}`}>
+              {x}
+            </span>
+          ))
+        ) : (
+          <span className="muted small">No completed matches</span>
+        )}
+      </div>
+      <div className="md-pc-mini">
+        <span>GF {ctx.gf}</span>
+        <span>GA {ctx.ga}</span>
+        <span>CS {ctx.cleanSheets}</span>
+      </div>
+    </div>
+  )
+}
+
 export default function MatchDetail() {
   const { id } = useParams()
   const { t, pick, countryName, locale, lang } = useI18n()
@@ -103,11 +136,12 @@ export default function MatchDetail() {
     o.typeName.en ??
     o.role
   const { settings } = useSettings()
-  const { matches, teams, venues, weather, lineups, broadcasters } = useAppData()
+  const { matches, teams, venues, weather, lineups, stats, predictionContext, broadcasters } = useAppData()
 
   const m = matches.find((x) => x.id === id)
   const venue = m?.venueId ? (venues[m.venueId] ?? null) : null
   const lu = m ? lineups[m.id] : undefined
+  const pc = m ? predictionContext.matches[m.id] : undefined
 
   /* market for the watch teaser — shared app-wide via Settings */
   const market = useMemo(() => {
@@ -378,6 +412,72 @@ export default function MatchDetail() {
           </a>
         </div>
       </div>
+
+      {pc && (
+        <section className="card card-pad md-pc-card">
+          <h3 className="md-info-title">
+            <Icon name="chart" size={18} />
+            Prediction context
+          </h3>
+          <div className="md-pc-head">
+            <TeamContextColumn ctx={pc.home} />
+            <div className="md-pc-vs">{t('vs')}</div>
+            <TeamContextColumn ctx={pc.away} />
+          </div>
+          <div className="md-pc-metrics">
+            <div>
+              <span className="lbl">Ranking edge</span>
+              <span className="val tnum">
+                {pc.home?.ranking && pc.away?.ranking
+                  ? pc.rankingGap !== null && pc.rankingGap > 0
+                    ? pc.home.code
+                    : pc.rankingGap !== null && pc.rankingGap < 0
+                      ? pc.away.code
+                      : 'Level'
+                  : '—'}
+              </span>
+            </div>
+            <div>
+              <span className="lbl">Rest gap</span>
+              <span className="val tnum">{fmtSigned(pc.restGapDays, 'd')}</span>
+            </div>
+            <div>
+              <span className="lbl">Travel gap</span>
+              <span className="val tnum">{fmtSigned(pc.travelGapKm, 'km')}</span>
+            </div>
+            <div>
+              <span className="lbl">Suspensions</span>
+              <span className="val tnum">
+                {pc.home?.suspensions ?? 0} · {pc.away?.suspensions ?? 0}
+              </span>
+            </div>
+            <div>
+              <span className="lbl">Fair play</span>
+              <span className="val tnum">
+                {pc.home?.fairPlay ?? 0} · {pc.away?.fairPlay ?? 0}
+              </span>
+            </div>
+            <div>
+              <span className="lbl">Weather</span>
+              <span className="val">{pc.weatherMatchId ? 'Forecast available' : 'Typical climate'}</span>
+            </div>
+          </div>
+          {Boolean((pc.home?.suspensions ?? 0) || (pc.away?.suspensions ?? 0)) && (
+            <div className="md-pc-alert">
+              {stats.suspensions?.[pc.home?.code ?? '']?.map((s) => (
+                <span key={`${pc.home?.code}-${s.id}`} className="chip">
+                  {pc.home?.code}: {s.name}
+                </span>
+              ))}
+              {stats.suspensions?.[pc.away?.code ?? '']?.map((s) => (
+                <span key={`${pc.away?.code}-${s.id}`} className="chip">
+                  {pc.away?.code}: {s.name}
+                </span>
+              ))}
+            </div>
+          )}
+        </section>
+      )}
 
       {/* ===== info cards ===== */}
       <div className="md-grid">

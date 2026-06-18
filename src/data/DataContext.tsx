@@ -25,6 +25,11 @@ async function getJson<T>(file: string): Promise<T> {
 const EMPTY_STANDINGS: AppData['standings'] = { groups: {}, thirds: [], complete: {} }
 const EMPTY_STATS: AppData['stats'] = { scorers: [] }
 const EMPTY_META: AppData['meta'] = { updatedAt: '', season: '', counts: {}, errors: [], sources: [] }
+const EMPTY_PREDICTION_CONTEXT: AppData['predictionContext'] = {
+  generatedAt: '',
+  sources: [],
+  matches: {},
+}
 
 function settled<T>(r: PromiseSettledResult<T>, fallback: T): T {
   return r.status === 'fulfilled' ? r.value : fallback
@@ -60,8 +65,9 @@ export function DataProvider({ children }: { children: ReactNode }) {
       getJson<AppData['lineups']>('lineups.json'),
       getJson<AppData['stats']>('stats.json'),
       getJson<AppData['meta']>('meta.json'),
+      getJson<AppData['predictionContext']>('prediction-context.json'),
       getJson<NonNullable<AppData['broadcasters']>>('broadcasters.json'),
-    ]).then(([m, t, v, standings, weather, lineups, stats, meta, broadcasters]) => {
+    ]).then(([m, t, v, standings, weather, lineups, stats, meta, predictionContext, broadcasters]) => {
       if (!on) return
       // matches/teams/venues are required: without them nothing can render
       if (m.status !== 'fulfilled' || t.status !== 'fulfilled' || v.status !== 'fulfilled') {
@@ -80,6 +86,7 @@ export function DataProvider({ children }: { children: ReactNode }) {
         lineups: settled(lineups, {}),
         stats: settled(stats, EMPTY_STATS),
         meta: settled(meta, EMPTY_META),
+        predictionContext: settled(predictionContext, EMPTY_PREDICTION_CONTEXT),
         broadcasters: settled(broadcasters, null),
       })
     })
@@ -95,13 +102,14 @@ export function DataProvider({ children }: { children: ReactNode }) {
       if (refreshing.current || !dataRef.current) return
       refreshing.current = true
       try {
-        const [m, standings, lineups, stats, weather, meta] = await Promise.allSettled([
+        const [m, standings, lineups, stats, weather, meta, predictionContext] = await Promise.allSettled([
           getJson<{ matches: AppData['matches'] }>('matches.json'),
           getJson<AppData['standings']>('standings.json'),
           getJson<AppData['lineups']>('lineups.json'),
           getJson<AppData['stats']>('stats.json'),
           getJson<AppData['weather']>('weather.json'),
           getJson<AppData['meta']>('meta.json'),
+          getJson<AppData['predictionContext']>('prediction-context.json'),
         ])
         setData((prev) =>
           prev
@@ -113,6 +121,7 @@ export function DataProvider({ children }: { children: ReactNode }) {
                 stats: settled(stats, prev.stats),
                 weather: settled(weather, prev.weather),
                 meta: settled(meta, prev.meta),
+                predictionContext: settled(predictionContext, prev.predictionContext),
               }
             : prev,
         )

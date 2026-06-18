@@ -1177,6 +1177,146 @@ async function fetchWeather(matches, venues) {
   return out
 }
 
+// ------------------------------------------------------------ prediction context
+
+const toRad = (deg) => (deg * Math.PI) / 180
+
+function distanceKm(a, b) {
+  if (!a || !b) return null
+  if (![a.lat, a.lon, b.lat, b.lon].every(Number.isFinite)) return null
+  const r = 6371
+  const dLat = toRad(b.lat - a.lat)
+  const dLon = toRad(b.lon - a.lon)
+  const lat1 = toRad(a.lat)
+  const lat2 = toRad(b.lat)
+  const h = Math.sin(dLat / 2) ** 2 + Math.cos(lat1) * Math.cos(lat2) * Math.sin(dLon / 2) ** 2
+  return Math.round(2 * r * Math.asin(Math.sqrt(h)))
+}
+
+function outcomeFor(m, code) {
+  if (m.status !== 'finished' || !m.home || !m.away) return null
+  const own = m.home.code === code ? m.home : m.away.code === code ? m.away : null
+  const opp = m.home.code === code ? m.away : m.away.code === code ? m.home : null
+  if (!own || !opp || own.score == null || opp.score == null) return null
+  if (own.score > opp.score) return 'W'
+  if (own.score < opp.score) return 'L'
+  return 'D'
+}
+
+function computePredictionContext(matches, teams, venues, standings, stats, weather) {
+  const generatedAt = new Date().toISOString()
+  const sorted = matches.slice().sort((a, b) => Date.parse(a.date) - Date.parse(b.date))
+  const byTeam = {}
+  for (const m of sorted) {
+    for (const side of [m.home, m.away]) {
+      if (!side?.code) continue
+      byTeam[side.code] ??= []
+      byTeam[side.code].push(m)
+    }
+  }
+  const weatherIds = new Set(Object.keys(weather || {}))
+
+  const teamContext = (code, match) => {
+    if (!code || !teams[code]) return null
+    const teamMatches = byTeam[code] || []
+    const previous = teamMatches
+      .filter((x) => Date.parse(x.date) < Date.parse(match.date))
+      .sort((a, b) => Date.parse(b.date) - Date.parse(a.date))[0]
+    const finishedBefore = teamMatches
+      .filter((x) => x.status === 'finished' && Date.parse(x.date) < Date.parse(match.date))
+      .sort((a, b) => Date.parse(a.date) - Date.parse(b.date))
+    const form = finishedBefore
+      .map((x) => outcomeFor(x, code))
+      .filter(Boolean)
+      .slice(-5)
+    let gf = 0
+    let ga = 0
+    let wins = 0
+    let draws = 0
+    let losses = 0
+    let cleanSheets = 0
+    let failedToScore = 0
+    for (const x of finishedBefore) {
+      const own = x.home?.code === code ? x.home : x.away?.code === code ? x.away : null
+      const opp = x.home?.code === code ? x.away : x.away?.code === code ? x.home : null
+      if (!own || !opp || own.score == null || opp.score == null) continue
+      gf += own.score
+      ga += opp.score
+      if (own.score > opp.score) wins++
+      else if (own.score < opp.score) losses++
+      else draws++
+      if (opp.score === 0) cleanSheets++
+      if (own.score === 0) failedToScore++
+    }
+    const played = wins + draws + losses
+    const restDays = previous
+      ? Math.max(0, Math.floor((Date.parse(match.date) - Date.parse(previous.date)) / 86400e3))
+      : null
+    const from =
+      previous?.venueId && venues[previous.venueId]
+        ? venues[previous.venueId]
+        : teams[code].baseCamp?.lat != null && teams[code].baseCamp?.lon != null
+          ? teams[code].baseCamp
+          : null
+    const to = match.venueId ? venues[match.venueId] : null
+    const groupRow = Object.values(standings.groups || {})
+      .flat()
+      .find((r) => r.code === code)
+    return {
+      code,
+      ranking: teams[code].ranking ?? null,
+      group: teams[code].group ?? null,
+      form,
+      played,
+      wins,
+      draws,
+      losses,
+      gf,
+      ga,
+      gd: gf - ga,
+      cleanSheets,
+      failedToScore,
+      restDays,
+      previousMatchId: previous?.id ?? null,
+      previousVenueId: previous?.venueId ?? null,
+      travelKm: distanceKm(from, to),
+      fairPlay: stats.fairPlay?.group?.[code] ?? stats.fairPlay?.all?.[code] ?? null,
+      suspensions: stats.suspensions?.[code]?.length ?? 0,
+      goalsForPerMatch: played ? Number((gf / played).toFixed(2)) : null,
+      goalsAgainstPerMatch: played ? Number((ga / played).toFixed(2)) : null,
+      groupPoints: groupRow?.pts ?? null,
+      groupRank: groupRow?.rank ?? null,
+    }
+  }
+
+  const out = {}
+  for (const m of matches) {
+    const home = m.home ? teamContext(m.home.code, m) : null
+    const away = m.away ? teamContext(m.away.code, m) : null
+    const notes = []
+    if (!home || !away) notes.push('teams-not-known')
+    if (!weatherIds.has(m.id)) notes.push('forecast-not-available')
+    if (m.stage !== 'group') notes.push('knockout-context')
+    out[m.id] = {
+      id: m.id,
+      generatedAt,
+      source: 'computed',
+      home,
+      away,
+      rankingGap: home?.ranking != null && away?.ranking != null ? away.ranking - home.ranking : null,
+      restGapDays: home?.restDays != null && away?.restDays != null ? home.restDays - away.restDays : null,
+      travelGapKm: home?.travelKm != null && away?.travelKm != null ? home.travelKm - away.travelKm : null,
+      weatherMatchId: weatherIds.has(m.id) ? m.id : null,
+      notes,
+    }
+  }
+  return {
+    generatedAt,
+    sources: ['computed from matches, teams, venues, standings, stats, weather'],
+    matches: out,
+  }
+}
+
 // ---------------------------------------------------------------- main
 
 async function main() {
@@ -1338,6 +1478,9 @@ async function main() {
   // 8b. country flags served locally (idempotent — only fetches missing files)
   const flagCount = await downloadFlags(fifaIso, broadcasters)
 
+  // 8c. free-first prediction context computed from reliable local datasets
+  const predictionContext = computePredictionContext(matches, teams, venues, standings, stats, weather)
+
   // 9. write everything
   await writeJson(path.join(OUT, 'matches.json'), { matches })
   await writeJson(path.join(OUT, 'teams.json'), { teams })
@@ -1346,6 +1489,7 @@ async function main() {
   await writeJson(path.join(OUT, 'lineups.json'), lineups)
   await writeJson(path.join(OUT, 'stats.json'), stats)
   await writeJson(path.join(OUT, 'weather.json'), weather)
+  await writeJson(path.join(OUT, 'prediction-context.json'), predictionContext)
   await writeJson(path.join(OUT, 'squads.json'), squads)
   // per-team squad payloads (small fetches for the team detail page; the
   // monolithic squads.json above is kept for compatibility)
@@ -1376,6 +1520,7 @@ async function main() {
       squads: Object.keys(squads).length,
       weather: Object.keys(weather).length,
       lineups: Object.keys(lineups).length,
+      predictionContext: Object.keys(predictionContext.matches).length,
       flags: flagCount,
     },
     errors,

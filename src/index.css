@@ -515,7 +515,7 @@ html.nav-fits .tab-bar {
 }
 @keyframes pulse {
   50% {
-    opacity: 0.65;
+    box-shadow: 0 0 0 3px color-mix(in srgb, var(--live) 24%, transparent);
   }
 }
 

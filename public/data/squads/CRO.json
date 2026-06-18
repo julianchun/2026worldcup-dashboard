@@ -18,7 +18,7 @@
    "clubWiki": "https://en.wikipedia.org/wiki/GNK_Dinamo_Zagreb",
    "captain": false,
    "wiki": "https://en.wikipedia.org/wiki/Dominik_Livakovi%C4%87",
-   "wcApps": 0,
+   "wcApps": 1,
    "wcGoals": 0,
    "wcYellow": 0,
    "wcRed": 0
@@ -72,7 +72,7 @@
    "clubWiki": "https://en.wikipedia.org/wiki/FC_Bayern_Munich",
    "captain": false,
    "wiki": "https://en.wikipedia.org/wiki/Josip_Stani%C5%A1i%C4%87",
-   "wcApps": 0,
+   "wcApps": 1,
    "wcGoals": 0,
    "wcYellow": 0,
    "wcRed": 0
@@ -108,7 +108,7 @@
    "clubWiki": "https://en.wikipedia.org/wiki/Manchester_City_F.C.",
    "captain": false,
    "wiki": "https://en.wikipedia.org/wiki/Jo%C5%A1ko_Gvardiol",
-   "wcApps": 0,
+   "wcApps": 1,
    "wcGoals": 0,
    "wcYellow": 0,
    "wcRed": 0
@@ -144,7 +144,7 @@
    "clubWiki": "https://en.wikipedia.org/wiki/AFC_Ajax",
    "captain": false,
    "wiki": "https://en.wikipedia.org/wiki/Josip_%C5%A0utalo",
-   "wcApps": 0,
+   "wcApps": 1,
    "wcGoals": 0,
    "wcYellow": 0,
    "wcRed": 0
@@ -180,7 +180,7 @@
    "clubWiki": "https://en.wikipedia.org/wiki/Hamburger_SV",
    "captain": false,
    "wiki": "https://en.wikipedia.org/wiki/Luka_Vu%C5%A1kovi%C4%87",
-   "wcApps": 0,
+   "wcApps": 1,
    "wcGoals": 0,
    "wcYellow": 0,
    "wcRed": 0
@@ -234,7 +234,7 @@
    "clubWiki": "https://en.wikipedia.org/wiki/Manchester_City_F.C.",
    "captain": false,
    "wiki": "https://en.wikipedia.org/wiki/Mateo_Kova%C4%8Di%C4%87",
-   "wcApps": 0,
+   "wcApps": 1,
    "wcGoals": 0,
    "wcYellow": 0,
    "wcRed": 0
@@ -252,7 +252,7 @@
    "clubWiki": "https://en.wikipedia.org/wiki/AC_Milan",
    "captain": false,
    "wiki": "https://en.wikipedia.org/wiki/Luka_Modri%C4%87",
-   "wcApps": 0,
+   "wcApps": 1,
    "wcGoals": 0,
    "wcYellow": 0,
    "wcRed": 0
@@ -270,7 +270,7 @@
    "clubWiki": "https://en.wikipedia.org/wiki/Torino_FC",
    "captain": false,
    "wiki": "https://en.wikipedia.org/wiki/Nikola_Vla%C5%A1i%C4%87",
-   "wcApps": 0,
+   "wcApps": 1,
    "wcGoals": 0,
    "wcYellow": 0,
    "wcRed": 0
@@ -288,7 +288,7 @@
    "clubWiki": "https://en.wikipedia.org/wiki/Atalanta_BC",
    "captain": false,
    "wiki": "https://en.wikipedia.org/wiki/Mario_Pa%C5%A1ali%C4%87",
-   "wcApps": 0,
+   "wcApps": 1,
    "wcGoals": 0,
    "wcYellow": 0,
    "wcRed": 0
@@ -306,8 +306,8 @@
    "clubWiki": "https://en.wikipedia.org/wiki/Como_1907",
    "captain": false,
    "wiki": "https://en.wikipedia.org/wiki/Martin_Baturina",
-   "wcApps": 0,
-   "wcGoals": 0,
+   "wcApps": 1,
+   "wcGoals": 1,
    "wcYellow": 0,
    "wcRed": 0
   },
@@ -324,7 +324,7 @@
    "clubWiki": "https://en.wikipedia.org/wiki/Inter_Milan",
    "captain": false,
    "wiki": "https://en.wikipedia.org/wiki/Petar_Su%C4%8Di%C4%87",
-   "wcApps": 0,
+   "wcApps": 1,
    "wcGoals": 0,
    "wcYellow": 0,
    "wcRed": 0
@@ -378,7 +378,7 @@
    "clubWiki": "https://en.wikipedia.org/wiki/TSG_1899_Hoffenheim",
    "captain": false,
    "wiki": "https://en.wikipedia.org/wiki/Andrej_Kramari%C4%87",
-   "wcApps": 0,
+   "wcApps": 1,
    "wcGoals": 0,
    "wcYellow": 0,
    "wcRed": 0
@@ -414,7 +414,7 @@
    "clubWiki": "https://en.wikipedia.org/wiki/PSV_Eindhoven",
    "captain": false,
    "wiki": "https://en.wikipedia.org/wiki/Ivan_Peri%C5%A1i%C4%87",
-   "wcApps": 0,
+   "wcApps": 1,
    "wcGoals": 0,
    "wcYellow": 0,
    "wcRed": 0
@@ -432,7 +432,7 @@
    "clubWiki": "https://en.wikipedia.org/wiki/SC_Freiburg",
    "captain": false,
    "wiki": "https://en.wikipedia.org/wiki/Igor_Matanovi%C4%87",
-   "wcApps": 0,
+   "wcApps": 1,
    "wcGoals": 0,
    "wcYellow": 0,
    "wcRed": 0
@@ -450,7 +450,7 @@
    "clubWiki": "https://en.wikipedia.org/wiki/Orlando_City_SC",
    "captain": false,
    "wiki": "https://en.wikipedia.org/wiki/Marco_Pa%C5%A1ali%C4%87",
-   "wcApps": 0,
+   "wcApps": 1,
    "wcGoals": 0,
    "wcYellow": 0,
    "wcRed": 0
@@ -468,8 +468,8 @@
    "clubWiki": "https://en.wikipedia.org/wiki/FC_Dallas",
    "captain": false,
    "wiki": "https://en.wikipedia.org/wiki/Petar_Musa",
-   "wcApps": 0,
-   "wcGoals": 0,
+   "wcApps": 1,
+   "wcGoals": 1,
    "wcYellow": 0,
    "wcRed": 0
   }

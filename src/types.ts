@@ -241,6 +241,51 @@ export interface Stats {
   fairPlay?: { group: Record<string, number>; all: Record<string, number> }
 }
 
+export interface PredictionTeamContext {
+  code: string
+  ranking: number | null
+  group: string | null
+  form: string[]
+  played: number
+  wins: number
+  draws: number
+  losses: number
+  gf: number
+  ga: number
+  gd: number
+  cleanSheets: number
+  failedToScore: number
+  restDays: number | null
+  previousMatchId: string | null
+  previousVenueId: string | null
+  travelKm: number | null
+  fairPlay: number | null
+  suspensions: number
+  goalsForPerMatch: number | null
+  goalsAgainstPerMatch: number | null
+  groupPoints: number | null
+  groupRank: number | null
+}
+
+export interface PredictionMatchContext {
+  id: string
+  generatedAt: string
+  source: 'computed'
+  home: PredictionTeamContext | null
+  away: PredictionTeamContext | null
+  rankingGap: number | null
+  restGapDays: number | null
+  travelGapKm: number | null
+  weatherMatchId: string | null
+  notes: string[]
+}
+
+export interface PredictionContextData {
+  generatedAt: string
+  sources: string[]
+  matches: Record<string, PredictionMatchContext>
+}
+
 export interface Meta {
   updatedAt: string
   season: string
@@ -258,6 +303,7 @@ export interface AppData {
   weather: Record<string, WeatherInfo>
   lineups: Record<string, MatchLineups>
   stats: Stats
+  predictionContext: PredictionContextData
   broadcasters: Broadcasters | null
 }
 
