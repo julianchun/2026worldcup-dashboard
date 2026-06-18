@@ -82,6 +82,8 @@ All data comes from free, authoritative sources, with no API keys anywhere:
 
 Scores are **semi-live, not real-time**: they typically trail the broadcast by up to ~15 minutes. This is by design; the whole app is static JSON refreshed by CI, with no servers, sockets or push infrastructure.
 
+**Not currently fetched**: injuries, probable line-ups before FIFA publishes them, betting odds, xG, advanced player/team event stats, and pre-tournament international form. Those usually require a paid/licensed sports-data provider and should only be added after choosing a provider, approving cost/quota limits, and keeping API keys server-side in GitHub Actions or another backend job.
+
 ## 🛠️ Development
 
 For developers of this project.
