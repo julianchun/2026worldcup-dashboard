@@ -9,6 +9,14 @@
    "ownGoals": 0
   },
   {
+   "id": "390670",
+   "name": "Cyle LARIN",
+   "code": "CAN",
+   "no": 9,
+   "goals": 2,
+   "ownGoals": 0
+  },
+  {
    "id": "466624",
    "name": "Folarin BALOGUN",
    "code": "USA",
@@ -169,14 +177,6 @@
    "ownGoals": 0
   },
   {
-   "id": "390670",
-   "name": "Cyle LARIN",
-   "code": "CAN",
-   "no": 9,
-   "goals": 1,
-   "ownGoals": 0
-  },
-  {
    "id": "431200",
    "name": "Daniel MUNOZ",
    "code": "COL",
@@ -322,7 +322,7 @@
   }
  ],
  "cards": {
-  "yellow": 58,
+  "yellow": 59,
   "red": 4,
   "players": [
    {
