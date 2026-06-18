@@ -1522,8 +1522,8 @@
    "group": "A",
    "date": "2026-06-18T16:00:00Z",
    "venueId": "400098290",
-   "status": "live",
-   "time": "81'",
+   "status": "finished",
+   "time": "98'",
    "home": {
     "code": "CZE",
     "score": 1,
@@ -1531,7 +1531,7 @@
    },
    "away": {
     "code": "RSA",
-    "score": 0,
+    "score": 1,
     "pen": null
    },
    "phA": "A4",
