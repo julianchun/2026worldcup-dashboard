@@ -93,6 +93,20 @@ jobs:
               console.error('refusing to commit suspicious data: matches.json has', matches.length, 'matches');
               process.exit(1);
             }
+            const pc = require('./public/data/prediction-context.json');
+            const contextCount = Object.keys(pc.matches || {}).length;
+            if (m.counts.predictionContext !== 104 || contextCount !== 104) {
+              console.error('refusing to commit suspicious data: prediction context count mismatch:', {
+                meta: m.counts.predictionContext,
+                file: contextCount,
+              });
+              process.exit(1);
+            }
+            const missingContext = matches.filter((x) => !pc.matches?.[x.id]);
+            if (missingContext.length) {
+              console.error('refusing to commit suspicious data: matches missing prediction context:', missingContext.map((x) => x.id));
+              process.exit(1);
+            }
             const bad = matches.filter((x) => x.status === 'finished' && (x.home?.score == null || x.away?.score == null));
             if (bad.length) {
               console.error('refusing to commit suspicious data: finished matches with null scores:', bad.map((x) => x.id));
