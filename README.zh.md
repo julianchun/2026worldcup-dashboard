@@ -1,90 +1,90 @@
-# [2026 世界杯仪表板 ⚽](https://julianchun.github.io/2026worldcup-dashboard)
+# [2026 世界盃儀表板 ⚽](https://julianchun.github.io/2026worldcup-dashboard)
 
-简洁而完整的 2026 国际足联世界杯助手：赛程、小组、对阵图、参赛名单、球场、天气、观赛指南，以及用户自行填写的比赛预测，支持 23 种语言。
+簡潔而完整的 2026 國際足總世界盃助手：賽程、小組、對陣圖、參賽名單、球場、天氣、觀賽指南，以及使用者自行填寫的比賽預測，支援 23 種語言。
 
-👉 **[点我立即使用 2026 世界杯仪表板！](https://julianchun.github.io/2026worldcup-dashboard)** ⚽ ([julianchun.github.io/2026worldcup-dashboard](https://julianchun.github.io/2026worldcup-dashboard))
+👉 **[點我立即使用 2026 世界盃儀表板！](https://julianchun.github.io/2026worldcup-dashboard)** ⚽ ([julianchun.github.io/2026worldcup-dashboard](https://julianchun.github.io/2026worldcup-dashboard))
 
-比起 FIFA&#46;com、Google 或维基百科，这里查信息更快、更简单、更轻松：关于这届赛事的每一条信息都只需一两下点按即可获取，以你的语言、你的时区呈现，没有任何多余的东西（无广告、无新闻流、无视频、无 Cookie 横幅、无需登录）。
+比起 FIFA&#46;com、Google 或維基百科，這裡查資訊更快、更簡單、更輕鬆：關於這屆賽事的每一條資訊都只需一兩下點按即可取得，以你的語言、你的時區呈現，沒有任何多餘的東西（無廣告、無新聞流、無影片、無 Cookie 橫幅、無需登入）。
 
-> **非官方、球迷自制、非营利、开源项目**，托管于 GitHub Pages。与国际足联、任何国家足协、球队、球员或转播机构均无关联、未获其认可、也无任何关系。代码与精选数据采用 MIT 许可（见 [LICENSE](LICENSE.md)）；第三方数据条款详见 [COPYRIGHT](COPYRIGHT.md)。
+> **非官方、球迷自製、非營利、開源專案**，託管於 GitHub Pages。與國際足總、任何國家足協、球隊、球員或轉播機構均無關聯、未獲其認可、也無任何關係。程式碼與精選資料採用 MIT 授權（見 [LICENSE](LICENSE.md)）；第三方資料條款詳見 [COPYRIGHT](COPYRIGHT.md)。
 
-其他语言的README：[English](README.md) · [français](README.fr.md)
+其他語言的 README：[English](README.md)
 
-## ✨ 功能特性
+## ✨ 功能特色
 
-### 🏆 赛事
+### 🏆 賽事
 
-- 📅 **全部 104 场比赛**，含开球时间、球场、小组/阶段标签以及半实时比分
-- 🔍 **赛程**可按球队、阶段和球场筛选；筛选条件保存在 URL 中，因此视图可以分享
-- 📊 **小组积分榜**依据官方国际足联同分排序规则计算，并附第三名球队的排名（12 支中前 8 名晋级），用颜色标注晋级情况
-- 🪜 **淘汰赛对阵图**采用向中心汇聚的树状结构，随球队晋级自动填充，无需横向滚动；在手机上则改为逐轮列表布局
-- 📋 **比赛页面**：球场信息、开球时段天气预报（对于较远日期则回退至典型气候数据）、完整裁判组、绘制在 SVG 球场上并标注阵型的首发阵容、进球时间轴，以及你所在国家/地区的转播频道
+- 📅 **全部 104 場比賽**，含開球時間、球場、小組/階段標籤以及半即時比分
+- 🔍 **賽程**可依球隊、階段和球場篩選；篩選條件儲存在 URL 中，因此檢視可以分享
+- 📊 **小組積分榜**依據官方國際足總同分排序規則計算，並附第三名球隊的排名（12 支中前 8 名晉級），用顏色標示晉級情況
+- 🪜 **淘汰賽對陣圖**採用向中心匯聚的樹狀結構，隨球隊晉級自動填入，無需橫向捲動；在手機上則改為逐輪列表版面
+- 📋 **比賽頁面**：球場資訊、開球時段天氣預報（對於較遠日期則回退至典型氣候資料）、完整裁判組、繪製在 SVG 球場上並標註陣型的先發陣容、進球時間軸，以及你所在國家/地區的轉播頻道
 
-### 👕 球队与球员
+### 👕 球隊與球員
 
-- 🧢 **48 支球队页面**：实时国际足联排名、主教练、小组积分榜、完整赛程、训练大本营（含地图 + Google 地图链接）、官方网站及维基百科链接
-- 👥 **官方 26 人参赛名单**：号码、位置、年龄、出场次数、进球数、所属俱乐部；每位球员均链接到其英文维基百科条目
-- ⭐ **收藏**：为你关注的球队加星标，并据此筛选赛程
+- 🧢 **48 支球隊頁面**：即時國際足總排名、總教練、小組積分榜、完整賽程、訓練基地（含地圖 + Google 地圖連結）、官方網站及維基百科連結
+- 👥 **官方 26 人參賽名單**：號碼、位置、年齡、出場次數、進球數、所屬俱樂部；每位球員均連結到其英文維基百科項目
+- ⭐ **收藏**：為你關注的球隊加星標，並據此篩選賽程
 
-### 🗺️ 球场与地图
+### 🗺️ 球場與地圖
 
-- 🌎 全部 16 座球场的**真实地理地图**（Natural Earth 数据，兰勃特等角圆锥投影），标注每座球场的容量、顶棚类型、时区以及六月/七月气候
-- 🏕️ **球队大本营**以旗帜图钉形式标绘在同一张地图上（避免重叠的布局），并配有球队筛选功能，仅高亮显示所选球队参赛的城市
+- 🌎 全部 16 座球場的**真實地理地圖**（Natural Earth 資料，蘭伯特等角圓錐預測），標示每座球場的容量、頂棚類型、時區以及六月/七月氣候
+- 🏕️ **球隊基地**以旗幟圖釘形式標繪在同一張地圖上（避免重疊的版面），並配有球隊篩選功能，僅醒目顯示所選球隊參賽的城市
 
-### 📺 观赛
+### 📺 觀賽
 
-- 📡 **覆盖 32 个国家/地区的转播指南**，并高亮标出免费收看频道；你所在的国家/地区会根据设备时区自动识别（可在设置中更改）
+- 📡 **涵蓋 32 個國家/地區的轉播指南**，並醒目標示免費收看頻道；你所在的國家/地區會根據裝置時區自動識別（可在設定中更改）
 
-### 📊 数据统计与预测
+### 📊 資料統計與預測
 
-- 👟 **金靴榜**及赛事数据统计，在整届比赛期间持续更新
-- 🎲 **用户预测**：在本地填写你自己的比分预测，已完赛比赛使用官方比分，并让小组积分投影随你的选择更新。不显示 AI 赔率或模型生成的比赛概率。
+- 👟 **金靴榜**及賽事資料統計，在整屆比賽期間持續更新
+- 🎲 **使用者預測**：在本機填寫你自己的比分預測，已完賽比賽使用官方比分，並讓小組積分預測隨你的選擇更新。不顯示 AI 賠率或模型產生的比賽機率。
 
-### 🌍 语言
+### 🌍 語言
 
-- **23 种语言**，覆盖所有参赛球队的语言以及一些热门语言：English · Français · Español · Português (Portugal) · Português (Brasil) · Deutsch · Nederlands · Čeština · Hrvatski · Svenska · Norsk · العربية · فارسی · Türkçe · Oʻzbekcha · 日本語 · 한국어 · 简体中文 · 繁體中文 · Italiano · Bahasa Indonesia · Русский · Українська
-- 对阿拉伯语和波斯语提供自动检测及完整的 RTL（从右到左）支持
-- 球队、球场和裁判的名称还会以国际足联自己的本地化方式提供给其中 12 种语言；其余语言则在界面保持翻译的同时回退使用英文名称。语言可随时从顶栏切换；词典按需加载
+- **23 種語言**，涵蓋所有參賽球隊的語言以及一些熱門語言：English · Français · Español · Português (Portugal) · Português (Brasil) · Deutsch · Nederlands · Čeština · Hrvatski · Svenska · Norsk · العربية · فارسی · Türkçe · Oʻzbekcha · 日本語 · 한국어 · 簡體中文 · 繁體中文 · Italiano · Bahasa Indonesia · Русский · Українська
+- 對阿拉伯語和波斯語提供自動偵測及完整的 RTL（從右到左）支援
+- 球隊、球場和裁判的名稱還會以國際足總自己的在地化方式提供給其中 12 種語言；其餘語言则在介面保持翻譯的同時回退使用英文名稱。語言可隨時從頂欄切換；字典按需載入
 
-### 🎁 体验
+### 🎁 體驗
 
-- 🕒 **时区**：比赛时间默认以*你的*时钟显示；可切换为球场当地时间或任意固定时区（默认锚定主办地时区 America/New_York）
-- 📲 **PWA**：可安装到桌面端和移动端，首次访问后完全离线可用（除实时比分刷新外的一切功能）
-- 📆 **日历导出**：下载你所关注球队比赛的 `.ics` 文件
-- 🌗 **浅色与深色主题**，默认自动切换
-- 🔒 **自包含**：旗帜、字体、地图数据以及所有赛事数据均本地提供；应用在运行时发出**零次第三方请求**
+- 🕒 **時區**：比賽時間預設以*你的*時鐘顯示；可切換為球場當地時間或任意固定時區（預設錨定主辦地時區 America/New_York）
+- 📲 **PWA**：可安裝到桌面端和行動端，首次造訪後完全離線可用（除即時比分重新整理外的一切功能）
+- 📆 **行事曆匯出**：下載你所關注球隊比賽的 `.ics` 文件
+- 🌗 **淺色與深色主題**，預設自动切換
+- 🔒 **自包含**：旗幟、字型、地圖資料以及所有賽事資料均於本機提供；應用在執行時發出**零次第三方請求**
 
-## 📱 兼容性
+## 📱 相容性
 
-- **屏幕**：从小屏手机（360 px）到大屏桌面均自适应；移动端使用底部标签栏，桌面端则为完整导航
-- **浏览器**：最新版 Chrome、Edge、Firefox 和 Safari（桌面端及 iOS）
-- **安装**：可在 Android、iOS（"添加到主屏幕"）以及桌面版 Chrome/Edge 上从浏览器菜单作为 PWA 安装
-- **无障碍**：支持键盘导航的控件、可见的焦点状态、两种主题下均达到 WCAG AA 对比度，并遵循 `prefers-reduced-motion` 设置
+- **螢幕**：從小螢幕手機（360 px）到大螢幕桌面均自適應；行動端使用底部標籤列，桌面端則為完整導覽
+- **瀏覽器**：最新版本 Chrome、Edge、Firefox 和 Safari（桌面端及 iOS）
+- **安裝**：可在 Android、iOS（"加入主畫面"）以及桌面版 Chrome/Edge 上從瀏覽器選單作為 PWA 安裝
+- **無障礙**：支援鍵盤導覽的控制項、可見的焦點狀態、兩種主題下均達到 WCAG AA 對比度，並遵循 `prefers-reduced-motion` 設定
 
-## ⚡ 数据：每场比赛后即时更新
+## ⚡ 資料：每場比賽後即時更新
 
-所有数据均来自免费、权威的来源，且全程不使用任何 API 密钥：
+所有資料均來自免費、權威的來源，且全程不使用任何 API 金鑰：
 
-| 来源 | 提供内容 |
+| 來源 | 提供內容 |
 |---|---|
-| FIFA 公开 API | 赛程、比分、阵容、裁判、本地化名称、世界排名 |
-| 维基百科 | 官方 26 人参赛名单（号码、出场次数、进球数、俱乐部、主教练） |
-| Open-Meteo | 逐小时球场天气预报及大本营地理编码 |
-| 手工精选文件 | 球场、转播机构、大本营、气候常年值、球队配色 |
+| FIFA 公開 API | 賽程、比分、陣容、裁判、在地化名稱、世界排名 |
+| 維基百科 | 官方 26 人參賽名單（號碼、出場次數、進球數、俱樂部、總教練） |
+| Open-Meteo | 逐小時球場天氣預報及基地地理編碼 |
+| 手工精選檔案 | 球場、轉播機構、基地、氣候常年值、球隊配色 |
 
-**自动更新**（GitHub Actions，已包含在本仓库中）：
+**自動更新**（GitHub Actions，已包含在本倉庫中）：
 
-- ⏱️ **比赛进行期间每 15 分钟一次**（外加每场比赛开球前 10 分钟拉取一次阵容）
-- 🌙 **每天纽约时间 00:00**
-- ✅ 每次更新在发布前都会经过合理性校验，并触发站点重新部署
+- ⏱️ **比賽進行期間每 15 分鐘一次**（另外每場比賽開球前 10 分鐘擷取一次陣容）
+- 🌙 **每天纽约時間 00:00**
+- ✅ 每次更新在發布前都會經過合理性檢查，並觸發站點重新部署
 
-比分为**半实时，而非实时**：通常比转播信号滞后最多约 15 分钟。这是有意为之；整个应用是由 CI 刷新的静态 JSON，没有服务器、套接字或推送基础设施。
+比分為**半即時，而非即時**：通常比轉播訊號落後最多約 15 分鐘。這是有意為之；整個應用是由 CI 重新整理的靜態 JSON，沒有伺服器、socket 或推播基礎設施。
 
-## 🛠️ 开发
+## 🛠️ 開發
 
-面向本项目的开发者。
+面向本專案的開發者。
 
-### 🚀 快速开始
+### 🚀 快速開始
 
 ```bash
 npm install
@@ -92,81 +92,81 @@ npm run update   # fetch the latest data
 npm run dev      # http://localhost:5173
 ```
 
-生产构建（在 `dist/` 中生成完全静态的输出）：
+正式環境建置（在 `dist/` 中產生完全靜態的輸出）：
 
 ```bash
 npm run build
 npm run preview
 ```
 
-### 📜 脚本
+### 📜 腳本
 
-| 脚本 | 作用 |
+| 腳本 | 作用 |
 |---|---|
-| `npm run dev` | 在 `localhost:5173` 启动 Vite 开发服务器 |
-| `npm run build` | 类型检查并构建生产版本到 `dist/` |
-| `npm run preview` | 在本地提供已构建的 `dist/` |
-| `npm run update` | 将所有赛事数据（FIFA、维基百科、Open-Meteo）刷新到 `public/data/` |
-| `npm run gencron` | 根据比赛日历重新生成 CI cron 调度计划 |
-| `npm run genmap` | 从 Natural Earth 源数据重建球场地图 |
-| `npm run typecheck` | TypeScript 类型检查（`tsc -b`，不产出文件） |
-| `npm run format` | Biome 自动格式化（写入） |
-| `npm run lint` | Biome lint + 格式检查（包含无障碍规则） |
-| `npm run smoke` | 无头冒烟测试：覆盖所有语言和主题下的每条路由 |
-| `npm run a11y` | axe-core WCAG A/AA 审计：路由 × 浅色/深色 × RTL |
-| `npm run checkall` | 快速校验：typecheck + format + lint |
-| `npm run checkall:build` | 完整校验：checkall + build + smoke + a11y |
+| `npm run dev` | 在 `localhost:5173` 啟動 Vite 開發伺服器 |
+| `npm run build` | 型別檢查並建置正式版本到 `dist/` |
+| `npm run preview` | 在本機提供已建置的 `dist/` |
+| `npm run update` | 將所有賽事資料（FIFA、維基百科、Open-Meteo）重新整理到 `public/data/` |
+| `npm run gencron` | 根據比賽日曆重新產生 CI cron 排程計畫 |
+| `npm run genmap` | 從 Natural Earth 源資料重建球場地圖 |
+| `npm run typecheck` | TypeScript 型別檢查（`tsc -b`，不产出文件） |
+| `npm run format` | Biome 自動格式化（寫入） |
+| `npm run lint` | Biome lint + 格式檢查（包含無障礙規則） |
+| `npm run smoke` | 無頭冒煙測試：涵蓋所有語言和主題下的每條路由 |
+| `npm run a11y` | axe-core WCAG A/AA 稽核：路由 × 淺色/深色 × RTL |
+| `npm run checkall` | 快速檢查：typecheck + format + lint |
+| `npm run checkall:build` | 完整檢查：checkall + build + smoke + a11y |
 
 <details>
-<summary><b>🌐 添加一种语言</b></summary>
+<summary><b>🌐 新增一種語言</b></summary>
 
-1. 创建 `src/i18n/<code>.ts`，包含 `en.ts` 中的每一个键，顺序相同（在语法需要时再加上 `key#one` 风格的复数变体）。
-2. 接入它：`types.ts` 中的 `Lang` 联合类型；`i18n/strings.ts` 中的 `LOCALE_TAG` + `LANG_LABEL`（键的顺序 = 菜单顺序）；`i18n/index.tsx` 中的加载器；`SettingsContext.tsx` 中的检测前缀；以及在适用时的 `RTL_LANGS` / `DATA_FALLBACK`。
-3. 如果 `api.fifa.com` 提供该语言，就将其加入 `scripts/update.mjs` 中的 `LANGS`；否则将其加入那里的 `CLDR_LANGS`（球队名称随后会来自 CLDR 国家名称），并将 England 和 Scotland 添加到 `team-names-l10n.json` —— 它们是 CLDR 无法命名的英国行政区。
-4. 翻译精选内容：16 条 `rainNote` 条目（`climate.json`）、90 条转播机构备注（`broadcasters.json`）、旧金山湾区标签（`Venues.tsx`）、16 个城市名称（`city-l10n.json`，仅限非拉丁文字），以及仅在本地命名习惯与 CLDR 不同时（如繁体中文）才需要的完整 48 个球队名称区块（`team-names-l10n.json`）。
-5. 添加一次冒烟测试，更新本 README 的语言列表，并运行 `npm run update && npm run build && npm run smoke`。
+1. 建立 `src/i18n/<code>.ts`，包含 `en.ts` 中的每一個鍵，順序相同（在語法需要時再加上 `key#one` 風格的複數變體）。
+2. 接入它：`types.ts` 中的 `Lang` 聯合型別；`i18n/strings.ts` 中的 `LOCALE_TAG` + `LANG_LABEL`（鍵的順序 = 選單順序）；`i18n/index.tsx` 中的載入器；`SettingsContext.tsx` 中的偵測前綴；以及在適用時的 `RTL_LANGS` / `DATA_FALLBACK`。
+3. 如果 `api.fifa.com` 提供該語言，就將其加入 `scripts/update.mjs` 中的 `LANGS`；否則將其加入那裡的 `CLDR_LANGS`（球隊名稱隨後會來自 CLDR 國家名稱），並將 England 和 Scotland 添加到 `team-names-l10n.json` —— 它們是 CLDR 無法命名的英國行政區。
+4. 翻譯精選內容：16 條 `rainNote` 項目（`climate.json`）、90 條轉播機構備註（`broadcasters.json`）、舊金山灣區標籤（`Venues.tsx`）、16 個城市名稱（`city-l10n.json`，僅限非拉丁文字），以及僅在本機命名習慣與 CLDR 不同時（如繁體中文）才需要的完整 48 個球隊名稱區塊（`team-names-l10n.json`）。
+5. 添加一次冒煙測試，更新本 README 的語言列表，並執行 `npm run update && npm run build && npm run smoke`。
 
 </details>
 
 ### 🚢 部署
 
-本应用是一个采用 hash 路由和相对资源路径的静态站点。对于 GitHub Pages：
+本應用是一個採用 hash 路由和相對資源路徑的靜態站點。對於 GitHub Pages：
 
-1. 推送到仓库。
-2. `deploy.yml` 会在每次推送到 `main` 时构建并发布（仅涉及文档和仅涉及流水线的改动会被跳过）。
-3. `update-data.yml` 会按上述以比赛为驱动的调度刷新数据并重新部署。它的 cron 表是根据固定的比赛日历生成的；如果某场比赛的开球时间发生变化，请运行 `npm run gencron`。
+1. 推送到倉庫。
+2. `deploy.yml` 會在每次推送到 `main` 時建置並發布（僅涉及文件和僅涉及流水線的變更會被跳過）。
+3. `update-data.yml` 會依上述以比賽為驅動的排程重新整理資料並重新部署。它的 cron 表是根據固定的比賽日曆產生的；如果某場比賽的開球時間發生變化，請執行 `npm run gencron`。
 
-### 🐳 Docker（自托管）
+### 🐳 Docker（自託管）
 
-一个小巧的镜像（由 nginx 提供已构建的 PWA），发布于 **`ghcr.io/julianchun/2026worldcup-dashboard`**。它从何处读取比赛数据由 `DATA_SOURCE` 环境变量决定；无论哪种方式，应用都在 **http://localhost:8080** 上提供服务。
+一個小巧的映像（由 nginx 提供已建置的 PWA），發布於 **`ghcr.io/julianchun/2026worldcup-dashboard`**。它從何處讀取比賽資料由 `DATA_SOURCE` 環境變數決定；無論哪種方式，應用都在 **http://localhost:8080** 上提供服務。
 
-| `DATA_SOURCE` | `/data/*.json` 来自 | 时效性 | 网络 |
+| `DATA_SOURCE` | `/data/*.json` 來自 | 時效性 | 網路 |
 | --- | --- | --- | --- |
-| `remote` *（默认）* | 从在线站点反向代理 | 始终最新，含实时比分 | 向 `REMOTE_DATA_HOST` 发出出站请求 |
-| `self` | 运行数据流水线的更新器边车容器 | 接近实时（由自身的 `UPDATE_INTERVAL` 决定） | 向 FIFA/维基百科/Open-Meteo 发出出站请求 |
+| `remote` *（預設）* | 從線上站點反向代理 | 始終最新，含即時比分 | 向 `REMOTE_DATA_HOST` 發出對外請求 |
+| `self` | 執行資料流水線的更新器 sidecar 容器 | 接近即時（由自身的 `UPDATE_INTERVAL` 決定） | 向 FIFA/維基百科/Open-Meteo 發出對外請求 |
 
-#### 1. `remote` 模式（默认）：从在线站点代理的始终最新的数据
+#### 1. `remote` 模式（預設）：從線上站點代理的始終最新的資料
 
-**1.1 使用预构建镜像**（无需克隆）：
+**1.1 使用預建置映像**（無需複製）：
 
 ```bash
 docker run -d -p 8080:80 ghcr.io/julianchun/2026worldcup-dashboard:latest
 ```
 
-**1.2 自行构建**（有本地改动，或在镜像发布之前）：
+**1.2 自行建置**（有本機變更，或在映像發布之前）：
 
 ```bash
 git clone https://github.com/julianchun/2026worldcup-dashboard.git
 cd 2026worldcup-dashboard
-docker build -t ghcr.io/julianchun/2026worldcup-dashboard:latest .          # 构建本地镜像
-docker run -d -p 8080:80 ghcr.io/julianchun/2026worldcup-dashboard:latest   # 相同标签 → 运行你的构建，不会拉取
+docker build -t ghcr.io/julianchun/2026worldcup-dashboard:latest .          # 建置本機映像
+docker run -d -p 8080:80 ghcr.io/julianchun/2026worldcup-dashboard:latest   # 相同標籤 → 執行你的建置，不會擷取
 ```
 
-#### 2. `self` 模式：自我更新，不依赖在线站点
+#### 2. `self` 模式：自我更新，不依賴線上站點
 
-两个容器共享一个数据卷：Web 服务器（`DATA_SOURCE=self`）和一个每隔 `UPDATE_INTERVAL` 秒（默认 `900` = 15 分钟）重新运行数据流水线的更新器。该数据卷以镜像中预置的快照作为初始内容，因此站点可立即工作，并在首次运行后被最新数据替换。
+兩個容器共用一個資料卷：Web 伺服器（`DATA_SOURCE=self`）和一個每隔 `UPDATE_INTERVAL` 秒（預設 `900` = 15 分鐘）重新執行資料流水線的更新器。該資料卷以映像中預置的快照作為初始內容，因此站點可立即運作，并在首次執行後被最新資料取代。
 
-**2.1 使用预构建镜像**（无需克隆），直接运行这一对容器：
+**2.1 使用預建置映像**（無需複製），直接執行這一對容器：
 
 ```bash
 docker volume create wc-data
@@ -178,7 +178,7 @@ docker run -d -e UPDATE_INTERVAL=900 --restart unless-stopped \
   ghcr.io/julianchun/2026worldcup-dashboard-updater:latest
 ```
 
-**2.2 自行构建**（Compose 会同时构建 Web 镜像和更新器镜像）：
+**2.2 自行建置**（Compose 會同時建置 Web 映像和更新器映像）：
 
 ```bash
 git clone https://github.com/julianchun/2026worldcup-dashboard.git
@@ -186,9 +186,9 @@ cd 2026worldcup-dashboard
 docker compose -f docker-compose.yml -f docker-compose.self.yml up -d --build
 ```
 
-### ⚙️ 技术栈
+### ⚙️ 技術棧
 
-React 19 · TypeScript · Vite · 无后端，除 React + Router 外无任何运行时依赖。全程使用 SVG：含首发阵容的球场、投影后的北美地图、对阵图、Logo。
+React 19 · TypeScript · Vite · 無後端，除 React + Router 外無任何執行時依賴。全程使用 SVG：含先發陣容的球場、投影後的北美地圖、對陣圖、Logo。
 
 ```
 scripts/update.mjs    data pipeline (npm run update)
@@ -200,6 +200,6 @@ public/data/          generated JSON the app loads at runtime
 src/                  application code (pages, components, i18n, settings)
 ```
 
-## 📄 许可
+## 📄 授權
 
-代码与精选数据：[MIT](LICENSE.md)。详细的第三方数据与图像许可：[COPYRIGHT](COPYRIGHT.md)。数据由国际足联公开 API、维基百科及 Open-Meteo 提供；请通过当地节目单核实转播权。
+程式碼與精選資料：[MIT](LICENSE.md)。詳細的第三方資料與圖像授權：[COPYRIGHT](COPYRIGHT.md)。資料由國際足總公開 API、維基百科及 Open-Meteo 提供；請透過當地節目表核實轉播權。

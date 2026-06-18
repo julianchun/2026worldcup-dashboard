@@ -8,7 +8,7 @@ Faster, simpler, easier way to look things up than FIFA&#46;com, Google or Wikip
 
 > **Unofficial, fan-made, not-for-profit, open-source project**, hosted on GitHub Pages. Not affiliated with, endorsed by, or connected to FIFA, any national football association, team, player, or broadcaster. Code and curated data are MIT-licensed (see [LICENSE](LICENSE.md)); third-party data terms are inventoried in [COPYRIGHT](COPYRIGHT.md).
 
-README in [français](README.fr.md) · [中文](README.zh.md)
+README in [繁體中文](README.zh.md)
 
 ## ✨ Features
 
@@ -42,7 +42,7 @@ README in [français](README.fr.md) · [中文](README.zh.md)
 
 ### 🌍 Languages
 
-- **23 languages**, covering the languages of all participating teams plus some popular ones: English · Français · Español · Português (Portugal) · Português (Brasil) · Deutsch · Nederlands · Čeština · Hrvatski · Svenska · Norsk · العربية · فارسی · Türkçe · Oʻzbekcha · 日本語 · 한국어 · 简体中文 · 繁體中文 · Italiano · Bahasa Indonesia · Русский · Українська
+- **23 languages**, covering the languages of all participating teams plus some popular ones: English · Français · Español · Português (Portugal) · Português (Brasil) · Deutsch · Nederlands · Čeština · Hrvatski · Svenska · Norsk · العربية · فارسی · Türkçe · Oʻzbekcha · 日本語 · 한국어 · 繁體中文 · Italiano · Bahasa Indonesia · Русский · Українська
 - Automatic detection and full RTL support for Arabic and Persian
 - Team, stadium, and referee names are additionally served in FIFA's own localisation for 12 of these languages; the rest fall back to English names while the interface stays translated. The language can be switched any time from the header; dictionaries load on demand
 
