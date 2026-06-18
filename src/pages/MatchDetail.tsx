@@ -97,8 +97,14 @@ function fmtSigned(n: number | null, suffix = '') {
   return `${n > 0 ? '+' : ''}${n}${suffix}`
 }
 
-function TeamContextColumn({ ctx }: { ctx: PredictionTeamContext | null }) {
-  if (!ctx) return <div className="md-pc-team muted">TBD</div>
+function TeamContextColumn({
+  ctx,
+  labels,
+}: {
+  ctx: PredictionTeamContext | null
+  labels: { tbd: string; noCompleted: string; gf: string; ga: string; cleanSheets: string }
+}) {
+  if (!ctx) return <div className="md-pc-team muted">{labels.tbd}</div>
   const record = `${ctx.wins}-${ctx.draws}-${ctx.losses}`
   return (
     <div className="md-pc-team">
@@ -112,13 +118,19 @@ function TeamContextColumn({ ctx }: { ctx: PredictionTeamContext | null }) {
             </span>
           ))
         ) : (
-          <span className="muted small">No completed matches</span>
+          <span className="muted small">{labels.noCompleted}</span>
         )}
       </div>
       <div className="md-pc-mini">
-        <span>GF {ctx.gf}</span>
-        <span>GA {ctx.ga}</span>
-        <span>CS {ctx.cleanSheets}</span>
+        <span>
+          {labels.gf} {ctx.gf}
+        </span>
+        <span>
+          {labels.ga} {ctx.ga}
+        </span>
+        <span>
+          {labels.cleanSheets} {ctx.cleanSheets}
+        </span>
       </div>
     </div>
   )
@@ -142,6 +154,13 @@ export default function MatchDetail() {
   const venue = m?.venueId ? (venues[m.venueId] ?? null) : null
   const lu = m ? lineups[m.id] : undefined
   const pc = m ? predictionContext.matches[m.id] : undefined
+  const pcLabels = {
+    tbd: t('tbd'),
+    noCompleted: t('pcNoCompleted'),
+    gf: t('colGF'),
+    ga: t('colGA'),
+    cleanSheets: t('pcCleanSheetsShort'),
+  }
 
   /* market for the watch teaser — shared app-wide via Settings */
   const market = useMemo(() => {
@@ -417,51 +436,56 @@ export default function MatchDetail() {
         <section className="card card-pad md-pc-card">
           <h3 className="md-info-title">
             <Icon name="chart" size={18} />
-            Prediction context
+            {t('predictionContext')}
           </h3>
           <div className="md-pc-head">
-            <TeamContextColumn ctx={pc.home} />
+            <TeamContextColumn ctx={pc.home} labels={pcLabels} />
             <div className="md-pc-vs">{t('vs')}</div>
-            <TeamContextColumn ctx={pc.away} />
+            <TeamContextColumn ctx={pc.away} labels={pcLabels} />
           </div>
           <div className="md-pc-metrics">
             <div>
-              <span className="lbl">Ranking edge</span>
+              <span className="lbl">{t('pcRankingEdge')}</span>
               <span className="val tnum">
                 {pc.home?.ranking && pc.away?.ranking
                   ? pc.rankingGap !== null && pc.rankingGap > 0
                     ? pc.home.code
                     : pc.rankingGap !== null && pc.rankingGap < 0
                       ? pc.away.code
-                      : 'Level'
+                      : t('pcLevel')
                   : '—'}
               </span>
             </div>
             <div>
-              <span className="lbl">Rest gap</span>
-              <span className="val tnum">{fmtSigned(pc.restGapDays, 'd')}</span>
+              <span className="lbl">{t('pcRestGap')}</span>
+              <span className="val tnum">{fmtSigned(pc.restGapDays, t('pcDaysSuffix'))}</span>
             </div>
             <div>
-              <span className="lbl">Travel gap</span>
-              <span className="val tnum">{fmtSigned(pc.travelGapKm, 'km')}</span>
+              <span className="lbl">{t('pcTravelGap')}</span>
+              <span className="val tnum">{fmtSigned(pc.travelGapKm, t('pcKmSuffix'))}</span>
             </div>
             <div>
-              <span className="lbl">Suspensions</span>
+              <span className="lbl">{t('suspTitle')}</span>
               <span className="val tnum">
                 {pc.home?.suspensions ?? 0} · {pc.away?.suspensions ?? 0}
               </span>
             </div>
             <div>
-              <span className="lbl">Fair play</span>
+              <span className="lbl">{t('fairPlay')}</span>
               <span className="val tnum">
                 {pc.home?.fairPlay ?? 0} · {pc.away?.fairPlay ?? 0}
               </span>
             </div>
             <div>
-              <span className="lbl">Weather</span>
-              <span className="val">{pc.weatherMatchId ? 'Forecast available' : 'Typical climate'}</span>
+              <span className="lbl">{t('weatherTitle')}</span>
+              <span className="val">
+                {pc.weatherMatchId ? t('pcForecastAvailable') : t('weatherTypical')}
+              </span>
             </div>
           </div>
+          <p className="md-pc-source small muted">
+            {t('pcComputedSource')} · {t('updatedAt', { date: fmtDateTime(pc.generatedAt, locale) })}
+          </p>
           {Boolean((pc.home?.suspensions ?? 0) || (pc.away?.suspensions ?? 0)) && (
             <div className="md-pc-alert">
               {stats.suspensions?.[pc.home?.code ?? '']?.map((s) => (
