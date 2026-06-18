@@ -1,4 +1,5 @@
-Copyright (c) Tom Chen (tomchen.org)
+Copyright (c) 2026 Julian Chun
+Portions copyright (c) Tom Chen (tomchen.org)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

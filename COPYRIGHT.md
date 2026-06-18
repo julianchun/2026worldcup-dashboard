@@ -2,9 +2,11 @@
 
 This is an unofficial, non-commercial fan project. It is not affiliated with, endorsed by, or connected to FIFA, any national football association, team, player, or broadcaster. "FIFA", "FIFA World Cup", and "FIFA World Cup 26" are trademarks of FIFA.
 
-## 1. Original code — MIT (see [LICENSE](LICENSE.md))
+## 1. Code — MIT (see [LICENSE](LICENSE.md))
 
 Copyright (c) 2026 Julian Chun.
+
+Portions of this project are derived from the MIT-licensed `26worldcup/26worldcup.github.io` project. Its original copyright notice is preserved in [LICENSE](LICENSE.md), as required by the MIT license.
 
 - `src/**` — application source (React/TypeScript/CSS)
 - `scripts/*.mjs` — data pipeline (update.mjs, genmap.mjs, gencron.mjs, smoke.mjs, a11y.mjs)
