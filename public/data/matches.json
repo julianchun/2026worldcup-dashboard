@@ -1700,10 +1700,10 @@
    "date": "2026-06-19T01:00:00Z",
    "venueId": "400252150",
    "status": "live",
-   "time": "44'",
+   "time": "73'",
    "home": {
     "code": "MEX",
-    "score": 0,
+    "score": 1,
     "pen": null
    },
    "away": {
@@ -1714,7 +1714,7 @@
    "phA": "A1",
    "phB": "A3",
    "winner": null,
-   "attendance": null,
+   "attendance": 45522,
    "officials": [
     {
      "id": "408669",
