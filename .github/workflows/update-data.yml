@@ -171,6 +171,7 @@ jobs:
 
   relay:
     needs: update
+    if: github.event_name != 'workflow_dispatch' || inputs.relay == 'true'
     runs-on: ubuntu-latest
     permissions:
       contents: read
