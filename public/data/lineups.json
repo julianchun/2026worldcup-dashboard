@@ -7615,7 +7615,7 @@
  },
  "400021462": {
   "home": {
-   "tactics": "4-2-3-1",
+   "tactics": "3-5-2",
    "xi": [
     {
      "id": "499913",
@@ -7900,6 +7900,12 @@
      "player": "382312",
      "minute": "11'",
      "type": 3,
+     "period": 3
+    },
+    {
+     "player": "464542",
+     "minute": "43'",
+     "type": 2,
      "period": 3
     }
    ],
@@ -8205,11 +8211,17 @@
      "minute": "16'",
      "card": 1,
      "period": 3
+    },
+    {
+     "player": "448014",
+     "minute": "32'",
+     "card": 1,
+     "period": 3
     }
    ],
    "substitutions": []
   },
-  "matchTime": "17'",
+  "matchTime": "45'+1'",
   "period": 3,
   "final": false
  },
