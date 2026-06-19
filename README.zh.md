@@ -84,6 +84,8 @@
 
 **目前不會擷取**：傷病、FIFA 公布前的預計先發、投注賠率、xG、進階球員/球隊事件資料，以及賽前國際賽近期狀態。這些資料通常需要付費或授權的體育資料供應商；只有在選定供應商、確認費用/配額限制，並確保 API 金鑰只放在 GitHub Actions 或其他後端工作中之後，才應加入。
 
+加入任何需要 API 金鑰的資料來源前，請先閱讀 [Optional Data Providers](docs/optional-data-providers.md)。
+
 ## 🛠️ 開發
 
 面向本專案的開發者。
@@ -200,6 +202,7 @@ scripts/gencron.mjs   regenerates the match-driven CI schedule
 scripts/genmap.mjs    rebuilds the map from Natural Earth data
 scripts/smoke.mjs     headless smoke test across routes, languages, themes
 scripts/curated/      hand-checked datasets
+docs/                 optional provider boundaries and project notes
 public/data/          generated JSON the app loads at runtime
 src/                  application code (pages, components, i18n, settings)
 ```

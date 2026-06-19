@@ -84,6 +84,8 @@ Scores are **semi-live, not real-time**: they typically trail the broadcast by u
 
 **Not currently fetched**: injuries, probable line-ups before FIFA publishes them, betting odds, xG, advanced player/team event stats, and pre-tournament international form. Those usually require a paid/licensed sports-data provider and should only be added after choosing a provider, approving cost/quota limits, and keeping API keys server-side in GitHub Actions or another backend job.
 
+See [Optional Data Providers](docs/optional-data-providers.md) before adding any API-key-backed feed.
+
 ## 🛠️ Development
 
 For developers of this project.
@@ -200,6 +202,7 @@ scripts/gencron.mjs   regenerates the match-driven CI schedule
 scripts/genmap.mjs    rebuilds the map from Natural Earth data
 scripts/smoke.mjs     headless smoke test across routes, languages, themes
 scripts/curated/      hand-checked datasets
+docs/                 project notes for optional provider boundaries
 public/data/          generated JSON the app loads at runtime
 src/                  application code (pages, components, i18n, settings)
 ```
