@@ -1,4 +1,5 @@
-# Builds and publishes the site to GitHub Pages on every push to main.
+# Builds and publishes the site to GitHub Pages when explicitly enabled.
+# Set repo variable ENABLE_GITHUB_PAGES=true after Pages is available for this repo.
 # (Repo Settings → Pages → Source must be set to "GitHub Actions".)
 name: Deploy to GitHub Pages
 
@@ -24,6 +25,7 @@ concurrency:
 
 jobs:
   deploy:
+    if: vars.ENABLE_GITHUB_PAGES == 'true'
     runs-on: ubuntu-latest
     permissions:
       contents: read

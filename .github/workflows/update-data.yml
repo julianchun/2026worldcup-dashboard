@@ -1,7 +1,7 @@
-# Daily data refresh: fetches the latest matches/results/lineups/weather,
-# commits the JSON, then redeploys GitHub Pages with the fresh data.
-# (Bot pushes made with GITHUB_TOKEN do not trigger deploy.yml, so this
-# workflow carries its own deploy job.)
+# Daily data refresh: fetches the latest matches/results/lineups/weather and
+# commits the JSON. If repo variable ENABLE_GITHUB_PAGES=true, it also deploys
+# GitHub Pages with the fresh data. (Bot pushes made with GITHUB_TOKEN do not
+# trigger deploy.yml, so this workflow carries its own gated deploy job.)
 name: Update World Cup data
 
 on:
@@ -138,6 +138,7 @@ jobs:
 
   deploy:
     needs: update
+    if: vars.ENABLE_GITHUB_PAGES == 'true'
     runs-on: ubuntu-latest
     permissions:
       contents: read
@@ -172,6 +173,7 @@ jobs:
     needs: update
     runs-on: ubuntu-latest
     permissions:
+      contents: read
       actions: write
     steps:
       - uses: actions/checkout@v4
