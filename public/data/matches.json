@@ -1699,8 +1699,8 @@
    "group": "A",
    "date": "2026-06-19T01:00:00Z",
    "venueId": "400252150",
-   "status": "live",
-   "time": "87'",
+   "status": "finished",
+   "time": "97'",
    "home": {
     "code": "MEX",
     "score": 1,
@@ -1713,7 +1713,7 @@
    },
    "phA": "A1",
    "phB": "A3",
-   "winner": null,
+   "winner": "MEX",
    "attendance": 45522,
    "officials": [
     {
@@ -1721,18 +1721,18 @@
      "country": "URU",
      "role": "referee",
      "name": {
-      "en": "Gustavo TEJERA",
-      "fr": "Gustavo TEJERA",
-      "zh": "Gustavo TEJERA",
-      "ar": "Gustavo TEJERA",
-      "es": "Gustavo TEJERA",
-      "de": "Gustavo TEJERA",
-      "pt": "Gustavo TEJERA",
-      "it": "Gustavo TEJERA",
-      "ja": "Gustavo TEJERA",
-      "ko": "Gustavo TEJERA",
-      "id": "Gustavo TEJERA",
-      "ru": "Gustavo TEJERA"
+      "en": "G. Tejera",
+      "fr": "G. Tejera",
+      "zh": "特赫拉",
+      "ar": "G. Tejera",
+      "es": "G. Tejera",
+      "de": "G. Tejera",
+      "pt": "G. Tejera",
+      "it": "G. Tejera",
+      "ja": "G. Tejera",
+      "ko": "G. Tejera",
+      "id": "G. Tejera",
+      "ru": "G. Tejera"
      },
      "typeName": {
       "en": "Referee",
@@ -3267,7 +3267,11 @@
    "venueId": "400222084",
    "status": "scheduled",
    "time": null,
-   "home": null,
+   "home": {
+    "code": "MEX",
+    "score": null,
+    "pen": null
+   },
    "away": null,
    "phA": "1A",
    "phB": "3CEFHI",
