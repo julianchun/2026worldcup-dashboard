@@ -13449,10 +13449,23 @@
      "minute": "17'",
      "type": 2,
      "period": 3
+    },
+    {
+     "player": "448152",
+     "minute": "47'",
+     "type": 2,
+     "period": 5
     }
    ],
    "bookings": [],
-   "substitutions": []
+   "substitutions": [
+    {
+     "off": "433066",
+     "on": "489518",
+     "minute": "",
+     "period": 4
+    }
+   ]
   },
   "away": {
    "tactics": "3-5-2",
@@ -13750,8 +13763,8 @@
    "bookings": [],
    "substitutions": []
   },
-  "matchTime": null,
-  "period": 4,
+  "matchTime": "49'",
+  "period": 5,
   "final": false
  },
  "400021474": {
