@@ -3441,7 +3441,11 @@
    "venueId": "400257521",
    "status": "scheduled",
    "time": null,
-   "home": null,
+   "home": {
+    "code": "USA",
+    "score": null,
+    "pen": null
+   },
    "away": null,
    "phA": "1D",
    "phB": "3BEFIJ",
