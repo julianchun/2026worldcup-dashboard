@@ -2061,7 +2061,7 @@
    "date": "2026-06-20T20:00:00Z",
    "venueId": "400242032",
    "status": "scheduled",
-   "time": "0'",
+   "time": null,
    "home": {
     "code": "GER",
     "score": null,
@@ -2120,7 +2120,7 @@
    "date": "2026-06-21T00:00:00Z",
    "venueId": "400254717",
    "status": "scheduled",
-   "time": "0'",
+   "time": null,
    "home": {
     "code": "ECU",
     "score": null,
@@ -2238,7 +2238,7 @@
    "date": "2026-06-21T04:00:00Z",
    "venueId": "400238450",
    "status": "scheduled",
-   "time": "0'",
+   "time": null,
    "home": {
     "code": "TUN",
     "score": null,
@@ -2297,7 +2297,7 @@
    "date": "2026-06-21T22:00:00Z",
    "venueId": "400257525",
    "status": "scheduled",
-   "time": "0'",
+   "time": null,
    "home": {
     "code": "URU",
     "score": null,
@@ -2389,7 +2389,7 @@
    "date": "2026-06-21T16:00:00Z",
    "venueId": "400098290",
    "status": "scheduled",
-   "time": "0'",
+   "time": null,
    "home": {
     "code": "ESP",
     "score": null,
@@ -2448,7 +2448,7 @@
    "date": "2026-06-21T19:00:00Z",
    "venueId": "400017978",
    "status": "scheduled",
-   "time": "0'",
+   "time": null,
    "home": {
     "code": "BEL",
     "score": null,
@@ -2507,7 +2507,7 @@
    "date": "2026-06-22T01:00:00Z",
    "venueId": "400248370",
    "status": "scheduled",
-   "time": "0'",
+   "time": null,
    "home": {
     "code": "NZL",
     "score": null,
@@ -2566,7 +2566,7 @@
    "date": "2026-06-23T00:00:00Z",
    "venueId": "400257536",
    "status": "scheduled",
-   "time": "0'",
+   "time": null,
    "home": {
     "code": "NOR",
     "score": null,
@@ -2625,7 +2625,7 @@
    "date": "2026-06-22T21:00:00Z",
    "venueId": "400248622",
    "status": "scheduled",
-   "time": "0'",
+   "time": null,
    "home": {
     "code": "FRA",
     "score": null,
@@ -2684,7 +2684,7 @@
    "date": "2026-06-22T17:00:00Z",
    "venueId": "400257526",
    "status": "scheduled",
-   "time": "0'",
+   "time": null,
    "home": {
     "code": "ARG",
     "score": null,
@@ -2776,7 +2776,7 @@
    "date": "2026-06-23T03:00:00Z",
    "venueId": "400257521",
    "status": "scheduled",
-   "time": "0'",
+   "time": null,
    "home": {
     "code": "JOR",
     "score": null,
@@ -2835,7 +2835,7 @@
    "date": "2026-06-23T20:00:00Z",
    "venueId": "400248623",
    "status": "scheduled",
-   "time": "0'",
+   "time": null,
    "home": {
     "code": "ENG",
     "score": null,
@@ -2860,7 +2860,7 @@
    "date": "2026-06-23T23:00:00Z",
    "venueId": "400242032",
    "status": "scheduled",
-   "time": "0'",
+   "time": null,
    "home": {
     "code": "PAN",
     "score": null,
@@ -2885,7 +2885,7 @@
    "date": "2026-06-23T17:00:00Z",
    "venueId": "400249385",
    "status": "scheduled",
-   "time": "0'",
+   "time": null,
    "home": {
     "code": "POR",
     "score": null,
@@ -2910,7 +2910,7 @@
    "date": "2026-06-24T02:00:00Z",
    "venueId": "400252150",
    "status": "scheduled",
-   "time": "0'",
+   "time": null,
    "home": {
     "code": "COL",
     "score": null,
@@ -2935,7 +2935,7 @@
    "date": "2026-06-24T22:00:00Z",
    "venueId": "400257525",
    "status": "scheduled",
-   "time": "0'",
+   "time": null,
    "home": {
     "code": "SCO",
     "score": null,
@@ -2960,7 +2960,7 @@
    "date": "2026-06-24T22:00:00Z",
    "venueId": "400098290",
    "status": "scheduled",
-   "time": "0'",
+   "time": null,
    "home": {
     "code": "MAR",
     "score": null,
@@ -2985,7 +2985,7 @@
    "date": "2026-06-24T19:00:00Z",
    "venueId": "400248370",
    "status": "scheduled",
-   "time": "0'",
+   "time": null,
    "home": {
     "code": "SUI",
     "score": null,
@@ -3010,7 +3010,7 @@
    "date": "2026-06-24T19:00:00Z",
    "venueId": "400216606",
    "status": "scheduled",
-   "time": "0'",
+   "time": null,
    "home": {
     "code": "BIH",
     "score": null,
@@ -3035,7 +3035,7 @@
    "date": "2026-06-25T01:00:00Z",
    "venueId": "400222084",
    "status": "scheduled",
-   "time": "0'",
+   "time": null,
    "home": {
     "code": "CZE",
     "score": null,
@@ -3060,7 +3060,7 @@
    "date": "2026-06-25T01:00:00Z",
    "venueId": "400238450",
    "status": "scheduled",
-   "time": "0'",
+   "time": null,
    "home": {
     "code": "RSA",
     "score": null,
@@ -3085,7 +3085,7 @@
    "date": "2026-06-25T20:00:00Z",
    "venueId": "400248622",
    "status": "scheduled",
-   "time": "0'",
+   "time": null,
    "home": {
     "code": "CUW",
     "score": null,
@@ -3110,7 +3110,7 @@
    "date": "2026-06-25T20:00:00Z",
    "venueId": "400257536",
    "status": "scheduled",
-   "time": "0'",
+   "time": null,
    "home": {
     "code": "ECU",
     "score": null,
@@ -3135,7 +3135,7 @@
    "date": "2026-06-25T23:00:00Z",
    "venueId": "400257526",
    "status": "scheduled",
-   "time": "0'",
+   "time": null,
    "home": {
     "code": "JPN",
     "score": null,
@@ -3160,7 +3160,7 @@
    "date": "2026-06-25T23:00:00Z",
    "venueId": "400254717",
    "status": "scheduled",
-   "time": "0'",
+   "time": null,
    "home": {
     "code": "TUN",
     "score": null,
@@ -3185,7 +3185,7 @@
    "date": "2026-06-26T02:00:00Z",
    "venueId": "400017978",
    "status": "scheduled",
-   "time": "0'",
+   "time": null,
    "home": {
     "code": "TUR",
     "score": null,
@@ -3210,7 +3210,7 @@
    "date": "2026-06-26T02:00:00Z",
    "venueId": "400257521",
    "status": "scheduled",
-   "time": "0'",
+   "time": null,
    "home": {
     "code": "PAR",
     "score": null,
@@ -3235,7 +3235,7 @@
    "date": "2026-06-26T19:00:00Z",
    "venueId": "400248623",
    "status": "scheduled",
-   "time": "0'",
+   "time": null,
    "home": {
     "code": "NOR",
     "score": null,
@@ -3260,7 +3260,7 @@
    "date": "2026-06-26T19:00:00Z",
    "venueId": "400242032",
    "status": "scheduled",
-   "time": "0'",
+   "time": null,
    "home": {
     "code": "SEN",
     "score": null,
@@ -3285,7 +3285,7 @@
    "date": "2026-06-27T03:00:00Z",
    "venueId": "400216606",
    "status": "scheduled",
-   "time": "0'",
+   "time": null,
    "home": {
     "code": "EGY",
     "score": null,
@@ -3310,7 +3310,7 @@
    "date": "2026-06-27T03:00:00Z",
    "venueId": "400248370",
    "status": "scheduled",
-   "time": "0'",
+   "time": null,
    "home": {
     "code": "NZL",
     "score": null,
@@ -3335,7 +3335,7 @@
    "date": "2026-06-27T00:00:00Z",
    "venueId": "400249385",
    "status": "scheduled",
-   "time": "0'",
+   "time": null,
    "home": {
     "code": "CPV",
     "score": null,
@@ -3360,7 +3360,7 @@
    "date": "2026-06-27T00:00:00Z",
    "venueId": "400252150",
    "status": "scheduled",
-   "time": "0'",
+   "time": null,
    "home": {
     "code": "URU",
     "score": null,
@@ -3385,7 +3385,7 @@
    "date": "2026-06-27T21:00:00Z",
    "venueId": "400257536",
    "status": "scheduled",
-   "time": "0'",
+   "time": null,
    "home": {
     "code": "PAN",
     "score": null,
@@ -3410,7 +3410,7 @@
    "date": "2026-06-27T21:00:00Z",
    "venueId": "400248622",
    "status": "scheduled",
-   "time": "0'",
+   "time": null,
    "home": {
     "code": "CRO",
     "score": null,
@@ -3435,7 +3435,7 @@
    "date": "2026-06-28T02:00:00Z",
    "venueId": "400254717",
    "status": "scheduled",
-   "time": "0'",
+   "time": null,
    "home": {
     "code": "ALG",
     "score": null,
@@ -3460,7 +3460,7 @@
    "date": "2026-06-28T02:00:00Z",
    "venueId": "400257526",
    "status": "scheduled",
-   "time": "0'",
+   "time": null,
    "home": {
     "code": "JOR",
     "score": null,
@@ -3485,7 +3485,7 @@
    "date": "2026-06-27T23:30:00Z",
    "venueId": "400257525",
    "status": "scheduled",
-   "time": "0'",
+   "time": null,
    "home": {
     "code": "COL",
     "score": null,
@@ -3510,7 +3510,7 @@
    "date": "2026-06-27T23:30:00Z",
    "venueId": "400098290",
    "status": "scheduled",
-   "time": "0'",
+   "time": null,
    "home": {
     "code": "COD",
     "score": null,
