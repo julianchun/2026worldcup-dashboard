@@ -322,7 +322,7 @@
   }
  ],
  "cards": {
-  "yellow": 71,
+  "yellow": 72,
   "red": 6,
   "players": [
    {
@@ -454,6 +454,14 @@
     "r": 0
    },
    {
+    "id": "337389",
+    "name": "Anthony RALSTON",
+    "code": "SCO",
+    "no": 24,
+    "y": 1,
+    "r": 0
+   },
+   {
     "id": "441251",
     "name": "Antonee ROBINSON",
     "code": "USA",
@@ -476,18 +484,10 @@
     "no": 26,
     "y": 1,
     "r": 0
-   },
-   {
-    "id": "506279",
-    "name": "Caleb YIRENKYI",
-    "code": "GHA",
-    "no": 3,
-    "y": 1,
-    "r": 0
    }
   ]
  },
- "attAvg": 64655,
+ "attAvg": 64638,
  "biggestWin": {
   "diff": 6,
   "id": "400021464",
@@ -514,11 +514,11 @@
    "USA": -4,
    "PAR": -5,
    "HAI": -1,
-   "SCO": -3,
+   "SCO": -5,
    "AUS": -4,
    "TUR": -1,
    "BRA": -2,
-   "MAR": 0,
+   "MAR": -1,
    "QAT": -11,
    "SUI": -2,
    "CIV": -3,
@@ -564,11 +564,11 @@
    "USA": -4,
    "PAR": -5,
    "HAI": -1,
-   "SCO": -3,
+   "SCO": -5,
    "AUS": -4,
    "TUR": -1,
    "BRA": -2,
-   "MAR": 0,
+   "MAR": -1,
    "QAT": -11,
    "SUI": -2,
    "CIV": -3,
