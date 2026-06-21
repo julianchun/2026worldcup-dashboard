@@ -21241,10 +21241,17 @@
      "period": 3
     }
    ],
-   "substitutions": []
+   "substitutions": [
+    {
+     "off": "494314",
+     "on": "477827",
+     "minute": "",
+     "period": 4
+    }
+   ]
   },
-  "matchTime": null,
-  "period": 4,
+  "matchTime": "55'",
+  "period": 5,
   "final": false
  },
  "400021488": {
