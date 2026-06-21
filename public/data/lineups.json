@@ -17833,10 +17833,17 @@
      "period": 3
     }
    ],
-   "substitutions": []
+   "substitutions": [
+    {
+     "off": "448505",
+     "on": "379886",
+     "minute": "",
+     "period": 4
+    }
+   ]
   },
-  "matchTime": "36'",
-  "period": 3,
+  "matchTime": "47'",
+  "period": 5,
   "final": false
  },
  "400021478": {
