@@ -2237,8 +2237,8 @@
    "group": "F",
    "date": "2026-06-21T04:00:00Z",
    "venueId": "400238450",
-   "status": "live",
-   "time": "90'",
+   "status": "finished",
+   "time": "97'",
    "home": {
     "code": "TUN",
     "score": 0,
@@ -2251,7 +2251,7 @@
    },
    "phA": "F4",
    "phB": "F2",
-   "winner": null,
+   "winner": "JPN",
    "attendance": 51243,
    "officials": [
     {
