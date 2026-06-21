@@ -15915,7 +15915,7 @@
  },
  "400021475": {
   "home": {
-   "tactics": null,
+   "tactics": "5-3-2",
    "xi": [
     {
      "id": "433365",
@@ -16211,7 +16211,7 @@
    "substitutions": []
   },
   "away": {
-   "tactics": null,
+   "tactics": "3-4-3",
    "xi": [
     {
      "id": "405530",
@@ -16484,8 +16484,8 @@
    "bookings": [],
    "substitutions": []
   },
-  "matchTime": "0'",
-  "period": 0,
+  "matchTime": "3'",
+  "period": 3,
   "final": false
  },
  "400021476": {
