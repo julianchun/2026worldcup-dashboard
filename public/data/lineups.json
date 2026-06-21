@@ -18931,6 +18931,12 @@
      "minute": "21'",
      "type": 2,
      "period": 3
+    },
+    {
+     "player": "430751",
+     "minute": "24'",
+     "type": 2,
+     "period": 3
     }
    ],
    "bookings": [],
@@ -19229,10 +19235,17 @@
     }
    ],
    "goals": [],
-   "bookings": [],
+   "bookings": [
+    {
+     "player": "339745",
+     "minute": "30'",
+     "card": 1,
+     "period": 3
+    }
+   ],
    "substitutions": []
   },
-  "matchTime": "23'",
+  "matchTime": "37'",
   "period": 3,
   "final": false
  },
