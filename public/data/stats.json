@@ -305,18 +305,18 @@
    "ownGoals": 0
   },
   {
-   "id": "405545",
-   "name": "Ferran TORRES",
-   "code": "ESP",
-   "no": 7,
-   "goals": 1,
-   "ownGoals": 0
-  },
-  {
    "id": "371609",
    "name": "Franck KESSIE",
    "code": "CIV",
    "no": 8,
+   "goals": 1,
+   "ownGoals": 0
+  },
+  {
+   "id": "448586",
+   "name": "H G OH",
+   "code": "KOR",
+   "no": 18,
    "goals": 1,
    "ownGoals": 0
   }
@@ -486,7 +486,7 @@
    }
   ]
  },
- "attAvg": 64110,
+ "attAvg": 64221,
  "biggestWin": {
   "diff": 6,
   "id": "400021464",
@@ -528,7 +528,7 @@
    "JPN": 0,
    "SWE": -3,
    "TUN": -1,
-   "KSA": -1,
+   "KSA": -3,
    "URU": 0,
    "ESP": -1,
    "CPV": -1,
@@ -578,7 +578,7 @@
    "JPN": 0,
    "SWE": -3,
    "TUN": -1,
-   "KSA": -1,
+   "KSA": -3,
    "URU": 0,
    "ESP": -1,
    "CPV": -1,
