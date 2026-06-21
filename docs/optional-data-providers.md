@@ -1,6 +1,6 @@
 # Optional Data Providers
 
-The current updater is free-first: it uses FIFA public data, Wikipedia, Open-Meteo, curated files, and local computations. It does not require API keys.
+The current updater is free-first: it uses FIFA public data, Wikipedia, Open-Meteo, curated files, the open `martj42/international_results` dataset, and local computations. It does not require API keys.
 
 Optional provider-backed datasets are intentionally gated until a human chooses a provider and approves cost, quota, licensing, and product tone.
 
@@ -10,7 +10,17 @@ Optional provider-backed datasets are intentionally gated until a human chooses 
 - probable line-ups before FIFA publishes official line-ups
 - betting odds or market movement
 - xG and advanced event stats
-- pre-tournament international form and head-to-head history beyond this World Cup
+- complete club-season player performance across all domestic leagues
+
+## Currently Fetched From Open Data
+
+- pre-tournament international form
+- head-to-head history beyond this World Cup
+- last meetings and World Cup-only meetings, where teams can be mapped safely
+
+## Manual Availability Notes
+
+`scripts/curated/availability-notes.json` supports manually curated availability notes with required source URLs and `asOf` dates. Use this only for official or otherwise clearly reliable source-linked information. Do not add rumors, social chatter, or unsourced injury claims.
 
 ## Rules For Adding A Provider
 
@@ -37,8 +47,7 @@ interface OptionalProviderResult<T> {
 
 Recommended future files:
 
-- `public/data/team-form.json`
-- `public/data/availability.json`
+- `public/data/player-form.json`
 - `public/data/market-signals.json`
 
 Do not add these files until a real provider is selected and the updater can validate the data safely.

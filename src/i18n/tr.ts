@@ -13,7 +13,6 @@ const tr: Dict = {
   navBracket: 'Eleme tablosu',
   navTeams: 'Takımlar',
   navVenues: 'Statlar',
-  navWatch: 'İzle',
   navStats: 'İstatistikler',
   navSettings: 'Ayarlar',
   navMore: 'Diğer',
@@ -156,10 +155,6 @@ const tr: Dict = {
   climateNote: 'Tahmin henüz mevcut değil — {city} için tipik {month} koşulları gösteriliyor.',
   monthJun: 'Haziran',
   monthJul: 'Temmuz',
-  whereToWatch: 'Nereden izlenir',
-  freeChannel: 'Ücretsiz',
-  paidChannel: 'Ücretli',
-  yourCountryHint: 'TV ve yayın seçeneklerini görmek için ülkenizi/bölgenizi seçin.',
   attendance: 'Seyirci',
   h2hMatches: 'Bu turnuvada iki takım arasındaki diğer maçlar',
   goalsTitle: 'Goller',
@@ -212,11 +207,6 @@ const tr: Dict = {
   hostUS: 'ABD',
   hostCA: 'Kanada',
   hostMX: 'Meksika',
-  // watch
-  watchTitle: 'Nereden izlenir',
-  watchSub: 'Ülkeye/bölgeye göre resmî yayıncılar — ücretsiz kanallar vurgulanmıştır.',
-  watchDisclaimer:
-    'Yayın hakları yayıncıların duyurduğu şekildedir; yerel yayın akışını kontrol edin. Bazı ücretsiz kanallar maçların yalnızca bir bölümünü yayınlar.',
   typeTv: 'TV',
   typeStreaming: 'Dijital yayın',
   typeTvStreaming: 'TV + dijital',
@@ -249,7 +239,6 @@ const tr: Dict = {
   settingFavorites: 'Takımlarım',
   favoritesHint:
     'Takip ettiğiniz takımları seçin. Listeler ve ana sayfa takımlarınıza göre filtrelenebilir. Boş = tüm takımlar.',
-  settingMarket: 'TV kanalları için ülke/bölge',
   settingTheme: 'Tema',
   settingUnits: 'Birimler',
   unitsMetric: 'Metrik (°C, km/sa)',

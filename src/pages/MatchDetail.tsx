@@ -1,12 +1,19 @@
 import { useMemo } from 'react'
 import { Link, useParams } from 'react-router-dom'
-import type { Lang, MatchSide, Official, PredictionTeamContext, TeamLineup } from '../types'
+import type {
+  AvailabilityNote,
+  Lang,
+  MatchSide,
+  Official,
+  OpenHistoricalMatch,
+  OpenMatchContext,
+  TeamLineup,
+} from '../types'
 import { DATA_FALLBACK, useI18n } from '../i18n'
 import { useSettings } from '../settings/SettingsContext'
 import { useAppData } from '../data/DataContext'
 import { dayKey, displayTz, fmtDateLong, fmtDateTime, fmtTime, tzAbbr } from '../utils/time'
 import {
-  detectMarket,
   fifaMatchUrl,
   fifaToIso2,
   flagSrc,
@@ -97,24 +104,38 @@ function fmtSigned(n: number | null, suffix = '') {
   return `${n > 0 ? '+' : ''}${n}${suffix}`
 }
 
-function TeamContextColumn({
+function recordText(record: { wins: number; draws: number; losses: number }) {
+  return `${record.wins}-${record.draws}-${record.losses}`
+}
+
+function resultForOpenMatch(m: OpenHistoricalMatch, code: string) {
+  const own = m.homeCode === code ? m.homeScore : m.awayScore
+  const opp = m.homeCode === code ? m.awayScore : m.homeScore
+  if (own > opp) return 'W'
+  if (own < opp) return 'L'
+  return 'D'
+}
+
+function OpenFormColumn({
   ctx,
   labels,
 }: {
-  ctx: PredictionTeamContext | null
-  labels: { tbd: string; noCompleted: string; gf: string; ga: string; cleanSheets: string }
+  ctx: OpenMatchContext['home']
+  labels: { tbd: string; noCompleted: string }
 }) {
   if (!ctx) return <div className="md-pc-team muted">{labels.tbd}</div>
-  const record = `${ctx.wins}-${ctx.draws}-${ctx.losses}`
   return (
     <div className="md-pc-team">
       <TeamName code={ctx.code} flagSize={20} bold />
-      <div className="md-pc-record tnum">{record}</div>
+      <div className="md-pc-record tnum">{recordText(ctx.record)}</div>
       <div className="md-pc-form">
-        {ctx.form.length ? (
-          ctx.form.map((x, i) => (
-            <span key={`${x}-${i}`} className={`md-form md-form-${x.toLowerCase()}`}>
-              {x}
+        {ctx.matches.length ? (
+          ctx.matches.slice(0, 5).map((m) => (
+            <span
+              key={`${ctx.code}-${m.date}-${m.homeCode}-${m.awayCode}`}
+              className={`md-form md-form-${resultForOpenMatch(m, ctx.code).toLowerCase()}`}
+            >
+              {resultForOpenMatch(m, ctx.code)}
             </span>
           ))
         ) : (
@@ -122,16 +143,53 @@ function TeamContextColumn({
         )}
       </div>
       <div className="md-pc-mini">
-        <span>
-          {labels.gf} {ctx.gf}
-        </span>
-        <span>
-          {labels.ga} {ctx.ga}
-        </span>
-        <span>
-          {labels.cleanSheets} {ctx.cleanSheets}
-        </span>
+        <span>GF {ctx.record.gf}</span>
+        <span>GA {ctx.record.ga}</span>
       </div>
+    </div>
+  )
+}
+
+function OpenMatchRow({ m, locale }: { m: OpenHistoricalMatch; locale: string }) {
+  return (
+    <div className="md-open-match">
+      <span className="muted small tnum">
+        {new Intl.DateTimeFormat(locale, { year: 'numeric', month: 'short', day: 'numeric' }).format(
+          new Date(`${m.date}T00:00:00Z`),
+        )}
+      </span>
+      <span className="md-open-score tnum">
+        {m.homeCode} {m.homeScore}-{m.awayScore} {m.awayCode}
+      </span>
+      <span className="muted small">{m.tournament}</span>
+    </div>
+  )
+}
+
+function AvailabilityNotes({ notes }: { notes: AvailabilityNote[] }) {
+  const { t } = useI18n()
+  if (!notes.length) return null
+  return (
+    <div className="md-avail">
+      <h4>{t('availabilityNotes')}</h4>
+      {notes.map((note) => (
+        <a
+          key={`${note.code}-${note.player ?? ''}-${note.asOf}-${note.note}`}
+          className="md-avail-note"
+          href={note.sourceUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <span className={`chip md-avail-status md-avail-${note.status}`}>
+            {t(`availStatus${note.status[0].toUpperCase()}${note.status.slice(1)}`)}
+          </span>
+          <span>
+            <strong>{note.player ? `${note.code}: ${note.player}` : note.code}</strong>
+            <span className="muted"> · {note.note}</span>
+          </span>
+          <span className="muted small tnum">{note.asOf}</span>
+        </a>
+      ))}
     </div>
   )
 }
@@ -148,28 +206,17 @@ export default function MatchDetail() {
     o.typeName.en ??
     o.role
   const { settings } = useSettings()
-  const { matches, teams, venues, weather, lineups, stats, predictionContext, broadcasters } = useAppData()
+  const { matches, teams, venues, weather, lineups, stats, predictionContext, openDataContext } = useAppData()
 
   const m = matches.find((x) => x.id === id)
   const venue = m?.venueId ? (venues[m.venueId] ?? null) : null
   const lu = m ? lineups[m.id] : undefined
   const pc = m ? predictionContext.matches[m.id] : undefined
+  const oc = m ? openDataContext.matches[m.id] : undefined
   const pcLabels = {
     tbd: t('tbd'),
     noCompleted: t('pcNoCompleted'),
-    gf: t('colGF'),
-    ga: t('colGA'),
-    cleanSheets: t('pcCleanSheetsShort'),
   }
-
-  /* market for the watch teaser — shared app-wide via Settings */
-  const market = useMemo(() => {
-    const markets = broadcasters?.markets
-    if (!markets?.length) return null
-    const codes = new Set(markets.map((mk) => mk.iso2))
-    const want = settings.market && codes.has(settings.market) ? settings.market : detectMarket(codes)
-    return markets.find((mk) => mk.iso2 === want) ?? markets[0]
-  }, [broadcasters, settings.market])
 
   /* other matches of this tournament between the same two teams (knockout rematches) */
   const h2h = useMemo(() => {
@@ -432,22 +479,38 @@ export default function MatchDetail() {
         </div>
       </div>
 
-      {pc && (
+      {(pc || oc) && (
         <section className="card card-pad md-pc-card">
           <h3 className="md-info-title">
             <Icon name="chart" size={18} />
-            {t('predictionContext')}
+            {t('openDataContext')}
           </h3>
           <div className="md-pc-head">
-            <TeamContextColumn ctx={pc.home} labels={pcLabels} />
+            <OpenFormColumn ctx={oc?.home ?? null} labels={pcLabels} />
             <div className="md-pc-vs">{t('vs')}</div>
-            <TeamContextColumn ctx={pc.away} labels={pcLabels} />
+            <OpenFormColumn ctx={oc?.away ?? null} labels={pcLabels} />
           </div>
           <div className="md-pc-metrics">
             <div>
+              <span className="lbl">{t('h2hRecord')}</span>
+              <span className="val tnum">
+                {oc?.headToHead
+                  ? `${oc.headToHead.homeWins}-${oc.headToHead.draws}-${oc.headToHead.awayWins}`
+                  : '—'}
+              </span>
+            </div>
+            <div>
+              <span className="lbl">{t('h2hMeetings')}</span>
+              <span className="val tnum">{oc?.headToHead?.total ?? 0}</span>
+            </div>
+            <div>
+              <span className="lbl">{t('h2hWorldCup')}</span>
+              <span className="val tnum">{oc?.headToHead?.worldCupMeetings ?? 0}</span>
+            </div>
+            <div>
               <span className="lbl">{t('pcRankingEdge')}</span>
               <span className="val tnum">
-                {pc.home?.ranking && pc.away?.ranking
+                {pc?.home?.ranking && pc.away?.ranking
                   ? pc.rankingGap !== null && pc.rankingGap > 0
                     ? pc.home.code
                     : pc.rankingGap !== null && pc.rankingGap < 0
@@ -458,44 +521,56 @@ export default function MatchDetail() {
             </div>
             <div>
               <span className="lbl">{t('pcRestGap')}</span>
-              <span className="val tnum">{fmtSigned(pc.restGapDays, t('pcDaysSuffix'))}</span>
+              <span className="val tnum">{fmtSigned(pc?.restGapDays ?? null, t('pcDaysSuffix'))}</span>
             </div>
             <div>
               <span className="lbl">{t('pcTravelGap')}</span>
-              <span className="val tnum">{fmtSigned(pc.travelGapKm, t('pcKmSuffix'))}</span>
+              <span className="val tnum">{fmtSigned(pc?.travelGapKm ?? null, t('pcKmSuffix'))}</span>
             </div>
             <div>
               <span className="lbl">{t('suspTitle')}</span>
               <span className="val tnum">
-                {pc.home?.suspensions ?? 0} · {pc.away?.suspensions ?? 0}
+                {pc?.home?.suspensions ?? 0} · {pc?.away?.suspensions ?? 0}
               </span>
             </div>
             <div>
               <span className="lbl">{t('fairPlay')}</span>
               <span className="val tnum">
-                {pc.home?.fairPlay ?? 0} · {pc.away?.fairPlay ?? 0}
+                {pc?.home?.fairPlay ?? 0} · {pc?.away?.fairPlay ?? 0}
               </span>
             </div>
             <div>
               <span className="lbl">{t('weatherTitle')}</span>
               <span className="val">
-                {pc.weatherMatchId ? t('pcForecastAvailable') : t('weatherTypical')}
+                {pc?.weatherMatchId ? t('pcForecastAvailable') : t('weatherTypical')}
               </span>
             </div>
           </div>
+          {oc?.headToHead?.lastMeetings.length ? (
+            <div className="md-open-last">
+              <h4>{t('h2hLastMeetings')}</h4>
+              {oc.headToHead.lastMeetings.map((hm) => (
+                <OpenMatchRow key={`${hm.date}-${hm.homeCode}-${hm.awayCode}`} m={hm} locale={locale} />
+              ))}
+            </div>
+          ) : (
+            <p className="md-open-empty muted small">{t('h2hNoMeetings')}</p>
+          )}
+          <AvailabilityNotes notes={oc?.availabilityNotes ?? []} />
           <p className="md-pc-source small muted">
-            {t('pcComputedSource')} · {t('updatedAt', { date: fmtDateTime(pc.generatedAt, locale) })}
+            {t('openDataSource')} ·{' '}
+            {t('updatedAt', { date: fmtDateTime(oc?.generatedAt || pc?.generatedAt || '', locale) })}
           </p>
-          {Boolean((pc.home?.suspensions ?? 0) || (pc.away?.suspensions ?? 0)) && (
+          {Boolean((pc?.home?.suspensions ?? 0) || (pc?.away?.suspensions ?? 0)) && (
             <div className="md-pc-alert">
-              {stats.suspensions?.[pc.home?.code ?? '']?.map((s) => (
-                <span key={`${pc.home?.code}-${s.id}`} className="chip">
-                  {pc.home?.code}: {s.name}
+              {stats.suspensions?.[pc?.home?.code ?? '']?.map((s) => (
+                <span key={`${pc?.home?.code}-${s.id}`} className="chip">
+                  {pc?.home?.code}: {s.name}
                 </span>
               ))}
-              {stats.suspensions?.[pc.away?.code ?? '']?.map((s) => (
-                <span key={`${pc.away?.code}-${s.id}`} className="chip">
-                  {pc.away?.code}: {s.name}
+              {stats.suspensions?.[pc?.away?.code ?? '']?.map((s) => (
+                <span key={`${pc?.away?.code}-${s.id}`} className="chip">
+                  {pc?.away?.code}: {s.name}
                 </span>
               ))}
             </div>
@@ -651,35 +726,6 @@ export default function MatchDetail() {
                   </div>
                 )
               })}
-            </div>
-          </section>
-        )}
-
-        {market && (
-          <section className="card card-pad">
-            <h3 className="md-info-title">
-              <Icon name="tv" size={18} />
-              {t('whereToWatch')}
-              <Link to="/watch" className="md-cardlink">
-                {t('navWatch')}
-                <Icon name="external" size={13} />
-              </Link>
-            </h3>
-            <div className="md-market">
-              <Flag iso2={market.iso2} size={22} />
-              {countryName(market.iso2, market.iso2)}
-            </div>
-            <div className="md-chips">
-              {market.channels.map((c) => (
-                <span
-                  key={c.name}
-                  className={c.free ? 'chip chip-free' : 'chip'}
-                  title={localizedNote(c.note, pick) ?? undefined}
-                >
-                  {c.name}
-                  {c.free && <span>· {t('freeChannel')}</span>}
-                </span>
-              ))}
             </div>
           </section>
         )}

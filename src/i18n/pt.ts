@@ -13,7 +13,6 @@ const pt: Dict = {
   navBracket: 'Quadro',
   navTeams: 'Seleções',
   navVenues: 'Estádios',
-  navWatch: 'Onde ver',
   navStats: 'Estatísticas',
   navSettings: 'Definições',
   navMore: 'Mais',
@@ -161,10 +160,6 @@ const pt: Dict = {
   climateNote: 'Previsão ainda indisponível — a mostrar as condições típicas de {month} em {city}.',
   monthJun: 'junho',
   monthJul: 'julho',
-  whereToWatch: 'Onde ver',
-  freeChannel: 'Gratuito',
-  paidChannel: 'Pago',
-  yourCountryHint: 'Escolha o seu país/região para ver as opções de TV e streaming.',
   attendance: 'Assistência',
   h2hMatches: 'Outros jogos entre estas seleções neste torneio',
   goalsTitle: 'Golos',
@@ -217,11 +212,6 @@ const pt: Dict = {
   hostUS: 'Estados Unidos',
   hostCA: 'Canadá',
   hostMX: 'México',
-  // watch
-  watchTitle: 'Onde ver',
-  watchSub: 'Transmissões oficiais por país/região — canais em sinal aberto em destaque.',
-  watchDisclaimer:
-    'Direitos conforme anunciados pelas emissoras; consulte a programação local. Alguns canais em sinal aberto transmitem apenas parte dos jogos.',
   typeTv: 'TV',
   typeStreaming: 'Streaming',
   typeTvStreaming: 'TV + streaming',
@@ -254,7 +244,6 @@ const pt: Dict = {
   settingFavorites: 'As minhas seleções',
   favoritesHint:
     'Escolha as seleções que acompanha. As listas e a página inicial podem depois ser filtradas pelas suas seleções. Vazio = todas as seleções.',
-  settingMarket: 'País/região para os canais de TV',
   settingTheme: 'Tema',
   settingUnits: 'Unidades',
   unitsMetric: 'Métricas (°C, km/h)',

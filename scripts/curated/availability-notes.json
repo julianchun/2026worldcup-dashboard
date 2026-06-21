@@ -1,0 +1,4 @@
+{
+ "_comment": "Manual official/curated availability notes only. Do not add rumors. Required: code, status, note, sourceUrl, asOf. Optional: player, sourceLabel, matchIds.",
+ "notes": []
+}

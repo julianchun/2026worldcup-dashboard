@@ -20,9 +20,7 @@ const ROUTES = [
   ['team-mex', '#/team/MEX'],
   ['team-fra', '#/team/FRA'],
   ['venues', '#/venues'],
-  ['watch', '#/watch'],
   ['stats', '#/stats'],
-  ['predictions', '#/predictions'],
   ['settings', '#/settings'],
   ['more', '#/more'],
   ['match-1', '#/match/400021443'],
@@ -79,7 +77,7 @@ for (const [mobile, vp] of [
 // language/theme spot checks (zh dark, fr light)
 for (const [tag, lang, theme, routes] of [
   ['zh-dark', 'zh', 'dark', ['home', 'match-1', 'groups', 'team-fra', 'settings', 'bracket']],
-  ['fr', 'fr', 'light', ['home', 'watch', 'venues']],
+  ['fr', 'fr', 'light', ['home', 'stats', 'venues']],
   ['ar', 'ar', 'light', ['home', 'matches', 'match-1', 'bracket', 'settings', 'teams']],
   ['ja', 'ja', 'light', ['home', 'match-1', 'groups']],
   ['fa', 'fa', 'light', ['home', 'match-1', 'settings']],

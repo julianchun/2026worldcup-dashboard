@@ -5,15 +5,7 @@ import { useAppData } from '../data/DataContext'
 import { LANG_LABEL } from '../i18n/strings'
 import type { Lang, MatchSide, Team, Theme, TzMode, Units } from '../types'
 import { allTimezones, fmtDateTime } from '../utils/time'
-import {
-  buildIcs,
-  detectMarket,
-  flagEmoji,
-  download,
-  involvesTeams,
-  placeholderLabel,
-  sortMatches,
-} from '../utils/helpers'
+import { buildIcs, download, involvesTeams, placeholderLabel, sortMatches } from '../utils/helpers'
 import Flag from '../components/Flag'
 import Icon from '../components/Icon'
 import './settings.css'
@@ -26,12 +18,12 @@ const COUNT_LABEL_KEY: Record<string, string> = {
   weather: 'weatherTitle',
   lineups: 'lineups',
   venues: 'navVenues',
-  broadcasters: 'whereToWatch',
+  openDataContext: 'openDataContext',
   stats: 'navStats',
 }
 
 export default function Settings() {
-  const { t, pick, locale, countryName } = useI18n()
+  const { t, pick, locale } = useI18n()
   const {
     settings,
     setLang,
@@ -40,22 +32,10 @@ export default function Settings() {
     toggleFavorite,
     setFavorites,
     setTheme,
-    setMarket,
     setUnits,
     reset,
   } = useSettings()
-  const { matches, teams, venues, meta, broadcasters } = useAppData()
-
-  const markets = useMemo(() => {
-    const list = broadcasters?.markets ?? []
-    return list
-      .slice()
-      .sort((a, b) => countryName(a.iso2, a.iso2).localeCompare(countryName(b.iso2, b.iso2), locale))
-  }, [broadcasters, countryName, locale])
-  const marketSel =
-    settings.market && markets.some((m) => m.iso2 === settings.market)
-      ? settings.market
-      : detectMarket(new Set(markets.map((m) => m.iso2)))
+  const { matches, teams, venues, meta } = useAppData()
 
   const [tzQuery, setTzQuery] = useState('')
 
@@ -217,29 +197,6 @@ export default function Settings() {
             </div>
           )}
         </section>
-
-        {/* country for TV channels (shared with the Watch page) */}
-        {markets.length > 0 && (
-          <section className="card card-pad se-card">
-            <h2>{t('settingMarket')}</h2>
-            <p className="muted small">{t('yourCountryHint')}</p>
-            <div className="se-market">
-              <select
-                className="input"
-                value={marketSel}
-                onChange={(e) => setMarket(e.target.value)}
-                aria-label={t('settingMarket')}
-              >
-                {markets.map((mk) => (
-                  <option key={mk.iso2} value={mk.iso2}>
-                    {flagEmoji(mk.iso2)}
-                    {countryName(mk.iso2, mk.iso2)}
-                  </option>
-                ))}
-              </select>
-            </div>
-          </section>
-        )}
 
         {/* favorite teams */}
         <section className="card card-pad se-card">

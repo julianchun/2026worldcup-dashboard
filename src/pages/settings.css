@@ -190,14 +190,3 @@
 .se-danger:hover {
   background: color-mix(in srgb, var(--loss) 8%, transparent);
 }
-
-/* country for TV channels */
-.se-market {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  max-width: 420px;
-}
-.se-market select {
-  flex: 1;
-}

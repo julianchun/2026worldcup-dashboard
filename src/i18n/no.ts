@@ -13,7 +13,6 @@ const no: Dict = {
   navBracket: 'Sluttspilltre',
   navTeams: 'Lag',
   navVenues: 'Stadioner',
-  navWatch: 'TV-guide',
   navStats: 'Statistikk',
   navSettings: 'Innstillinger',
   navMore: 'Mer',
@@ -158,10 +157,6 @@ const no: Dict = {
   climateNote: 'Værvarsel er ikke tilgjengelig ennå – viser typiske forhold for {city} i {month}.',
   monthJun: 'juni',
   monthJul: 'juli',
-  whereToWatch: 'Slik ser du kampen',
-  freeChannel: 'Gratis',
-  paidChannel: 'Betalt',
-  yourCountryHint: 'Velg land/region for å se TV- og strømmealternativer.',
   attendance: 'Tilskuere',
   h2hMatches: 'Andre kamper mellom disse lagene i turneringen',
   goalsTitle: 'Mål',
@@ -214,11 +209,6 @@ const no: Dict = {
   hostUS: 'USA',
   hostCA: 'Canada',
   hostMX: 'Mexico',
-  // watch
-  watchTitle: 'Slik ser du kampene',
-  watchSub: 'Offisielle kringkastere per land/region — gratiskanaler uthevet.',
-  watchDisclaimer:
-    'Rettigheter slik de er kunngjort av kanalene; sjekk lokale oversikter. Enkelte gratiskanaler viser bare et utvalg av kampene.',
   typeTv: 'TV',
   typeStreaming: 'Strømming',
   typeTvStreaming: 'TV + strømming',
@@ -251,7 +241,6 @@ const no: Dict = {
   settingFavorites: 'Mine lag',
   favoritesHint:
     'Velg lagene du følger. Lister og forsiden kan da filtreres til lagene dine. Tomt = alle lag.',
-  settingMarket: 'Land/region for TV-kanaler',
   settingTheme: 'Tema',
   settingUnits: 'Enheter',
   unitsMetric: 'Metrisk (°C, km/h)',

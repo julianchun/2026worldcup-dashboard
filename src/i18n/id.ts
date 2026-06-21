@@ -13,7 +13,6 @@ const id: Dict = {
   navBracket: 'Bagan',
   navTeams: 'Tim',
   navVenues: 'Stadion',
-  navWatch: 'Tonton',
   navStats: 'Statistik',
   navSettings: 'Pengaturan',
   navMore: 'Lainnya',
@@ -156,10 +155,6 @@ const id: Dict = {
   climateNote: 'Prakiraan belum tersedia — menampilkan kondisi umum bulan {month} di {city}.',
   monthJun: 'Juni',
   monthJul: 'Juli',
-  whereToWatch: 'Tempat menonton',
-  freeChannel: 'Gratis',
-  paidChannel: 'Berbayar',
-  yourCountryHint: 'Pilih negara/wilayah Anda untuk melihat opsi TV dan streaming.',
   attendance: 'Penonton',
   h2hMatches: 'Pertandingan lain antara kedua tim di turnamen ini',
   goalsTitle: 'Gol',
@@ -212,11 +207,6 @@ const id: Dict = {
   hostUS: 'Amerika Serikat',
   hostCA: 'Kanada',
   hostMX: 'Meksiko',
-  // watch
-  watchTitle: 'Tempat menonton',
-  watchSub: 'Penyiar resmi per negara/wilayah — saluran gratis ditandai.',
-  watchDisclaimer:
-    'Hak siar sesuai pengumuman penyiar; periksa jadwal setempat. Sebagian saluran gratis hanya menayangkan sebagian pertandingan.',
   typeTv: 'TV',
   typeStreaming: 'Streaming',
   typeTvStreaming: 'TV + streaming',
@@ -249,7 +239,6 @@ const id: Dict = {
   settingFavorites: 'Tim saya',
   favoritesHint:
     'Pilih tim yang Anda ikuti. Daftar pertandingan dan beranda dapat difilter sesuai tim Anda. Kosong = semua tim.',
-  settingMarket: 'Negara/wilayah untuk saluran TV',
   settingTheme: 'Tema',
   settingUnits: 'Satuan',
   unitsMetric: 'Metrik (°C, km/j)',

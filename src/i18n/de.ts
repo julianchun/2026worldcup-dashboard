@@ -13,7 +13,6 @@ const de: Dict = {
   navBracket: 'Turnierbaum',
   navTeams: 'Teams',
   navVenues: 'Stadien',
-  navWatch: 'TV & Stream',
   navStats: 'Statistik',
   navSettings: 'Einstellungen',
   navMore: 'Mehr',
@@ -160,10 +159,6 @@ const de: Dict = {
     'Noch keine Vorhersage verfügbar — angezeigt werden typische Bedingungen im {month} für {city}.',
   monthJun: 'Juni',
   monthJul: 'Juli',
-  whereToWatch: 'Übertragung',
-  freeChannel: 'Frei empfangbar',
-  paidChannel: 'Kostenpflichtig',
-  yourCountryHint: 'Wähle dein Land/deine Region, um TV- und Streaming-Optionen zu sehen.',
   attendance: 'Zuschauer',
   h2hMatches: 'Weitere Duelle dieser Teams in diesem Turnier',
   goalsTitle: 'Tore',
@@ -216,11 +211,6 @@ const de: Dict = {
   hostUS: 'USA',
   hostCA: 'Kanada',
   hostMX: 'Mexiko',
-  // watch
-  watchTitle: 'TV & Stream',
-  watchSub: 'Offizielle Sender nach Land/Region — frei empfangbare Sender hervorgehoben.',
-  watchDisclaimer:
-    'Rechte laut Senderangaben; lokales Programm prüfen. Manche Free-TV-Sender zeigen nur einen Teil der Spiele.',
   typeTv: 'TV',
   typeStreaming: 'Streaming',
   typeTvStreaming: 'TV + Streaming',
@@ -253,7 +243,6 @@ const de: Dict = {
   settingFavorites: 'Meine Teams',
   favoritesHint:
     'Wähle die Teams, denen du folgst. Listen und Startseite lassen sich dann darauf filtern. Leer = alle Teams.',
-  settingMarket: 'Land/Region für TV-Sender',
   settingTheme: 'Design',
   settingUnits: 'Einheiten',
   unitsMetric: 'Metrisch (°C, km/h)',

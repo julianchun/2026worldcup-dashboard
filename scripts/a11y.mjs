@@ -51,9 +51,7 @@ const ROUTES = [
   '#/teams',
   '#/team/FRA',
   '#/venues',
-  '#/watch',
   '#/stats',
-  '#/predictions',
   '#/settings',
   '#/more',
 ]

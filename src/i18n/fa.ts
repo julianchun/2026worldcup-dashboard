@@ -13,7 +13,6 @@ const fa: Dict = {
   navBracket: 'جدول حذفی',
   navTeams: 'تیم‌ها',
   navVenues: 'ورزشگاه‌ها',
-  navWatch: 'پخش',
   navStats: 'آمار',
   navSettings: 'تنظیمات',
   navMore: 'بیشتر',
@@ -157,10 +156,6 @@ const fa: Dict = {
   climateNote: 'پیش‌بینی هنوز در دسترس نیست — شرایط معمول {month} در {city} نمایش داده می‌شود.',
   monthJun: 'ژوئن',
   monthJul: 'ژوئیه',
-  whereToWatch: 'کجا تماشا کنیم',
-  freeChannel: 'رایگان',
-  paidChannel: 'پولی',
-  yourCountryHint: 'برای مشاهده گزینه‌های تلویزیون و پخش، کشور/منطقه خود را انتخاب کنید.',
   attendance: 'تماشاگران',
   h2hMatches: 'دیگر بازی‌های این دو تیم در این جام',
   goalsTitle: 'گل‌ها',
@@ -213,11 +208,6 @@ const fa: Dict = {
   hostUS: 'ایالات متحده',
   hostCA: 'کانادا',
   hostMX: 'مکزیک',
-  // watch
-  watchTitle: 'کجا تماشا کنیم',
-  watchSub: 'پخش‌کنندگان رسمی بر اساس کشور/منطقه — شبکه‌های رایگان مشخص شده‌اند.',
-  watchDisclaimer:
-    'حق پخش طبق اعلام پخش‌کنندگان است؛ برنامه پخش محلی را بررسی کنید. برخی شبکه‌های رایگان فقط بخشی از بازی‌ها را پخش می‌کنند.',
   typeTv: 'تلویزیون',
   typeStreaming: 'پخش آنلاین',
   typeTvStreaming: 'تلویزیون + پخش آنلاین',
@@ -250,7 +240,6 @@ const fa: Dict = {
   settingFavorites: 'تیم‌های من',
   favoritesHint:
     'تیم‌هایی را که دنبال می‌کنید انتخاب کنید تا فهرست‌ها و صفحه اصلی بر اساس آن‌ها فیلتر شوند. خالی = همه تیم‌ها.',
-  settingMarket: 'کشور/منطقه برای شبکه‌های تلویزیونی',
   settingTheme: 'پوسته',
   settingUnits: 'واحدها',
   unitsMetric: 'متریک (°C، km/h)',

@@ -13,7 +13,6 @@ const ja: Dict = {
   navBracket: 'トーナメント',
   navTeams: 'チーム',
   navVenues: 'スタジアム',
-  navWatch: '視聴',
   navStats: 'スタッツ',
   navSettings: '設定',
   navMore: 'その他',
@@ -156,10 +155,6 @@ const ja: Dict = {
   climateNote: '予報はまだ利用できません — {city}の{month}の平年値を表示しています。',
   monthJun: '6月',
   monthJul: '7月',
-  whereToWatch: '視聴方法',
-  freeChannel: '無料',
-  paidChannel: '有料',
-  yourCountryHint: '国・地域を選択すると、テレビと配信の視聴方法が表示されます。',
   attendance: '観客数',
   h2hMatches: '今大会での両チームのその他の対戦',
   goalsTitle: '得点',
@@ -212,11 +207,6 @@ const ja: Dict = {
   hostUS: 'アメリカ',
   hostCA: 'カナダ',
   hostMX: 'メキシコ',
-  // watch
-  watchTitle: '視聴方法',
-  watchSub: '国・地域別の公式放送局 — 無料チャンネルをハイライト表示。',
-  watchDisclaimer:
-    '放送権は各放送局の発表に基づきます。最新の番組表をご確認ください。一部の無料チャンネルは一部の試合のみ放送します。',
   typeTv: 'テレビ',
   typeStreaming: '配信',
   typeTvStreaming: 'テレビ + 配信',
@@ -249,7 +239,6 @@ const ja: Dict = {
   settingFavorites: 'マイチーム',
   favoritesHint:
     '応援するチームを選択してください。一覧やホーム画面をマイチームで絞り込めます。未選択の場合は全チームが表示されます。',
-  settingMarket: 'テレビ放送の国/地域',
   settingTheme: 'テーマ',
   settingUnits: '単位',
   unitsMetric: 'メートル法(°C、km/h)',

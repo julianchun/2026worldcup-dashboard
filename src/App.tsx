@@ -12,9 +12,7 @@ const Bracket = lazy(() => import('./pages/Bracket'))
 const Teams = lazy(() => import('./pages/Teams'))
 const TeamDetail = lazy(() => import('./pages/TeamDetail'))
 const Venues = lazy(() => import('./pages/Venues'))
-const Watch = lazy(() => import('./pages/Watch'))
 const Stats = lazy(() => import('./pages/Stats'))
-const Predictions = lazy(() => import('./pages/Predictions'))
 const Settings = lazy(() => import('./pages/Settings'))
 const More = lazy(() => import('./pages/More'))
 
@@ -26,9 +24,7 @@ const TITLE_KEY: Record<string, string> = {
   teams: 'navTeams',
   team: 'navTeams',
   venues: 'navVenues',
-  watch: 'navWatch',
   stats: 'navStats',
-  predictions: 'navPredictions',
   settings: 'navSettings',
   more: 'navMore',
 }
@@ -101,9 +97,7 @@ export default function App() {
             <Route path="/teams" element={<Teams />} />
             <Route path="/team/:code" element={<TeamDetail />} />
             <Route path="/venues" element={<Venues />} />
-            <Route path="/watch" element={<Watch />} />
             <Route path="/stats" element={<Stats />} />
-            <Route path="/predictions" element={<Predictions />} />
             <Route path="/settings" element={<Settings />} />
             <Route path="/more" element={<More />} />
             <Route path="*" element={<Matches />} />

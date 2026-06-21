@@ -13,7 +13,6 @@ const sv: Dict = {
   navBracket: 'Slutspelsträd',
   navTeams: 'Lag',
   navVenues: 'Arenor',
-  navWatch: 'TV-guide',
   navStats: 'Statistik',
   navSettings: 'Inställningar',
   navMore: 'Mer',
@@ -158,10 +157,6 @@ const sv: Dict = {
   climateNote: 'Prognos saknas ännu — visar typiskt väder i {city} i {month}.',
   monthJun: 'juni',
   monthJul: 'juli',
-  whereToWatch: 'Var matchen sänds',
-  freeChannel: 'Gratis',
-  paidChannel: 'Betald',
-  yourCountryHint: 'Välj ditt land/din region för att se TV- och streamingalternativ.',
   attendance: 'Publik',
   h2hMatches: 'Övriga möten mellan lagen i denna turnering',
   goalsTitle: 'Mål',
@@ -214,11 +209,6 @@ const sv: Dict = {
   hostUS: 'USA',
   hostCA: 'Kanada',
   hostMX: 'Mexiko',
-  // watch
-  watchTitle: 'Var matcherna sänds',
-  watchSub: 'Officiella sändare per land/region — gratiskanaler markerade.',
-  watchDisclaimer:
-    'Rättigheter enligt TV-bolagens besked; kontrollera lokala tablåer. Vissa fria kanaler sänder bara ett urval av matcherna.',
   typeTv: 'TV',
   typeStreaming: 'Streaming',
   typeTvStreaming: 'TV + streaming',
@@ -251,7 +241,6 @@ const sv: Dict = {
   settingFavorites: 'Mina lag',
   favoritesHint:
     'Välj de lag du följer. Listor och startsidan kan sedan filtreras till dina lag. Tomt = alla lag.',
-  settingMarket: 'Land/region för TV-kanaler',
   settingTheme: 'Tema',
   settingUnits: 'Enheter',
   unitsMetric: 'Metriska (°C, km/h)',

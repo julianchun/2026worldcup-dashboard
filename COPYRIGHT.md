@@ -17,16 +17,16 @@ Portions of this project are derived from the MIT-licensed `26worldcup/26worldcu
 
 ## 2. Curated datasets — MIT (compiled for this project)
 
-- `scripts/curated/*.json` — hand-compiled and machine-translated compilations (venues, broadcasters, team extras, team colors and nicknames, climate, city name translations, FIFA-to-ISO code mapping)
+- `scripts/curated/*.json` — hand-compiled and machine-translated compilations (venues, team extras, team colors and nicknames, climate, city name translations, FIFA-to-ISO code mapping, optional source-linked availability notes)
 
-The compilations are released under MIT. They consist of factual information collected from public sources, including FIFA media releases (inside.fifa.com), broadcaster press releases (FOX, NBC/Telemundo, ITV, BBC, Groupe M6, etc.), Wikipedia, and public climate normals. Source URLs are embedded in the files themselves. Facts are not subject to copyright; no substantial part of any source database was extracted.
+The compilations are released under MIT. They consist of factual information collected from public sources, including FIFA media releases (inside.fifa.com), Wikipedia, and public climate normals. Source URLs are embedded in the files themselves. Facts are not subject to copyright; no substantial part of any source database was extracted.
 
 ## 3. Generated data — `public/data/*.json` (created by `npm run update`)
 
 - `matches.json`, `teams.json`, `standings.json`, `lineups.json`, `stats.json`, `venues.json` (names/schedule parts) — factual sports data retrieved from FIFA's publicly accessible API (api.fifa.com): fixtures, scores, officials, localized team/stadium names, world ranking. Facts as such are not copyrightable; the compilation here is our own. FIFA trademarks remain FIFA's property. If you redistribute this app publicly, review FIFA's terms of service yourself.
 - `squads.json`, `squads/*.json` — squad facts (player names, shirt numbers, positions, birth dates, caps, goals, clubs, coaches) extracted from the Wikipedia article ["2026 FIFA World Cup squads"](https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_squads). Wikipedia article text is CC BY-SA 4.0; only uncopyrightable facts are extracted (no prose is reproduced). Attribution is nevertheless given here.
 - `weather.json` — weather forecast data from [Open-Meteo](https://open-meteo.com), licensed CC BY 4.0. Attribution: "Weather data by Open-Meteo.com".
-- `broadcasters.json` — compiled from public rights announcements; see embedded source URLs. Translations are original to this project (MIT).
+- `open-match-context.json` — computed match context using the open [`martj42/international_results`](https://github.com/martj42/international_results) dataset, licensed CC0-1.0, plus local tournament facts.
 - `meta.json` — generated bookkeeping (MIT)
 
 ## 4. Map data
@@ -53,6 +53,7 @@ The compilations are released under MIT. They consist of factual information col
 | FIFA public API (api.fifa.com) | facts; FIFA™ marks remain FIFA's | match and ranking facts |
 | Wikipedia | CC BY-SA 4.0 (text) | squad facts source |
 | Open-Meteo | CC BY 4.0 | weather forecasts and geocoding |
+| martj42/international_results | CC0-1.0 | historical international results |
 | Natural Earth | public domain | map geometry |
 | Flagpedia / flagcdn | public domain | country flags |
 | Archivo, Inter, Inter Tight | SIL OFL 1.1 | typography |

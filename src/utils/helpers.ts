@@ -258,8 +258,8 @@ export function assetUrl(p: string | null | undefined): string | null {
   return /^https?:/.test(p) ? p : import.meta.env.BASE_URL + p
 }
 
-// IANA timezone -> country, for the broadcast markets we carry. The device
-// timezone tracks where the user actually IS (unlike the browser language).
+// IANA timezone -> country. The device timezone tracks where the user actually
+// is, unlike the browser language.
 const TZ_COUNTRY: Record<string, string> = {
   'Europe/London': 'GB',
   'Europe/Dublin': 'IE',
@@ -347,11 +347,6 @@ const TZ_PREFIX: [string, string][] = [
   ['America/North_Dakota/', 'US'],
 ]
 
-/**
- * best-guess broadcast market: device timezone first, then browser-locale region.
- * Returns null when the detected country has no broadcaster data, so callers
- * can show an explicit "pick your country" state instead of a wrong market.
- */
 /** best-effort ISO2 country from the device timezone/locale (no permission needed) */
 export function detectCountry(): string | null {
   try {
@@ -378,36 +373,6 @@ export function fmtTemp(celsius: number, units: 'metric' | 'imperial'): string {
 
 export function fmtSpeed(kmh: number, units: 'metric' | 'imperial'): string {
   return units === 'imperial' ? `${Math.round(kmh * 0.621371)} mph` : `${Math.round(kmh)} km/h`
-}
-
-export function detectMarketOrNull(available: ReadonlySet<string>): string | null {
-  try {
-    const tz = Intl.DateTimeFormat().resolvedOptions().timeZone
-    if (tz) {
-      const c = TZ_COUNTRY[tz] ?? TZ_PREFIX.find(([p]) => tz.startsWith(p))?.[1]
-      if (c && available.has(c)) return c
-    }
-  } catch {
-    /* fall through to locale */
-  }
-  for (const tag of navigator.languages?.length ? navigator.languages : [navigator.language]) {
-    if (!tag) continue
-    let region: string | null = null
-    try {
-      const r = new Intl.Locale(tag).region
-      if (r && /^[A-Za-z]{2}$/.test(r)) region = r.toUpperCase()
-    } catch {
-      const m = /[-_]([A-Za-z]{2})(?:[-_]|$)/.exec(tag)
-      region = m ? m[1].toUpperCase() : null
-    }
-    if (region && available.has(region)) return region
-  }
-  return null
-}
-
-/** like detectMarketOrNull, but falls back to the US market when undetected */
-export function detectMarket(available: ReadonlySet<string>): string {
-  return detectMarketOrNull(available) ?? 'US'
 }
 
 /** weather WMO code -> dictionary key */

@@ -92,6 +92,30 @@ async function fetchJson(url, { retries = 3, timeoutMs = 25000 } = {}) {
   }
 }
 
+async function fetchText(url, { retries = 3, timeoutMs = 25000 } = {}) {
+  for (let i = 0; i < retries; i++) {
+    try {
+      const ctrl = new AbortController()
+      const t = setTimeout(() => ctrl.abort(), timeoutMs)
+      const res = await fetch(url, {
+        signal: ctrl.signal,
+        headers: { 'User-Agent': 'wc2026-app/1.0 (personal project)' },
+      })
+      clearTimeout(t)
+      if (!res.ok) {
+        const err = new Error(`HTTP ${res.status}`)
+        err.status = res.status
+        if (res.status >= 400 && res.status < 500 && res.status !== 429) err.noRetry = true
+        throw err
+      }
+      return res.text()
+    } catch (e) {
+      if (e.noRetry || i === retries - 1) throw e
+      await sleep(1500 * (i + 1))
+    }
+  }
+}
+
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms))
 
 async function readJsonSafe(file) {
@@ -107,6 +131,14 @@ async function writeJson(file, data) {
   const tmp = `${file}.tmp`
   await fs.writeFile(tmp, `${JSON.stringify(data, null, 1)}\n`)
   await fs.rename(tmp, file) // atomic: never leave a half-written file
+  log('wrote', path.relative(ROOT, file))
+}
+
+async function writeText(file, data) {
+  await fs.mkdir(path.dirname(file), { recursive: true })
+  const tmp = `${file}.tmp`
+  await fs.writeFile(tmp, data)
+  await fs.rename(tmp, file)
   log('wrote', path.relative(ROOT, file))
 }
 
@@ -1052,11 +1084,10 @@ function computeStats(lineups, matches) {
 // flat flags at a fixed 120px height and the official aspect ratio (flagcdn h-series).
 // The app letterboxes them into its 4:3 slots (object-fit: contain) — no cropping of
 // square (CH) or 2:1 flags, unlike the old width-series + cover approach.
-async function downloadFlags(fifaIso, broadcasters) {
+async function downloadFlags(fifaIso) {
   const dir = path.join(ROOT, 'public', 'flags')
   await fs.mkdir(dir, { recursive: true })
   const codes = new Set(Object.values(fifaIso).map((c) => c.toLowerCase()))
-  for (const m of broadcasters?.markets || []) codes.add(m.iso2.toLowerCase())
   for (const c of ['us', 'ca', 'mx']) codes.add(c)
   let downloaded = 0
   for (const code of codes) {
@@ -1317,6 +1348,324 @@ function computePredictionContext(matches, teams, venues, standings, stats, weat
   }
 }
 
+// ---------------------------------------------------------------- open historical context
+
+const INTERNATIONAL_RESULTS_URL =
+  'https://raw.githubusercontent.com/martj42/international_results/master/results.csv'
+
+const TEAM_ALIASES = {
+  CIV: ["Côte d'Ivoire", 'Ivory Coast', 'Cote dIvoire', "Cote d'Ivoire"],
+  COD: ['Congo DR', 'DR Congo', 'Congo Democratic Republic', 'Democratic Republic of the Congo', 'Zaire'],
+  CPV: ['Cabo Verde', 'Cape Verde'],
+  CUW: ['Curaçao', 'Curacao'],
+  CZE: ['Czechia', 'Czech Republic', 'Czechoslovakia'],
+  ENG: ['England'],
+  GER: ['Germany', 'West Germany', 'East Germany'],
+  IRN: ['IR Iran', 'Iran'],
+  KOR: ['Korea Republic', 'South Korea'],
+  KSA: ['Saudi Arabia'],
+  NED: ['Netherlands', 'Holland'],
+  NZL: ['New Zealand'],
+  PAR: ['Paraguay'],
+  RSA: ['South Africa'],
+  SCO: ['Scotland'],
+  TUR: ['Türkiye', 'Turkey'],
+  USA: ['USA', 'United States', 'United States of America'],
+}
+
+const COMPETITIVE_TOURNAMENTS = new Set([
+  'FIFA World Cup',
+  'FIFA World Cup qualification',
+  'UEFA Euro',
+  'UEFA Euro qualification',
+  'Copa América',
+  'Copa America',
+  'African Cup of Nations',
+  'African Cup of Nations qualification',
+  'AFC Asian Cup',
+  'AFC Asian Cup qualification',
+  'CONCACAF Championship',
+  'CONCACAF Gold Cup',
+  'CONCACAF Nations League',
+  'UEFA Nations League',
+  'Oceania Nations Cup',
+])
+
+const AVAILABILITY_STATUS = new Set(['out', 'doubtful', 'suspended', 'returned', 'note'])
+
+function normTeamName(s) {
+  return String(s || '')
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .replace(/&/g, 'and')
+    .replace(/[^a-z0-9]+/gi, '')
+    .toLowerCase()
+}
+
+function csvRows(text) {
+  const rows = []
+  let row = []
+  let cell = ''
+  let quoted = false
+  for (let i = 0; i < text.length; i++) {
+    const ch = text[i]
+    const next = text[i + 1]
+    if (quoted) {
+      if (ch === '"' && next === '"') {
+        cell += '"'
+        i++
+      } else if (ch === '"') quoted = false
+      else cell += ch
+    } else if (ch === '"') quoted = true
+    else if (ch === ',') {
+      row.push(cell)
+      cell = ''
+    } else if (ch === '\n') {
+      row.push(cell)
+      rows.push(row)
+      row = []
+      cell = ''
+    } else if (ch !== '\r') cell += ch
+  }
+  if (cell || row.length) {
+    row.push(cell)
+    rows.push(row)
+  }
+  return rows
+}
+
+function parseCsvObjects(text) {
+  const rows = csvRows(text)
+  const header = rows.shift() || []
+  return rows
+    .filter((r) => r.length === header.length)
+    .map((r) => Object.fromEntries(header.map((h, i) => [h, r[i]])))
+}
+
+async function readInternationalResultsCsv() {
+  const cacheFile = path.join(CACHE, 'international-results.csv')
+  try {
+    const csv = await fetchText(INTERNATIONAL_RESULTS_URL, { retries: 2, timeoutMs: 20000 })
+    await writeText(cacheFile, csv)
+    return { csv, warning: null }
+  } catch (e) {
+    const cached = await fs.readFile(cacheFile, 'utf8').catch(() => null)
+    if (cached) return { csv: cached, warning: `using cached international results: ${e.message}` }
+    return { csv: '', warning: `international results unavailable: ${e.message}` }
+  }
+}
+
+function buildTeamNameMap(teams) {
+  const map = new Map()
+  for (const team of Object.values(teams)) {
+    for (const name of [team.name?.en, team.code, ...(TEAM_ALIASES[team.code] || [])]) {
+      const k = normTeamName(name)
+      if (k) map.set(k, team.code)
+    }
+  }
+  return map
+}
+
+function recordFor(matches, code) {
+  const record = { wins: 0, draws: 0, losses: 0, gf: 0, ga: 0 }
+  for (const m of matches) {
+    const ownHome = m.homeCode === code
+    const gf = ownHome ? m.homeScore : m.awayScore
+    const ga = ownHome ? m.awayScore : m.homeScore
+    record.gf += gf
+    record.ga += ga
+    if (gf > ga) record.wins++
+    else if (gf < ga) record.losses++
+    else record.draws++
+  }
+  return record
+}
+
+function publicHistoricalMatch(row, homeCode, awayCode) {
+  return {
+    date: row.date,
+    homeCode,
+    awayCode,
+    homeScore: Number(row.home_score),
+    awayScore: Number(row.away_score),
+    tournament: row.tournament,
+    city: row.city,
+    country: row.country,
+    neutral: row.neutral === 'TRUE',
+  }
+}
+
+function normalizeAvailabilityNotes(raw, teams, matches) {
+  const notes = []
+  const warnings = []
+  const matchIds = new Set(matches.map((m) => m.id))
+  for (const [i, note] of (raw?.notes || []).entries()) {
+    const where = `availability note ${i + 1}`
+    if (!note || typeof note !== 'object') {
+      warnings.push(`${where}: not an object`)
+      continue
+    }
+    const code = String(note.code || '').toUpperCase()
+    if (!teams[code]) {
+      warnings.push(`${where}: unknown team code ${JSON.stringify(note.code)}`)
+      continue
+    }
+    const status = String(note.status || '')
+    if (!AVAILABILITY_STATUS.has(status)) {
+      warnings.push(`${where}: invalid status ${JSON.stringify(note.status)}`)
+      continue
+    }
+    const text = String(note.note || '').trim()
+    const sourceUrl = String(note.sourceUrl || '').trim()
+    const asOf = String(note.asOf || '').trim()
+    if (!text || !sourceUrl || !asOf) {
+      warnings.push(`${where}: note, sourceUrl and asOf are required`)
+      continue
+    }
+    if (!/^https?:\/\//.test(sourceUrl)) {
+      warnings.push(`${where}: sourceUrl must be http(s)`)
+      continue
+    }
+    if (!/^\d{4}-\d{2}-\d{2}$/.test(asOf)) {
+      warnings.push(`${where}: asOf must be YYYY-MM-DD`)
+      continue
+    }
+    const scopedMatchIds = Array.isArray(note.matchIds)
+      ? note.matchIds.filter((id) => {
+          if (matchIds.has(String(id))) return true
+          warnings.push(`${where}: unknown match id ${JSON.stringify(id)}`)
+          return false
+        })
+      : undefined
+    notes.push({
+      code,
+      ...(note.player ? { player: String(note.player).trim() } : {}),
+      status,
+      note: text,
+      sourceUrl,
+      ...(note.sourceLabel ? { sourceLabel: String(note.sourceLabel).trim() } : {}),
+      asOf,
+      ...(scopedMatchIds?.length ? { matchIds: scopedMatchIds } : {}),
+    })
+  }
+  return { notes, warnings }
+}
+
+async function computeOpenDataContext(matches, teams, availabilityRaw) {
+  const generatedAt = new Date().toISOString()
+  const warnings = []
+  const availability = normalizeAvailabilityNotes(availabilityRaw, teams, matches)
+  warnings.push(...availability.warnings)
+  const { csv, warning } = await readInternationalResultsCsv()
+  if (warning) warnings.push(warning)
+  const teamNameMap = buildTeamNameMap(teams)
+  const rows = csv ? parseCsvObjects(csv) : []
+  const historical = []
+  for (const row of rows) {
+    const homeCode = teamNameMap.get(normTeamName(row.home_team))
+    const awayCode = teamNameMap.get(normTeamName(row.away_team))
+    if (!homeCode || !awayCode) continue
+    const h = Number(row.home_score)
+    const a = Number(row.away_score)
+    if (!row.date || !Number.isFinite(h) || !Number.isFinite(a)) continue
+    historical.push(publicHistoricalMatch(row, homeCode, awayCode))
+  }
+  historical.sort((a, b) => Date.parse(a.date) - Date.parse(b.date))
+
+  const byTeam = {}
+  for (const m of historical) {
+    byTeam[m.homeCode] ??= []
+    byTeam[m.awayCode] ??= []
+    byTeam[m.homeCode].push(m)
+    byTeam[m.awayCode].push(m)
+  }
+
+  const recentFor = (code, beforeDay) => {
+    if (!code) return null
+    const list = (byTeam[code] || [])
+      .filter((x) => x.date < beforeDay)
+      .sort((a, b) => Date.parse(b.date) - Date.parse(a.date))
+      .slice(0, 10)
+    return { code, matches: list, record: recordFor(list, code) }
+  }
+
+  const h2hFor = (homeCode, awayCode, beforeDay) => {
+    if (!homeCode || !awayCode) return null
+    const list = historical
+      .filter(
+        (x) =>
+          x.date < beforeDay &&
+          ((x.homeCode === homeCode && x.awayCode === awayCode) ||
+            (x.homeCode === awayCode && x.awayCode === homeCode)),
+      )
+      .sort((a, b) => Date.parse(b.date) - Date.parse(a.date))
+    let homeWins = 0
+    let awayWins = 0
+    let draws = 0
+    let homeGoals = 0
+    let awayGoals = 0
+    for (const x of list) {
+      const homePerspective = x.homeCode === homeCode
+      const hg = homePerspective ? x.homeScore : x.awayScore
+      const ag = homePerspective ? x.awayScore : x.homeScore
+      homeGoals += hg
+      awayGoals += ag
+      if (hg > ag) homeWins++
+      else if (hg < ag) awayWins++
+      else draws++
+    }
+    return {
+      total: list.length,
+      homeWins,
+      draws,
+      awayWins,
+      homeGoals,
+      awayGoals,
+      worldCupMeetings: list.filter((x) => x.tournament === 'FIFA World Cup').length,
+      competitiveMeetings: list.filter((x) => COMPETITIVE_TOURNAMENTS.has(x.tournament)).length,
+      lastMeetings: list.slice(0, 5),
+    }
+  }
+
+  const out = {}
+  for (const match of matches) {
+    const beforeDay = match.date.slice(0, 10)
+    const homeCode = match.home?.code ?? null
+    const awayCode = match.away?.code ?? null
+    const matchWarnings = []
+    if (!homeCode || !awayCode) matchWarnings.push('teams-not-known')
+    if (!historical.length) matchWarnings.push('open-history-unavailable')
+    const availabilityNotes = availability.notes.filter(
+      (note) =>
+        (note.code === homeCode || note.code === awayCode) &&
+        (!note.matchIds || note.matchIds.includes(match.id)),
+    )
+    out[match.id] = {
+      id: match.id,
+      generatedAt,
+      source: 'open-data',
+      home: homeCode ? recentFor(homeCode, beforeDay) : null,
+      away: awayCode ? recentFor(awayCode, beforeDay) : null,
+      headToHead: homeCode && awayCode ? h2hFor(homeCode, awayCode, beforeDay) : null,
+      availabilityNotes,
+      warnings: matchWarnings,
+    }
+  }
+
+  return {
+    generatedAt,
+    sources: [
+      {
+        name: 'International football results from 1872',
+        url: 'https://github.com/martj42/international_results',
+        license: 'CC0-1.0',
+      },
+    ],
+    warnings,
+    matches: out,
+  }
+}
+
 // ---------------------------------------------------------------- main
 
 async function main() {
@@ -1340,7 +1689,7 @@ async function main() {
   const teamL10n = (await readJsonSafe(path.join(CURATED, 'team-names-l10n.json'))) || {}
   const teamsExtra = (await readJsonSafe(path.join(CURATED, 'teams-extra.json')))?.teams || {}
   const fifaIso = (await readJsonSafe(path.join(CURATED, 'fifa-iso.json')))?.map || {}
-  const broadcasters = await readJsonSafe(path.join(CURATED, 'broadcasters.json'))
+  const availabilityRaw = await readJsonSafe(path.join(CURATED, 'availability-notes.json'))
 
   // 1. matches + localized names
   const { matches, names, raw } = await fetchMatches()
@@ -1476,10 +1825,11 @@ async function main() {
   if (!SKIP_WEATHER) weather = await fetchWeather(matches, venues)
 
   // 8b. country flags served locally (idempotent — only fetches missing files)
-  const flagCount = await downloadFlags(fifaIso, broadcasters)
+  const flagCount = await downloadFlags(fifaIso)
 
   // 8c. free-first prediction context computed from reliable local datasets
   const predictionContext = computePredictionContext(matches, teams, venues, standings, stats, weather)
+  const openDataContext = await computeOpenDataContext(matches, teams, availabilityRaw)
 
   // 9. write everything
   await writeJson(path.join(OUT, 'matches.json'), { matches })
@@ -1490,6 +1840,7 @@ async function main() {
   await writeJson(path.join(OUT, 'stats.json'), stats)
   await writeJson(path.join(OUT, 'weather.json'), weather)
   await writeJson(path.join(OUT, 'prediction-context.json'), predictionContext)
+  await writeJson(path.join(OUT, 'open-match-context.json'), openDataContext)
   await writeJson(path.join(OUT, 'squads.json'), squads)
   // per-team squad payloads (small fetches for the team detail page; the
   // monolithic squads.json above is kept for compatibility)
@@ -1510,7 +1861,6 @@ async function main() {
     squadFiles++
   }
   log(`wrote ${squadFiles} per-team squad files (public/data/squads/)`)
-  if (broadcasters) await writeJson(path.join(OUT, 'broadcasters.json'), broadcasters)
   await writeJson(path.join(OUT, 'meta.json'), {
     updatedAt: new Date().toISOString(),
     season: ID_SEASON,
@@ -1521,10 +1871,16 @@ async function main() {
       weather: Object.keys(weather).length,
       lineups: Object.keys(lineups).length,
       predictionContext: Object.keys(predictionContext.matches).length,
+      openDataContext: Object.keys(openDataContext.matches).length,
       flags: flagCount,
     },
     errors,
-    sources: ['api.fifa.com', 'en.wikipedia.org', 'open-meteo.com'],
+    sources: [
+      'api.fifa.com',
+      'en.wikipedia.org',
+      'open-meteo.com',
+      'github.com/martj42/international_results',
+    ],
   })
   log(`done. ${errors.length} warnings`)
 }

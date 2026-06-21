@@ -48,13 +48,6 @@ function detectLang(): Lang {
 }
 
 function defaults(): Settings {
-  let legacyMarket: string | null = null
-  try {
-    // pre-existing installs stored the watch market under its own key
-    legacyMarket = localStorage.getItem('wc2026-market')
-  } catch {
-    legacyMarket = null
-  }
   return {
     lang: detectLang(),
     tzMode: 'local',
@@ -62,7 +55,6 @@ function defaults(): Settings {
     fixedTz: 'America/New_York',
     favorites: [],
     theme: 'auto',
-    market: legacyMarket,
     units: detectCountry() === 'US' ? 'imperial' : 'metric',
   }
 }
@@ -97,7 +89,6 @@ function load(): Settings {
         ? p.favorites.filter((c): c is string => typeof c === 'string')
         : d.favorites,
       theme: p.theme === 'auto' || p.theme === 'light' || p.theme === 'dark' ? p.theme : d.theme,
-      market: typeof p.market === 'string' ? p.market : d.market,
       units: p.units === 'metric' || p.units === 'imperial' ? p.units : d.units,
     }
   } catch {
@@ -120,7 +111,6 @@ interface SettingsCtx {
   toggleFavorite: (code: string) => void
   setFavorites: (codes: string[]) => void
   setTheme: (t: Theme) => void
-  setMarket: (iso2: string) => void
   setUnits: (u: Units) => void
   reset: () => void
 }
@@ -161,7 +151,6 @@ export function SettingsProvider({ children }: { children: ReactNode }) {
         })),
       setFavorites: (favorites) => setSettings((s) => ({ ...s, favorites })),
       setTheme: (theme) => setSettings((s) => ({ ...s, theme })),
-      setMarket: (market) => setSettings((s) => ({ ...s, market })),
       setUnits: (units) => setSettings((s) => ({ ...s, units })),
       reset: () => setSettings(defaults()),
     }),

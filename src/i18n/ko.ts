@@ -13,7 +13,6 @@ const ko: Dict = {
   navBracket: '대진표',
   navTeams: '팀',
   navVenues: '경기장',
-  navWatch: '중계',
   navStats: '통계',
   navSettings: '설정',
   navMore: '더보기',
@@ -156,10 +155,6 @@ const ko: Dict = {
   climateNote: '아직 예보가 없어 {city}의 {month} 평년 기상을 표시합니다.',
   monthJun: '6월',
   monthJul: '7월',
-  whereToWatch: '시청 안내',
-  freeChannel: '무료',
-  paidChannel: '유료',
-  yourCountryHint: '국가/지역을 선택하면 TV 및 스트리밍 옵션이 표시됩니다.',
   attendance: '관중 수',
   h2hMatches: '이번 대회 두 팀 간 다른 경기',
   goalsTitle: '득점',
@@ -212,11 +207,6 @@ const ko: Dict = {
   hostUS: '미국',
   hostCA: '캐나다',
   hostMX: '멕시코',
-  // watch
-  watchTitle: '시청 안내',
-  watchSub: '국가/지역별 공식 중계 채널 — 무료 채널 강조 표시.',
-  watchDisclaimer:
-    '중계권은 방송사 발표 기준이며 현지 편성표를 확인하세요. 일부 무료 채널은 일부 경기만 중계합니다.',
   typeTv: 'TV',
   typeStreaming: '스트리밍',
   typeTvStreaming: 'TV+스트리밍',
@@ -249,7 +239,6 @@ const ko: Dict = {
   settingFavorites: '내 팀',
   favoritesHint:
     '응원하는 팀을 선택하세요. 목록과 홈 화면을 내 팀 기준으로 필터링할 수 있습니다. 비워 두면 모든 팀이 표시됩니다.',
-  settingMarket: 'TV 채널 국가/지역',
   settingTheme: '테마',
   settingUnits: '단위',
   unitsMetric: '미터법(°C, km/h)',

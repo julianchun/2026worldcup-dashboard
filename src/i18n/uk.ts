@@ -13,7 +13,6 @@ const uk: Dict = {
   navBracket: 'Сітка',
   navTeams: 'Збірні',
   navVenues: 'Стадіони',
-  navWatch: 'Трансляції',
   navStats: 'Статистика',
   navSettings: 'Налаштування',
   navMore: 'Ще',
@@ -159,10 +158,6 @@ const uk: Dict = {
   climateNote: 'Прогноз ще недоступний — показано типові умови у {month} для міста {city}.',
   monthJun: 'червні',
   monthJul: 'липні',
-  whereToWatch: 'Де дивитися',
-  freeChannel: 'Безкоштовно',
-  paidChannel: 'Платно',
-  yourCountryHint: 'Оберіть свою країну/регіон, щоб побачити варіанти ТБ і стримінгу.',
   attendance: 'Глядачі',
   h2hMatches: 'Інші матчі між цими збірними на цьому турнірі',
   goalsTitle: 'Голи',
@@ -217,11 +212,6 @@ const uk: Dict = {
   hostUS: 'США',
   hostCA: 'Канада',
   hostMX: 'Мексика',
-  // watch
-  watchTitle: 'Де дивитися',
-  watchSub: 'Офіційні мовники за країнами/регіонами — безкоштовні канали виділено.',
-  watchDisclaimer:
-    'Права на трансляції — згідно з оголошеннями мовників; перевіряйте місцеву програму. Деякі безкоштовні канали показують лише частину матчів.',
   typeTv: 'ТБ',
   typeStreaming: 'Стримінг',
   typeTvStreaming: 'ТБ + стримінг',
@@ -254,7 +244,6 @@ const uk: Dict = {
   settingFavorites: 'Мої збірні',
   favoritesHint:
     'Оберіть збірні, за якими стежите. Списки та головну сторінку можна буде фільтрувати за вашими збірними. Порожньо = усі збірні.',
-  settingMarket: 'Країна/регіон для ТБ-каналів',
   settingTheme: 'Тема',
   settingUnits: 'Одиниці',
   unitsMetric: 'Метричні (°C, км/год)',

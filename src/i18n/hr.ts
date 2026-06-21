@@ -13,7 +13,6 @@ const hr: Dict = {
   navBracket: 'Kostur',
   navTeams: 'Momčadi',
   navVenues: 'Stadioni',
-  navWatch: 'Prijenosi',
   navStats: 'Statistika',
   navSettings: 'Postavke',
   navMore: 'Više',
@@ -159,10 +158,6 @@ const hr: Dict = {
   climateNote: 'Prognoza još nije dostupna — prikazani su tipični uvjeti za {city} ({month}).',
   monthJun: 'lipanj',
   monthJul: 'srpanj',
-  whereToWatch: 'Gdje gledati',
-  freeChannel: 'Besplatno',
-  paidChannel: 'Uz pretplatu',
-  yourCountryHint: 'Odaberite svoju državu/regiju za TV i streaming opcije.',
   attendance: 'Gledatelji',
   h2hMatches: 'Ostale međusobne utakmice na ovom turniru',
   goalsTitle: 'Golovi',
@@ -215,11 +210,6 @@ const hr: Dict = {
   hostUS: 'SAD',
   hostCA: 'Kanada',
   hostMX: 'Meksiko',
-  // watch
-  watchTitle: 'Gdje gledati',
-  watchSub: 'Službeni emiteri po državi/regiji — besplatni kanali istaknuti.',
-  watchDisclaimer:
-    'Prava prijenosa prema objavama emitera; provjerite lokalni program. Neki besplatni kanali prenose samo dio utakmica.',
   typeTv: 'TV',
   typeStreaming: 'Streaming',
   typeTvStreaming: 'TV + streaming',
@@ -252,7 +242,6 @@ const hr: Dict = {
   settingFavorites: 'Moje momčadi',
   favoritesHint:
     'Odaberite momčadi koje pratite. Popisi i početna stranica tada se mogu filtrirati prema vašim momčadima. Prazno = sve momčadi.',
-  settingMarket: 'Država/regija za TV kanale',
   settingTheme: 'Tema',
   settingUnits: 'Jedinice',
   unitsMetric: 'Metričke (°C, km/h)',

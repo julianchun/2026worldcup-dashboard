@@ -13,7 +13,6 @@ const nl: Dict = {
   navBracket: 'Knock-out',
   navTeams: 'Teams',
   navVenues: 'Stadions',
-  navWatch: 'Kijken',
   navStats: 'Stats',
   navSettings: 'Instellingen',
   navMore: 'Meer',
@@ -160,10 +159,6 @@ const nl: Dict = {
     'Nog geen verwachting beschikbaar — dit zijn de gebruikelijke omstandigheden in {city} in {month}.',
   monthJun: 'juni',
   monthJul: 'juli',
-  whereToWatch: 'Waar te kijken',
-  freeChannel: 'Gratis',
-  paidChannel: 'Betaald',
-  yourCountryHint: 'Kies je land/regio om tv- en streamingopties te zien.',
   attendance: 'Toeschouwers',
   h2hMatches: 'Andere onderlinge wedstrijden in dit toernooi',
   goalsTitle: 'Doelpunten',
@@ -216,11 +211,6 @@ const nl: Dict = {
   hostUS: 'Verenigde Staten',
   hostCA: 'Canada',
   hostMX: 'Mexico',
-  // watch
-  watchTitle: 'Waar te kijken',
-  watchSub: 'Officiële zenders per land/regio — gratis zenders uitgelicht.',
-  watchDisclaimer:
-    'Rechten zoals aangekondigd door de zenders; raadpleeg de lokale gids. Sommige gratis zenders tonen slechts een deel van de wedstrijden.',
   typeTv: 'Tv',
   typeStreaming: 'Streaming',
   typeTvStreaming: 'Tv + streaming',
@@ -253,7 +243,6 @@ const nl: Dict = {
   settingFavorites: 'Mijn teams',
   favoritesHint:
     'Kies de teams die je volgt. Lijsten en de homepagina kunnen dan op jouw teams worden gefilterd. Leeg = alle teams.',
-  settingMarket: 'Land/regio voor tv-zenders',
   settingTheme: 'Thema',
   settingUnits: 'Eenheden',
   unitsMetric: 'Metrisch (°C, km/h)',

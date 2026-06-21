@@ -1,6 +1,6 @@
 # [2026 World Cup Dashboard ⚽](https://julianchun.github.io/2026worldcup-dashboard)
 
-Clean and complete 2026 FIFA World Cup companion: schedule, groups, bracket, squads, venues, weather, where to watch, and user-entered match predictions, in 23 languages.
+Clean and complete 2026 FIFA World Cup companion: schedule, groups, bracket, squads, venues, weather, and open-data match context, in 23 languages.
 
 👉 **[Click me to use 2026 World Cup Dashboard now!](https://julianchun.github.io/2026worldcup-dashboard)** ⚽ ([julianchun.github.io/2026worldcup-dashboard](https://julianchun.github.io/2026worldcup-dashboard))
 
@@ -18,11 +18,11 @@ README in [繁體中文](README.zh.md)
 - 🔍 **Schedule** filterable by team(s), stage, and venue; filters live in the URL, so views are shareable
 - 📊 **Group tables** computed with the official FIFA tiebreakers, plus the ranking of third-placed teams (top 8 of 12 advance) with qualification colour-coding
 - 🪜 **Knockout bracket** as a centre-converging tree that fills in automatically as teams qualify, with no horizontal scrolling; reflows to a round-by-round list on phones
-- 📋 **Match pages**: prediction context, venue facts, kick-off weather forecast (typical-climate fallback for far-off dates), full referee crew, starting line-ups drawn on an SVG pitch with formations, goal timeline, and TV channels for your country
+- 📋 **Match pages**: open-data context, head-to-head history, recent international form, venue facts, kick-off weather forecast (typical-climate fallback for far-off dates), full referee crew, starting line-ups drawn on an SVG pitch with formations, and goal timeline
 
 ### 👕 Teams & players
 
-- 🧢 **48 team pages**: live FIFA ranking, coach, group table, full fixtures, training base camp (with map + Google Maps links), official website, and Wikipedia links
+- 🧢 **48 team pages**: live FIFA ranking, open-data form context, squad intelligence, coach, group table, full fixtures, training base camp (with map + Google Maps links), official website, and Wikipedia links
 - 👥 **Official 26-player squads**: numbers, positions, ages, caps, goals, clubs; every player links to their English Wikipedia article
 - ⭐ **Favorites**: star the teams you follow and filter the schedule to them
 
@@ -31,15 +31,12 @@ README in [繁體中文](README.zh.md)
 - 🌎 **Real-geography map** of all 16 stadiums (Natural Earth data, Lambert conformal conic projection) with capacity, roof type, time zone, and June/July climate for every venue
 - 🏕️ **Team base camps** plotted on the same map as flag pins (collision-free layout), with a team filter that highlights only the cities where a selected team plays
 
-### 📺 Watching
-
-- 📡 **Broadcast guide for 32 countries/regions** with free-to-air channels highlighted; your country is auto-detected from the device time zone (changeable in Settings)
-
-### 📊 Stats & predictions
+### 📊 Stats & match context
 
 - 👟 **Golden-boot table** and tournament stats, updated throughout the competition
-- 🧭 **Prediction context** computed from reliable tournament data: recent form, ranking edge, rest, travel, weather availability, fair-play score, and active suspensions
-- 🎲 **User predictions**: enter your own match scores locally, use official final scores for completed fixtures, and see projected group tables update from your picks. No AI odds or model-generated match probabilities are shown.
+- 🧭 **Open-data match context** combining tournament data with historical international results: recent form, head-to-head record, last meetings, ranking edge, rest, travel, weather availability, fair-play score, and active suspensions
+- 🩺 **Availability notes** are supported only as manually curated, source-linked official notes; the app does not scrape or claim complete injury coverage
+- 🧾 **No betting-style predictions**: the app provides factual context for your own judgment, not odds, win probabilities, or model-generated score picks.
 
 ### 🌍 Languages
 
@@ -71,8 +68,9 @@ All data comes from free, authoritative sources, with no API keys anywhere:
 | FIFA public API | fixtures, scores, line-ups, referees, localized names, world ranking |
 | Wikipedia | official 26-player squads (numbers, caps, goals, clubs, coaches) |
 | Open-Meteo | hourly stadium weather forecasts and base-camp geocoding |
-| Hand-curated files | venues, broadcasters, base camps, climate normals, team colours |
-| Computed locally | standings, tournament stats, suspensions, rest/travel context, prediction-context JSON |
+| Hand-curated files | venues, base camps, climate normals, team colours, optional source-linked availability notes |
+| Open historical data | head-to-head and recent international form from `martj42/international_results` (CC0) |
+| Computed locally | standings, tournament stats, suspensions, rest/travel context, open-data match-context JSON |
 
 **Automatic updates** (GitHub Actions, included in this repo):
 
@@ -82,7 +80,7 @@ All data comes from free, authoritative sources, with no API keys anywhere:
 
 Scores are **semi-live, not real-time**: they typically trail the broadcast by up to ~15 minutes. This is by design; the whole app is static JSON refreshed by CI, with no servers, sockets or push infrastructure.
 
-**Not currently fetched**: injuries, probable line-ups before FIFA publishes them, betting odds, xG, advanced player/team event stats, and pre-tournament international form. Those usually require a paid/licensed sports-data provider and should only be added after choosing a provider, approving cost/quota limits, and keeping API keys server-side in GitHub Actions or another backend job.
+**Not automatically fetched**: injuries, probable line-ups before FIFA publishes them, betting odds, xG, and advanced player/team event stats. Availability can be added only through curated source-linked notes in `scripts/curated/availability-notes.json`; do not add rumors or unsourced claims.
 
 See [Optional Data Providers](docs/optional-data-providers.md) before adding any API-key-backed feed.
 
@@ -112,7 +110,7 @@ npm run preview
 | `npm run dev` | Vite dev server at `localhost:5173` |
 | `npm run build` | type-check and production build into `dist/` |
 | `npm run preview` | serve the built `dist/` locally |
-| `npm run update` | refresh all tournament data (FIFA, Wikipedia, Open-Meteo) and computed context into `public/data/` |
+| `npm run update` | refresh all tournament data (FIFA, Wikipedia, Open-Meteo, open international-results history) and computed context into `public/data/` |
 | `npm run gencron` | regenerate the CI cron schedule from the match calendar |
 | `npm run genmap` | rebuild the venues map from Natural Earth source data |
 | `npm run typecheck` | TypeScript type check (`tsc -b`, no emit) |
@@ -129,7 +127,7 @@ npm run preview
 1. Create `src/i18n/<code>.ts` with every key from `en.ts`, same order (plus `key#one`-style plural variants where the grammar needs them).
 2. Wire it: `Lang` union in `types.ts`; `LOCALE_TAG` + `LANG_LABEL` in `i18n/strings.ts` (key order = menu order); loader in `i18n/index.tsx`; detection prefix in `SettingsContext.tsx`; `RTL_LANGS` / `DATA_FALLBACK` if applicable.
 3. If `api.fifa.com` serves the language, add it to `LANGS` in `scripts/update.mjs`; otherwise add it to `CLDR_LANGS` there (team names then come from CLDR country names) and add England/Scotland to `team-names-l10n.json` — they are GB subdivisions CLDR cannot name.
-4. Translate the curated bits: 16 `rainNote` entries (`climate.json`), 90 broadcaster notes (`broadcasters.json`), the SF Bay Area label (`Venues.tsx`), 16 city names (`city-l10n.json`, non-Latin scripts only), and a full 48-name block in `team-names-l10n.json` only if local naming conventions differ from CLDR (as Traditional Chinese does).
+4. Translate the curated bits: 16 `rainNote` entries (`climate.json`), the SF Bay Area label (`Venues.tsx`), 16 city names (`city-l10n.json`, non-Latin scripts only), and a full 48-name block in `team-names-l10n.json` only if local naming conventions differ from CLDR (as Traditional Chinese does).
 5. Add a smoke pass, update this README's language list, run `npm run update && npm run build && npm run smoke`.
 
 </details>

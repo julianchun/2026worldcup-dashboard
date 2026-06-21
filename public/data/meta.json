@@ -1,14 +1,15 @@
 {
- "updatedAt": "2026-06-21T15:59:52.544Z",
+ "updatedAt": "2026-06-21T16:04:12.423Z",
  "season": "285023",
  "counts": {
   "matches": 104,
   "teams": 48,
   "squads": 48,
   "weather": 93,
-  "lineups": 37,
+  "lineups": 38,
   "predictionContext": 104,
-  "flags": 179
+  "openDataContext": 104,
+  "flags": 178
  },
  "errors": [
   "geocode New Tecumseth: no usable result — not cached, will retry next run"
@@ -16,6 +17,7 @@
  "sources": [
   "api.fifa.com",
   "en.wikipedia.org",
-  "open-meteo.com"
+  "open-meteo.com",
+  "github.com/martj42/international_results"
  ]
 }

@@ -1,7 +1,7 @@
 {
   "name": "2026worldcup-dashboard",
   "version": "1.0.0",
-  "description": "2026 World Cup Dashboard: schedule, groups, bracket, teams, venues, weather, where to watch, and user-entered match predictions. Unofficial PWA",
+  "description": "2026 World Cup Dashboard: schedule, groups, bracket, teams, venues, weather, squads, and open-data match context. Unofficial PWA",
   "keywords": [
     "world-cup",
     "world-cup-2026",
@@ -12,7 +12,8 @@
     "fixtures",
     "bracket",
     "standings",
-    "prediction",
+    "open-data",
+    "match-context",
     "pwa",
     "offline-first",
     "i18n",

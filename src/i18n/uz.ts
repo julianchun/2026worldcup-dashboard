@@ -13,7 +13,6 @@ const uz: Dict = {
   navBracket: 'Setka',
   navTeams: 'Jamoalar',
   navVenues: 'Stadionlar',
-  navWatch: 'Translyatsiya',
   navStats: 'Statistika',
   navSettings: 'Sozlamalar',
   navMore: 'Yana',
@@ -157,10 +156,6 @@ const uz: Dict = {
   climateNote: "Prognoz hali mavjud emas — {city} uchun {month} oyidagi odatiy sharoit ko'rsatilmoqda.",
   monthJun: 'iyun',
   monthJul: 'iyul',
-  whereToWatch: "Qayerda ko'rish mumkin",
-  freeChannel: 'Bepul',
-  paidChannel: 'Pullik',
-  yourCountryHint: "TV va striming variantlarini ko'rish uchun mamlakat/hududingizni tanlang.",
   attendance: 'Tomoshabinlar',
   h2hMatches: "Ushbu jamoalarning bu turnirdagi boshqa o'yinlari",
   goalsTitle: 'Gollar',
@@ -213,11 +208,6 @@ const uz: Dict = {
   hostUS: 'AQSH',
   hostCA: 'Kanada',
   hostMX: 'Meksika',
-  // watch
-  watchTitle: "Qayerda ko'rish mumkin",
-  watchSub: 'Mamlakat/hudud boʻyicha rasmiy teleradiokompaniyalar — bepul kanallar ajratilgan.',
-  watchDisclaimer:
-    "Huquqlar teleradiokompaniyalar e'loniga asoslangan; mahalliy teledasturni tekshiring. Ayrim bepul kanallar o'yinlarning faqat bir qismini ko'rsatadi.",
   typeTv: 'TV',
   typeStreaming: 'Striming',
   typeTvStreaming: 'TV + striming',
@@ -250,7 +240,6 @@ const uz: Dict = {
   settingFavorites: 'Mening jamoalarim',
   favoritesHint:
     "Kuzatadigan jamoalaringizni tanlang. Ro'yxatlar va bosh sahifani shu jamoalar bo'yicha filtrlash mumkin bo'ladi. Bo'sh = barcha jamoalar.",
-  settingMarket: 'TV kanallari uchun mamlakat/hudud',
   settingTheme: 'Mavzu',
   settingUnits: 'Birliklar',
   unitsMetric: 'Metrik (°C, km/soat)',

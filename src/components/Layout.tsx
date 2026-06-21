@@ -16,9 +16,7 @@ const NAV: { to: string; key: string; icon: IconName }[] = [
   { to: '/bracket', key: 'navBracket', icon: 'bracket' },
   { to: '/teams', key: 'navTeams', icon: 'shirt' },
   { to: '/venues', key: 'navVenues', icon: 'stadium' },
-  { to: '/watch', key: 'navWatch', icon: 'tv' },
   { to: '/stats', key: 'navStats', icon: 'chart' },
-  { to: '/predictions', key: 'navPredictions', icon: 'target' },
   { to: '/settings', key: 'navSettings', icon: 'gear' },
 ]
 
@@ -33,7 +31,7 @@ function tabsFor(knockout: boolean) {
     NAV[0],
     phase,
     NAV.find((n) => n.key === 'navTeams') ?? NAV[3],
-    NAV.find((n) => n.key === 'navPredictions') ?? MORE_TAB,
+    NAV.find((n) => n.key === 'navStats') ?? MORE_TAB,
     MORE_TAB,
   ]
 }

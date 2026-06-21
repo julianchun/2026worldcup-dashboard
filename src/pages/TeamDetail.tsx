@@ -1,7 +1,14 @@
 import { useEffect, useMemo } from 'react'
 import type { CSSProperties } from 'react'
 import { Link, useParams, useSearchParams } from 'react-router-dom'
-import type { PosBucket, SquadPlayer, Team } from '../types'
+import type {
+  AvailabilityNote,
+  OpenHistoricalMatch,
+  OpenTeamForm,
+  PosBucket,
+  SquadPlayer,
+  Team,
+} from '../types'
 import { useI18n } from '../i18n'
 import { useSettings } from '../settings/SettingsContext'
 import { useAppData, useData } from '../data/DataContext'
@@ -35,6 +42,96 @@ function ageFrom(dob: string): number {
   let a = now.getFullYear() - d.getFullYear()
   if (now.getMonth() < d.getMonth() || (now.getMonth() === d.getMonth() && now.getDate() < d.getDate())) a--
   return a
+}
+
+function recordText(record: { wins: number; draws: number; losses: number }) {
+  return `${record.wins}-${record.draws}-${record.losses}`
+}
+
+function resultForOpenMatch(m: OpenHistoricalMatch, code: string) {
+  const own = m.homeCode === code ? m.homeScore : m.awayScore
+  const opp = m.homeCode === code ? m.awayScore : m.homeScore
+  if (own > opp) return 'W'
+  if (own < opp) return 'L'
+  return 'D'
+}
+
+function OpenFormCard({ form, code, locale }: { form: OpenTeamForm | null; code: string; locale: string }) {
+  const { t } = useI18n()
+  if (!form) return null
+  return (
+    <section className="card card-pad td-open">
+      <h2>{t('teamOpenContext')}</h2>
+      <div className="td-open-top">
+        <div>
+          <span className="muted small">{t('recentInternationalForm')}</span>
+          <strong className="tnum">{recordText(form.record)}</strong>
+        </div>
+        <div>
+          <span className="muted small">{t('colGF')}</span>
+          <strong className="tnum">{form.record.gf}</strong>
+        </div>
+        <div>
+          <span className="muted small">{t('colGA')}</span>
+          <strong className="tnum">{form.record.ga}</strong>
+        </div>
+      </div>
+      <div className="td-open-form">
+        {form.matches.slice(0, 10).map((m) => (
+          <span
+            key={`${m.date}-${m.homeCode}-${m.awayCode}`}
+            className={`td-form td-form-${resultForOpenMatch(m, code).toLowerCase()}`}
+            title={`${m.homeCode} ${m.homeScore}-${m.awayScore} ${m.awayCode}`}
+          >
+            {resultForOpenMatch(m, code)}
+          </span>
+        ))}
+      </div>
+      <div className="td-open-matches">
+        {form.matches.slice(0, 5).map((m) => (
+          <div key={`${m.date}-${m.homeCode}-${m.awayCode}`} className="td-open-match">
+            <span className="muted small tnum">
+              {new Intl.DateTimeFormat(locale, { year: 'numeric', month: 'short', day: 'numeric' }).format(
+                new Date(`${m.date}T00:00:00Z`),
+              )}
+            </span>
+            <span className="tnum">
+              {m.homeCode} {m.homeScore}-{m.awayScore} {m.awayCode}
+            </span>
+            <span className="muted small">{m.tournament}</span>
+          </div>
+        ))}
+      </div>
+    </section>
+  )
+}
+
+function AvailabilityNotes({ notes }: { notes: AvailabilityNote[] }) {
+  const { t } = useI18n()
+  if (!notes.length) return null
+  return (
+    <div className="card card-pad td-avail">
+      <h3>{t('availabilityNotes')}</h3>
+      {notes.map((note) => (
+        <a
+          key={`${note.code}-${note.player ?? ''}-${note.asOf}-${note.note}`}
+          href={note.sourceUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="td-avail-note"
+        >
+          <span className={`chip td-avail-status td-avail-${note.status}`}>
+            {t(`availStatus${note.status[0].toUpperCase()}${note.status.slice(1)}`)}
+          </span>
+          <span className="td-avail-body">
+            <strong>{note.player ?? note.code}</strong>
+            <span className="muted"> · {note.note}</span>
+          </span>
+          <span className="muted small tnum">{note.asOf}</span>
+        </a>
+      ))}
+    </div>
+  )
 }
 
 /** small Wikipedia-icon link */
@@ -137,10 +234,10 @@ function PlayerCard({ p }: { p: SquadPlayer }) {
 export default function TeamDetail() {
   const params = useParams<{ code: string }>()
   const code = (params.code ?? '').toUpperCase()
-  const { t, pick, countryName, lang } = useI18n()
+  const { t, pick, countryName, lang, locale } = useI18n()
   const { settings, toggleFavorite } = useSettings()
   const { squads, loadSquads } = useData()
-  const { teams, matches, standings, stats } = useAppData()
+  const { teams, matches, standings, stats, openDataContext } = useAppData()
 
   const team = teams[code] as Team | undefined
 
@@ -153,7 +250,43 @@ export default function TeamDetail() {
     [matches, code],
   )
 
+  const openTeamForm = useMemo(() => {
+    const now = Date.now()
+    const ref =
+      teamMatches.find((m) => m.status !== 'finished' && Date.parse(m.date) >= now) ?? teamMatches.at(-1)
+    const ctx = ref ? openDataContext.matches[ref.id] : null
+    if (!ctx) return null
+    if (ctx.home?.code === code) return ctx.home
+    if (ctx.away?.code === code) return ctx.away
+    return null
+  }, [openDataContext, teamMatches, code])
+
+  const availabilityNotes = useMemo(() => {
+    const map = new Map<string, AvailabilityNote>()
+    for (const ctx of Object.values(openDataContext.matches)) {
+      for (const note of ctx.availabilityNotes) {
+        if (note.code !== code) continue
+        map.set(`${note.player ?? ''}|${note.status}|${note.note}|${note.sourceUrl}|${note.asOf}`, note)
+      }
+    }
+    return [...map.values()].sort((a, b) => b.asOf.localeCompare(a.asOf))
+  }, [openDataContext, code])
+
   const squad = squads ? (squads[code] ?? null) : null
+
+  const squadSummary = useMemo(() => {
+    const players = squad?.players ?? []
+    const ages = players.flatMap((p) => (p.dob ? [ageFrom(p.dob)] : []))
+    const clubNats = new Set(players.flatMap((p) => (p.clubNat ? [p.clubNat] : [])))
+    return {
+      avgAge: ages.length ? Math.round((ages.reduce((a, b) => a + b, 0) / ages.length) * 10) / 10 : null,
+      caps: players.reduce((sum, p) => sum + (p.caps ?? 0), 0),
+      goals: players.reduce((sum, p) => sum + (p.goals ?? 0), 0),
+      wcApps: players.reduce((sum, p) => sum + (p.wcApps ?? 0), 0),
+      wcGoals: players.reduce((sum, p) => sum + (p.wcGoals ?? 0), 0),
+      clubCountries: clubNats.size,
+    }
+  }, [squad])
 
   const byPos = useMemo(() => {
     const g: Record<PosBucket, SquadPlayer[]> = { GK: [], DF: [], MF: [], FW: [] }
@@ -393,6 +526,8 @@ export default function TeamDetail() {
         </section>
       </div>
 
+      <OpenFormCard form={openTeamForm} code={code} locale={locale} />
+
       <div className="section-title">
         <h2>{t('teamMatches')}</h2>
       </div>
@@ -409,6 +544,7 @@ export default function TeamDetail() {
       <div className="section-title">
         <h2>{t('squad')}</h2>
       </div>
+      <AvailabilityNotes notes={availabilityNotes} />
       {(stats.suspensions?.[code]?.length ?? 0) > 0 && (
         <div className="card card-pad td-susp">
           <h3>{t('suspTitle')}</h3>
@@ -438,21 +574,52 @@ export default function TeamDetail() {
       ) : !squad || squad.players.length === 0 ? (
         <div className="empty">{t('none')}</div>
       ) : (
-        POS_ORDER.map((pos) =>
-          byPos[pos].length === 0 ? null : (
-            <div key={pos}>
-              <div className="td-pos-head">
-                {t(POS_KEY[pos])}
-                <span className="chip tnum">{byPos[pos].length}</span>
-              </div>
-              <div className="td-players">
-                {byPos[pos].map((p) => (
-                  <PlayerCard key={p.id} p={p} />
-                ))}
-              </div>
+        <>
+          <div className="card card-pad td-squad-context">
+            <h3>{t('squadContext')}</h3>
+            <div className="td-squad-metrics">
+              <span>
+                <b className="tnum">{squadSummary.avgAge ?? t('none')}</b>
+                <small>{t('avgAge')}</small>
+              </span>
+              <span>
+                <b className="tnum">{squadSummary.caps}</b>
+                <small>{t('appsCareer')}</small>
+              </span>
+              <span>
+                <b className="tnum">{squadSummary.goals}</b>
+                <small>{t('goalsCareer')}</small>
+              </span>
+              <span>
+                <b className="tnum">{squadSummary.wcApps}</b>
+                <small>{t('appsWc')}</small>
+              </span>
+              <span>
+                <b className="tnum">{squadSummary.wcGoals}</b>
+                <small>{t('goalsWc')}</small>
+              </span>
+              <span>
+                <b className="tnum">{squadSummary.clubCountries}</b>
+                <small>{t('clubCountries')}</small>
+              </span>
             </div>
-          ),
-        )
+          </div>
+          {POS_ORDER.map((pos) =>
+            byPos[pos].length === 0 ? null : (
+              <div key={pos}>
+                <div className="td-pos-head">
+                  {t(POS_KEY[pos])}
+                  <span className="chip tnum">{byPos[pos].length}</span>
+                </div>
+                <div className="td-players">
+                  {byPos[pos].map((p) => (
+                    <PlayerCard key={p.id} p={p} />
+                  ))}
+                </div>
+              </div>
+            ),
+          )}
+        </>
       )}
     </div>
   )

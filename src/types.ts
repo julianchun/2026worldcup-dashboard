@@ -203,25 +203,6 @@ export interface TeamSquad {
   players: SquadPlayer[]
 }
 
-export interface BroadcastChannel {
-  name: string
-  type: 'tv' | 'streaming' | 'tv+streaming'
-  free: boolean
-  lang: string | null
-  note: string | LocalizedName | null
-}
-
-export interface BroadcastMarket {
-  iso2: string
-  channels: BroadcastChannel[]
-  source: string | null
-}
-
-export interface Broadcasters {
-  markets: BroadcastMarket[]
-  asOf?: string
-}
-
 export interface Stats {
   scorers: { id: string; name: string; code: string; no?: number; goals: number; ownGoals: number }[]
   cards?: {
@@ -286,6 +267,67 @@ export interface PredictionContextData {
   matches: Record<string, PredictionMatchContext>
 }
 
+export interface OpenHistoricalMatch {
+  date: string
+  homeCode: string
+  awayCode: string
+  homeScore: number
+  awayScore: number
+  tournament: string
+  city: string
+  country: string
+  neutral: boolean
+}
+
+export interface OpenTeamForm {
+  code: string
+  matches: OpenHistoricalMatch[]
+  record: { wins: number; draws: number; losses: number; gf: number; ga: number }
+}
+
+export interface OpenHeadToHead {
+  total: number
+  homeWins: number
+  draws: number
+  awayWins: number
+  homeGoals: number
+  awayGoals: number
+  worldCupMeetings: number
+  competitiveMeetings: number
+  lastMeetings: OpenHistoricalMatch[]
+}
+
+export type AvailabilityStatus = 'out' | 'doubtful' | 'suspended' | 'returned' | 'note'
+
+export interface AvailabilityNote {
+  code: string
+  player?: string
+  status: AvailabilityStatus
+  note: string
+  sourceUrl: string
+  sourceLabel?: string
+  asOf: string
+  matchIds?: string[]
+}
+
+export interface OpenMatchContext {
+  id: string
+  generatedAt: string
+  source: 'open-data'
+  home: OpenTeamForm | null
+  away: OpenTeamForm | null
+  headToHead: OpenHeadToHead | null
+  availabilityNotes: AvailabilityNote[]
+  warnings: string[]
+}
+
+export interface OpenDataContextData {
+  generatedAt: string
+  sources: { name: string; url: string; license?: string }[]
+  warnings: string[]
+  matches: Record<string, OpenMatchContext>
+}
+
 export interface Meta {
   updatedAt: string
   season: string
@@ -304,7 +346,7 @@ export interface AppData {
   lineups: Record<string, MatchLineups>
   stats: Stats
   predictionContext: PredictionContextData
-  broadcasters: Broadcasters | null
+  openDataContext: OpenDataContextData
 }
 
 export type Squads = Record<string, TeamSquad>
@@ -323,6 +365,5 @@ export interface Settings {
   fixedTz: string
   favorites: string[] // team codes; empty = all teams
   theme: Theme
-  market: string | null // ISO2 country for TV channels; null = auto-detect
   units: Units // °C+km/h vs °F+mph
 }

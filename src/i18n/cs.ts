@@ -13,7 +13,6 @@ const cs: Dict = {
   navBracket: 'Pavouk',
   navTeams: 'Týmy',
   navVenues: 'Stadiony',
-  navWatch: 'Vysílání',
   navStats: 'Statistiky',
   navSettings: 'Nastavení',
   navMore: 'Více',
@@ -158,10 +157,6 @@ const cs: Dict = {
   climateNote: 'Předpověď zatím není k dispozici — zobrazujeme obvyklé podmínky pro {city} ({month}).',
   monthJun: 'červen',
   monthJul: 'červenec',
-  whereToWatch: 'Kde sledovat',
-  freeChannel: 'Zdarma',
-  paidChannel: 'Placené',
-  yourCountryHint: 'Vyberte svou zemi/region pro zobrazení TV a streamovacích možností.',
   attendance: 'Návštěva',
   h2hMatches: 'Další vzájemné zápasy těchto týmů na tomto turnaji',
   goalsTitle: 'Branky',
@@ -216,11 +211,6 @@ const cs: Dict = {
   hostUS: 'USA',
   hostCA: 'Kanada',
   hostMX: 'Mexiko',
-  // watch
-  watchTitle: 'Kde sledovat',
-  watchSub: 'Oficiální vysílatelé podle země/regionu — bezplatné kanály zvýrazněny.',
-  watchDisclaimer:
-    'Práva dle oznámení vysílatelů; ověřte v místním programu. Některé volné kanály vysílají jen část zápasů.',
   typeTv: 'TV',
   typeStreaming: 'Streaming',
   typeTvStreaming: 'TV + streaming',
@@ -253,7 +243,6 @@ const cs: Dict = {
   settingFavorites: 'Moje týmy',
   favoritesHint:
     'Vyberte týmy, které sledujete. Seznamy a domovskou stránku pak lze filtrovat podle vašich týmů. Prázdné = všechny týmy.',
-  settingMarket: 'Země/region pro TV kanály',
   settingTheme: 'Motiv',
   settingUnits: 'Jednotky',
   unitsMetric: 'Metrické (°C, km/h)',

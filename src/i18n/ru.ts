@@ -13,7 +13,6 @@ const ru: Dict = {
   navBracket: 'Сетка',
   navTeams: 'Сборные',
   navVenues: 'Стадионы',
-  navWatch: 'Трансляции',
   navStats: 'Статистика',
   navSettings: 'Настройки',
   navMore: 'Ещё',
@@ -159,10 +158,6 @@ const ru: Dict = {
   climateNote: 'Прогноз пока недоступен — показаны типичные для {city} условия в {month}.',
   monthJun: 'июне',
   monthJul: 'июле',
-  whereToWatch: 'Где смотреть',
-  freeChannel: 'Бесплатно',
-  paidChannel: 'Платно',
-  yourCountryHint: 'Выберите страну/регион, чтобы увидеть телеканалы и стриминги.',
   attendance: 'Зрители',
   h2hMatches: 'Другие очные матчи этих сборных на турнире',
   goalsTitle: 'Голы',
@@ -217,11 +212,6 @@ const ru: Dict = {
   hostUS: 'США',
   hostCA: 'Канада',
   hostMX: 'Мексика',
-  // watch
-  watchTitle: 'Где смотреть',
-  watchSub: 'Официальные вещатели по странам/регионам — бесплатные каналы выделены.',
-  watchDisclaimer:
-    'Права указаны по данным вещателей; сверяйтесь с местной телепрограммой. Некоторые бесплатные каналы показывают лишь часть матчей.',
   typeTv: 'ТВ',
   typeStreaming: 'Стриминг',
   typeTvStreaming: 'ТВ + стриминг',
@@ -254,7 +244,6 @@ const ru: Dict = {
   settingFavorites: 'Мои сборные',
   favoritesHint:
     'Отметьте сборные, за которыми следите. Списки и главную страницу можно будет фильтровать по вашим сборным. Пусто = все сборные.',
-  settingMarket: 'Страна/регион для телеканалов',
   settingTheme: 'Тема',
   settingUnits: 'Единицы',
   unitsMetric: 'Метрические (°C, км/ч)',
