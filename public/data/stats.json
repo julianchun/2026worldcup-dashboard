@@ -25,6 +25,14 @@
    "ownGoals": 0
   },
   {
+   "id": "430413",
+   "name": "Ayase UEDA",
+   "code": "JPN",
+   "no": 18,
+   "goals": 2,
+   "ownGoals": 0
+  },
+  {
    "id": "424051",
    "name": "Brian BROBBEY",
    "code": "NED",
@@ -311,14 +319,6 @@
    "no": 18,
    "goals": 1,
    "ownGoals": 1
-  },
-  {
-   "id": "395084",
-   "name": "HWANG Inbeom",
-   "code": "KOR",
-   "no": 6,
-   "goals": 1,
-   "ownGoals": 0
   }
  ],
  "cards": {
