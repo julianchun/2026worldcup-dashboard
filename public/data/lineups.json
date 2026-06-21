@@ -18919,12 +18919,25 @@
      "y": null
     }
    ],
-   "goals": [],
+   "goals": [
+    {
+     "player": "484320",
+     "minute": "10'",
+     "type": 2,
+     "period": 3
+    },
+    {
+     "player": "430751",
+     "minute": "21'",
+     "type": 2,
+     "period": 3
+    }
+   ],
    "bookings": [],
    "substitutions": []
   },
   "away": {
-   "tactics": "4-4-2",
+   "tactics": "5-4-1",
    "xi": [
     {
      "id": "396885",
@@ -19219,7 +19232,7 @@
    "bookings": [],
    "substitutions": []
   },
-  "matchTime": "3'",
+  "matchTime": "23'",
   "period": 3,
   "final": false
  },
