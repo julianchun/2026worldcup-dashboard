@@ -17825,10 +17825,17 @@
     }
    ],
    "goals": [],
-   "bookings": [],
+   "bookings": [
+    {
+     "player": "371736",
+     "minute": "33'",
+     "card": 1,
+     "period": 3
+    }
+   ],
    "substitutions": []
   },
-  "matchTime": "22'",
+  "matchTime": "36'",
   "period": 3,
   "final": false
  },
