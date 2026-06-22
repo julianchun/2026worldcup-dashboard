@@ -2473,8 +2473,8 @@
    "group": "G",
    "date": "2026-06-22T01:00:00Z",
    "venueId": "400248370",
-   "status": "live",
-   "time": "88'",
+   "status": "finished",
+   "time": "101'",
    "home": {
     "code": "NZL",
     "score": 1,
@@ -2487,7 +2487,7 @@
    },
    "phA": "G4",
    "phB": "G2",
-   "winner": null,
+   "winner": "EGY",
    "attendance": 52497,
    "officials": [
     {
@@ -2495,18 +2495,18 @@
      "country": "UAE",
      "role": "referee",
      "name": {
-      "en": "Omar ALALI",
-      "fr": "Omar ALALI",
-      "zh": "Omar ALALI",
-      "ar": "Omar ALALI",
-      "es": "Omar ALALI",
-      "de": "Omar ALALI",
-      "pt": "Omar ALALI",
-      "it": "Omar ALALI",
-      "ja": "Omar ALALI",
-      "ko": "Omar ALALI",
-      "id": "Omar ALALI",
-      "ru": "Omar ALALI"
+      "en": "Omar Al Ali",
+      "fr": "Omar Al Ali",
+      "zh": "阿里",
+      "ar": "عمر محمد العلي",
+      "es": "Omar Al Ali",
+      "de": "Omar Al Ali",
+      "pt": "Omar Al Ali",
+      "it": "Omar Al Ali",
+      "ja": "Omar Al Ali",
+      "ko": "Omar Al Ali",
+      "id": "Omar Al Ali",
+      "ru": "Omar Al Ali"
      },
      "typeName": {
       "en": "Referee",
