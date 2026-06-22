@@ -1,7 +1,7 @@
 {
   "name": "2026worldcup-dashboard",
   "version": "1.0.0",
-  "description": "2026 World Cup Dashboard: schedule, groups, bracket, teams, venues, weather, squads, and open-data match context. Unofficial PWA",
+  "description": "2026 World Cup Dashboard: schedule, groups, bracket, teams, venues, weather, squads, and open-data match context. Live: https://julianchun.github.io/2026worldcup-dashboard/",
   "keywords": [
     "world-cup",
     "world-cup-2026",

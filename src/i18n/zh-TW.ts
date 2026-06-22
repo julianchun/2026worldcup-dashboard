@@ -4,7 +4,8 @@ const zhTW: Dict = {
   appName: '2026世界盃',
   appSub: '美國 · 加拿大 · 墨西哥',
   appFullName: '2026 World Cup Dashboard',
-  metaDesc: '2026世界盃：賽程、小組、對陣圖、球隊、球場、天氣、陣容與開放資料比賽脈絡。非官方開源PWA',
+  metaDesc:
+    '2026世界盃：賽程、小組、對陣圖、球隊、球場、天氣、陣容與開放資料比賽脈絡。https://julianchun.github.io/2026worldcup-dashboard/',
   // nav
   navHome: '首頁',
   navMatches: '賽程',
@@ -184,6 +185,14 @@ const zhTW: Dict = {
   goalsAgainst: '失球',
   goalsForShort: '進球',
   goalsAgainstShort: '失球',
+  formRecord: '{w}勝 · {d}和 · {l}敗',
+  resultWin: '勝',
+  resultDraw: '和',
+  resultLoss: '敗',
+  resultWinShort: '勝',
+  resultDrawShort: '和',
+  resultLossShort: '敗',
+  restDays: '賽前休息',
   // teams
   teamsTitle: '參賽球隊',
   teamsByGroup: '按小組',

@@ -99,16 +99,6 @@ interface GoalRow {
   pen: boolean
 }
 
-function fmtSigned(n: number | null, suffix = '') {
-  if (n === null) return '—'
-  if (n === 0) return `0${suffix}`
-  return `${n > 0 ? '+' : ''}${n}${suffix}`
-}
-
-function recordText(record: { wins: number; draws: number; losses: number }) {
-  return `${record.wins}-${record.draws}-${record.losses}`
-}
-
 function resultForOpenMatch(m: OpenHistoricalMatch, code: string) {
   const own = m.homeCode === code ? m.homeScore : m.awayScore
   const opp = m.homeCode === code ? m.awayScore : m.homeScore
@@ -117,38 +107,92 @@ function resultForOpenMatch(m: OpenHistoricalMatch, code: string) {
   return 'D'
 }
 
+function resultLabel(result: 'W' | 'D' | 'L', labels: OpenFormLabels) {
+  if (result === 'W') return labels.win
+  if (result === 'D') return labels.draw
+  return labels.loss
+}
+
+function resultShort(result: 'W' | 'D' | 'L', labels: OpenFormLabels) {
+  if (result === 'W') return labels.winShort
+  if (result === 'D') return labels.drawShort
+  return labels.lossShort
+}
+
+type OpenFormLabels = {
+  tbd: string
+  noCompleted: string
+  goalsFor: string
+  goalsAgainst: string
+  goalsForShort: string
+  goalsAgainstShort: string
+  formRecord: string
+  win: string
+  draw: string
+  loss: string
+  winShort: string
+  drawShort: string
+  lossShort: string
+}
+
+function OpenMiniMatchRow({ m, locale }: { m: OpenHistoricalMatch; locale: string }) {
+  return (
+    <div className="md-form-match">
+      <span className="muted small tnum">
+        {new Intl.DateTimeFormat(locale, { month: 'short', day: 'numeric' }).format(
+          new Date(`${m.date}T00:00:00Z`),
+        )}
+      </span>
+      <span className="md-form-match-teams">
+        <TeamName code={m.homeCode} flagSize={14} link={false} />
+        <span className="md-form-match-score tnum">
+          {m.homeScore}-{m.awayScore}
+        </span>
+        <TeamName code={m.awayCode} flagSize={14} link={false} />
+      </span>
+    </div>
+  )
+}
+
 function OpenFormColumn({
   ctx,
   labels,
+  locale,
 }: {
   ctx: OpenMatchContext['home']
-  labels: {
-    tbd: string
-    noCompleted: string
-    goalsFor: string
-    goalsAgainst: string
-    goalsForShort: string
-    goalsAgainstShort: string
-  }
+  labels: OpenFormLabels
+  locale: string
 }) {
   if (!ctx) return <div className="md-pc-team muted">{labels.tbd}</div>
   return (
     <div className="md-pc-team">
       <TeamName code={ctx.code} flagSize={20} bold />
-      <div className="md-pc-record tnum">{recordText(ctx.record)}</div>
+      <div className="md-pc-record">
+        {labels.formRecord
+          .replace('{w}', String(ctx.record.wins))
+          .replace('{d}', String(ctx.record.draws))
+          .replace('{l}', String(ctx.record.losses))}
+      </div>
       <div className="md-pc-form">
         {ctx.matches.length ? (
-          ctx.matches.slice(0, 5).map((m) => (
-            <span
-              key={`${ctx.code}-${m.date}-${m.homeCode}-${m.awayCode}`}
-              className={`md-form md-form-${resultForOpenMatch(m, ctx.code).toLowerCase()}`}
-            >
-              {resultForOpenMatch(m, ctx.code)}
-            </span>
-          ))
+          ctx.matches.slice(0, 5).map((m) => {
+            const result = resultForOpenMatch(m, ctx.code)
+            return (
+              <span
+                key={`${ctx.code}-${m.date}-${m.homeCode}-${m.awayCode}`}
+                className={`md-form md-form-${result.toLowerCase()}`}
+                title={resultLabel(result, labels)}
+              >
+                {resultShort(result, labels)}
+              </span>
+            )
+          })
         ) : (
           <span className="muted small">{labels.noCompleted}</span>
         )}
+      </div>
+      <div className="md-form-legend small muted">
+        {labels.winShort}={labels.win} · {labels.drawShort}={labels.draw} · {labels.lossShort}={labels.loss}
       </div>
       <div className="md-pc-mini">
         <span title={labels.goalsFor}>
@@ -157,6 +201,15 @@ function OpenFormColumn({
         <span title={labels.goalsAgainst}>
           {labels.goalsAgainstShort} {ctx.record.ga}
         </span>
+      </div>
+      <div className="md-form-matches">
+        {ctx.matches.slice(0, 3).map((m) => (
+          <OpenMiniMatchRow
+            key={`${ctx.code}-mini-${m.date}-${m.homeCode}-${m.awayCode}`}
+            m={m}
+            locale={locale}
+          />
+        ))}
       </div>
     </div>
   )
@@ -170,10 +223,44 @@ function OpenMatchRow({ m, locale }: { m: OpenHistoricalMatch; locale: string })
           new Date(`${m.date}T00:00:00Z`),
         )}
       </span>
-      <span className="md-open-score tnum">
-        {m.homeCode} {m.homeScore}-{m.awayScore} {m.awayCode}
+      <span className="md-open-score">
+        <TeamName code={m.homeCode} flagSize={16} link={false} />
+        <span className="tnum">
+          {m.homeScore}-{m.awayScore}
+        </span>
+        <TeamName code={m.awayCode} flagSize={16} link={false} />
       </span>
       <span className="muted small">{m.tournament}</span>
+    </div>
+  )
+}
+
+function FactorPair({
+  label,
+  homeCode,
+  awayCode,
+  homeValue,
+  awayValue,
+}: {
+  label: string
+  homeCode: string | undefined
+  awayCode: string | undefined
+  homeValue: string
+  awayValue: string
+}) {
+  return (
+    <div>
+      <span className="lbl">{label}</span>
+      <span className="val md-factor-pair">
+        <span>
+          {homeCode ? <TeamName code={homeCode} flagSize={14} link={false} /> : null}
+          <b className="tnum">{homeValue}</b>
+        </span>
+        <span>
+          {awayCode ? <TeamName code={awayCode} flagSize={14} link={false} /> : null}
+          <b className="tnum">{awayValue}</b>
+        </span>
+      </span>
     </div>
   )
 }
@@ -277,6 +364,13 @@ export default function MatchDetail() {
     goalsAgainst: t('goalsAgainst'),
     goalsForShort: t('goalsForShort'),
     goalsAgainstShort: t('goalsAgainstShort'),
+    formRecord: t('formRecord'),
+    win: t('resultWin'),
+    draw: t('resultDraw'),
+    loss: t('resultLoss'),
+    winShort: t('resultWinShort'),
+    drawShort: t('resultDrawShort'),
+    lossShort: t('resultLossShort'),
   }
 
   /* other matches of this tournament between the same two teams (knockout rematches) */
@@ -548,9 +642,9 @@ export default function MatchDetail() {
           </h3>
           <h4 className="md-pc-section-title">{t('recentInternationalForm')}</h4>
           <div className="md-pc-head">
-            <OpenFormColumn ctx={oc?.home ?? null} labels={pcLabels} />
+            <OpenFormColumn ctx={oc?.home ?? null} labels={pcLabels} locale={locale} />
             <div className="md-pc-vs">{t('vs')}</div>
-            <OpenFormColumn ctx={oc?.away ?? null} labels={pcLabels} />
+            <OpenFormColumn ctx={oc?.away ?? null} labels={pcLabels} locale={locale} />
           </div>
           <div className="md-pc-groups">
             <div>
@@ -577,38 +671,42 @@ export default function MatchDetail() {
             <div>
               <h4 className="md-pc-section-title">{t('matchFactors')}</h4>
               <div className="md-pc-metrics">
-                <div>
-                  <span className="lbl">{t('pcRankingEdge')}</span>
-                  <span className="val tnum">
-                    {pc?.home?.ranking && pc.away?.ranking
-                      ? pc.rankingGap !== null && pc.rankingGap > 0
-                        ? pc.home.code
-                        : pc.rankingGap !== null && pc.rankingGap < 0
-                          ? pc.away.code
-                          : t('pcLevel')
-                      : '—'}
-                  </span>
-                </div>
-                <div>
-                  <span className="lbl">{t('pcRestGap')}</span>
-                  <span className="val tnum">{fmtSigned(pc?.restGapDays ?? null, t('pcDaysSuffix'))}</span>
-                </div>
-                <div>
-                  <span className="lbl">{t('pcTravelGap')}</span>
-                  <span className="val tnum">{fmtSigned(pc?.travelGapKm ?? null, t('pcKmSuffix'))}</span>
-                </div>
-                <div>
-                  <span className="lbl">{t('suspTitle')}</span>
-                  <span className="val tnum">
-                    {pc?.home?.suspensions ?? 0} · {pc?.away?.suspensions ?? 0}
-                  </span>
-                </div>
-                <div>
-                  <span className="lbl">{t('fairPlay')}</span>
-                  <span className="val tnum">
-                    {pc?.home?.fairPlay ?? 0} · {pc?.away?.fairPlay ?? 0}
-                  </span>
-                </div>
+                <FactorPair
+                  label={t('fifaRanking')}
+                  homeCode={pc?.home?.code}
+                  awayCode={pc?.away?.code}
+                  homeValue={pc?.home?.ranking ? `#${pc.home.ranking}` : '—'}
+                  awayValue={pc?.away?.ranking ? `#${pc.away.ranking}` : '—'}
+                />
+                <FactorPair
+                  label={t('restDays')}
+                  homeCode={pc?.home?.code}
+                  awayCode={pc?.away?.code}
+                  homeValue={
+                    pc?.home?.restDays === null || pc?.home?.restDays === undefined
+                      ? '—'
+                      : `${pc.home.restDays}${t('pcDaysSuffix')}`
+                  }
+                  awayValue={
+                    pc?.away?.restDays === null || pc?.away?.restDays === undefined
+                      ? '—'
+                      : `${pc.away.restDays}${t('pcDaysSuffix')}`
+                  }
+                />
+                <FactorPair
+                  label={t('suspTitle')}
+                  homeCode={pc?.home?.code}
+                  awayCode={pc?.away?.code}
+                  homeValue={String(pc?.home?.suspensions ?? 0)}
+                  awayValue={String(pc?.away?.suspensions ?? 0)}
+                />
+                <FactorPair
+                  label={t('fairPlay')}
+                  homeCode={pc?.home?.code}
+                  awayCode={pc?.away?.code}
+                  homeValue={String(pc?.home?.fairPlay ?? 0)}
+                  awayValue={String(pc?.away?.fairPlay ?? 0)}
+                />
                 <div>
                   <span className="lbl">{t('weatherTitle')}</span>
                   <span className="val">

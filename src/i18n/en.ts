@@ -5,7 +5,7 @@ const en: Dict = {
   appSub: 'United States · Canada · Mexico',
   appFullName: '2026 World Cup Dashboard',
   metaDesc:
-    '2026 World Cup: schedule, groups, bracket, teams, venues, weather, squads, and open-data match context. Unofficial open-source PWA',
+    '2026 World Cup: schedule, groups, bracket, teams, venues, weather, squads, and open-data match context. Live at https://julianchun.github.io/2026worldcup-dashboard/',
   // nav
   navHome: 'Home',
   navMatches: 'Matches',
@@ -196,6 +196,14 @@ const en: Dict = {
   goalsAgainst: 'Goals against',
   goalsForShort: 'GF',
   goalsAgainstShort: 'GA',
+  formRecord: 'Wins {w} · Draws {d} · Losses {l}',
+  resultWin: 'win',
+  resultDraw: 'draw',
+  resultLoss: 'loss',
+  resultWinShort: 'W',
+  resultDrawShort: 'D',
+  resultLossShort: 'L',
+  restDays: 'Rest before match',
   // teams
   teamsTitle: 'Teams',
   teamOpenContext: 'Open-data team context',

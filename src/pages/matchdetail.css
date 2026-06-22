@@ -262,6 +262,30 @@ a.md-side {
   display: grid;
   gap: 7px;
 }
+.md-pc-head > .md-pc-team:last-child {
+  justify-items: end;
+  text-align: end;
+}
+.md-pc-head > .md-pc-team:last-child .team-inline {
+  justify-content: flex-end;
+}
+.md-pc-head > .md-pc-team:last-child .team-inline .nm {
+  text-align: end;
+}
+.md-pc-head > .md-pc-team:last-child .md-pc-form,
+.md-pc-head > .md-pc-team:last-child .md-pc-mini {
+  justify-content: flex-end;
+}
+.md-pc-head > .md-pc-team:last-child .md-form-match {
+  grid-template-columns: minmax(0, 1fr) auto;
+}
+.md-pc-head > .md-pc-team:last-child .md-form-match > .tnum {
+  order: 2;
+}
+.md-pc-head > .md-pc-team:last-child .md-form-match-teams {
+  justify-content: flex-end;
+  text-align: end;
+}
 .md-pc-record {
   font-weight: 750;
   color: var(--text-2);
@@ -274,9 +298,46 @@ a.md-side {
   flex-wrap: wrap;
   gap: 6px;
 }
+.md-pc-form {
+  align-items: center;
+}
+.md-form-legend {
+  line-height: 1.35;
+}
 .md-pc-mini {
   color: var(--text-3);
   font-size: 0.78rem;
+}
+.md-form-matches {
+  display: grid;
+  gap: 4px;
+  margin-top: 2px;
+}
+.md-form-match {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  align-items: center;
+  gap: 7px;
+  min-width: 0;
+  font-size: 0.78rem;
+}
+.md-form-match-teams {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  min-width: 0;
+}
+.md-form-match-teams .team-inline {
+  min-width: 0;
+}
+.md-form-match-teams .team-inline .nm {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.md-form-match-score {
+  flex: none;
+  font-weight: 750;
 }
 .md-form {
   display: inline-grid;
@@ -334,6 +395,25 @@ a.md-side {
   font-size: 0.9rem;
   overflow-wrap: anywhere;
 }
+.md-factor-pair {
+  display: grid;
+  gap: 5px;
+}
+.md-factor-pair > span {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  min-width: 0;
+}
+.md-factor-pair .team-inline {
+  min-width: 0;
+}
+.md-factor-pair .team-inline .nm {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
 .md-pc-alert {
   margin-top: 10px;
 }
@@ -366,7 +446,19 @@ a.md-side {
   border-top: 0;
 }
 .md-open-score {
+  display: flex;
+  align-items: center;
+  gap: 6px;
   font-weight: 750;
+  min-width: 0;
+}
+.md-open-score .team-inline {
+  min-width: 0;
+}
+.md-open-score .team-inline .nm {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .md-open-empty {
   margin: 10px 0 0;

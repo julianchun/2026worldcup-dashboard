@@ -18,7 +18,7 @@ README in [繁體中文](README.zh.md)
 - 🔍 **Schedule** filterable by team(s), stage, and venue; filters live in the URL, so views are shareable
 - 📊 **Group tables** computed with the official FIFA tiebreakers, plus the ranking of third-placed teams (top 8 of 12 advance) with qualification colour-coding
 - 🪜 **Knockout bracket** as a centre-converging tree that fills in automatically as teams qualify, with no horizontal scrolling; reflows to a round-by-round list on phones
-- 📋 **Match pages**: open-data context, head-to-head history, recent international form, venue facts, kick-off weather forecast (typical-climate fallback for far-off dates), full referee crew, starting line-ups drawn on an SVG pitch with formations, and goal timeline
+- 📋 **Match pages**: match background from open data, head-to-head history, clearly labelled recent international form, venue facts, kick-off weather forecast (typical-climate fallback for far-off dates), full referee crew, starting line-ups drawn on an SVG pitch plus accessible starter/bench lists, and goal timeline
 
 ### 👕 Teams & players
 
@@ -34,7 +34,7 @@ README in [繁體中文](README.zh.md)
 ### 📊 Stats & match context
 
 - 👟 **Golden-boot table** and tournament stats, updated throughout the competition
-- 🧭 **Open-data match context** combining tournament data with historical international results: recent form, head-to-head record, last meetings, ranking edge, rest, travel, weather availability, fair-play score, and active suspensions
+- 🧭 **Open-data match context** combining tournament data with historical international results: recent form, head-to-head record, last meetings, FIFA ranking, rest before match, weather availability, fair-play score, and active suspensions
 - 🩺 **Availability notes** are supported only as manually curated, source-linked official notes; the app does not scrape or claim complete injury coverage
 - 🧾 **No betting-style predictions**: the app provides factual context for your own judgment, not odds, win probabilities, or model-generated score picks.
 
