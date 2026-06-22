@@ -3,6 +3,7 @@ import { Link, useParams } from 'react-router-dom'
 import type {
   AvailabilityNote,
   Lang,
+  LineupPlayer,
   MatchSide,
   Official,
   OpenHistoricalMatch,
@@ -121,7 +122,14 @@ function OpenFormColumn({
   labels,
 }: {
   ctx: OpenMatchContext['home']
-  labels: { tbd: string; noCompleted: string }
+  labels: {
+    tbd: string
+    noCompleted: string
+    goalsFor: string
+    goalsAgainst: string
+    goalsForShort: string
+    goalsAgainstShort: string
+  }
 }) {
   if (!ctx) return <div className="md-pc-team muted">{labels.tbd}</div>
   return (
@@ -143,8 +151,12 @@ function OpenFormColumn({
         )}
       </div>
       <div className="md-pc-mini">
-        <span>GF {ctx.record.gf}</span>
-        <span>GA {ctx.record.ga}</span>
+        <span title={labels.goalsFor}>
+          {labels.goalsForShort} {ctx.record.gf}
+        </span>
+        <span title={labels.goalsAgainst}>
+          {labels.goalsAgainstShort} {ctx.record.ga}
+        </span>
       </div>
     </div>
   )
@@ -194,6 +206,51 @@ function AvailabilityNotes({ notes }: { notes: AvailabilityNote[] }) {
   )
 }
 
+function LineupPlayerRow({
+  p,
+  code,
+  kind,
+  t,
+  subOn,
+  subOff,
+  goalMins,
+  card,
+}: {
+  p: LineupPlayer
+  code: string | undefined
+  kind: 'starter' | 'sub'
+  t: (key: string, vars?: Record<string, string | number>) => string
+  subOn?: string
+  subOff?: string
+  goalMins?: string
+  card?: 'y' | 'r'
+}) {
+  const name = p.name ?? t('none')
+  return (
+    <div className={`md-player md-player-${kind}`}>
+      <span className="no tnum">{p.number ?? ''}</span>
+      {code && p.number != null ? (
+        <Link className="nm md-plink" to={`/team/${code}?p=${p.number}`}>
+          {name}
+        </Link>
+      ) : (
+        <span className="nm">{name}</span>
+      )}
+      {p.gk && <span className="chip md-pos-chip">GK</span>}
+      {p.captain && (
+        <span className="md-cap" title={t('captain')}>
+          C
+        </span>
+      )}
+      {subOn && <span className="md-sub-on tnum">↑ {subOn}</span>}
+      {subOff && <span className="md-sub-off tnum">↓ {subOff}</span>}
+      {goalMins && <span className="md-sub-goal tnum">⚽ {goalMins}</span>}
+      {card === 'y' && <span aria-hidden="true">🟨</span>}
+      {card === 'r' && <span aria-hidden="true">🟥</span>}
+    </div>
+  )
+}
+
 export default function MatchDetail() {
   const { id } = useParams()
   const { t, pick, countryName, locale, lang } = useI18n()
@@ -216,6 +273,10 @@ export default function MatchDetail() {
   const pcLabels = {
     tbd: t('tbd'),
     noCompleted: t('pcNoCompleted'),
+    goalsFor: t('goalsFor'),
+    goalsAgainst: t('goalsAgainst'),
+    goalsForShort: t('goalsForShort'),
+    goalsAgainstShort: t('goalsAgainstShort'),
   }
 
   /* other matches of this tournament between the same two teams (knockout rematches) */
@@ -485,65 +546,76 @@ export default function MatchDetail() {
             <Icon name="chart" size={18} />
             {t('openDataContext')}
           </h3>
+          <h4 className="md-pc-section-title">{t('recentInternationalForm')}</h4>
           <div className="md-pc-head">
             <OpenFormColumn ctx={oc?.home ?? null} labels={pcLabels} />
             <div className="md-pc-vs">{t('vs')}</div>
             <OpenFormColumn ctx={oc?.away ?? null} labels={pcLabels} />
           </div>
-          <div className="md-pc-metrics">
+          <div className="md-pc-groups">
             <div>
-              <span className="lbl">{t('h2hRecord')}</span>
-              <span className="val tnum">
-                {oc?.headToHead
-                  ? `${oc.headToHead.homeWins}-${oc.headToHead.draws}-${oc.headToHead.awayWins}`
-                  : '—'}
-              </span>
+              <h4 className="md-pc-section-title">{t('h2hRecord')}</h4>
+              <div className="md-pc-metrics">
+                <div>
+                  <span className="lbl">{t('record')}</span>
+                  <span className="val tnum">
+                    {oc?.headToHead
+                      ? `${oc.headToHead.homeWins}-${oc.headToHead.draws}-${oc.headToHead.awayWins}`
+                      : '—'}
+                  </span>
+                </div>
+                <div>
+                  <span className="lbl">{t('h2hMeetings')}</span>
+                  <span className="val tnum">{oc?.headToHead?.total ?? 0}</span>
+                </div>
+                <div>
+                  <span className="lbl">{t('h2hWorldCup')}</span>
+                  <span className="val tnum">{oc?.headToHead?.worldCupMeetings ?? 0}</span>
+                </div>
+              </div>
             </div>
             <div>
-              <span className="lbl">{t('h2hMeetings')}</span>
-              <span className="val tnum">{oc?.headToHead?.total ?? 0}</span>
-            </div>
-            <div>
-              <span className="lbl">{t('h2hWorldCup')}</span>
-              <span className="val tnum">{oc?.headToHead?.worldCupMeetings ?? 0}</span>
-            </div>
-            <div>
-              <span className="lbl">{t('pcRankingEdge')}</span>
-              <span className="val tnum">
-                {pc?.home?.ranking && pc.away?.ranking
-                  ? pc.rankingGap !== null && pc.rankingGap > 0
-                    ? pc.home.code
-                    : pc.rankingGap !== null && pc.rankingGap < 0
-                      ? pc.away.code
-                      : t('pcLevel')
-                  : '—'}
-              </span>
-            </div>
-            <div>
-              <span className="lbl">{t('pcRestGap')}</span>
-              <span className="val tnum">{fmtSigned(pc?.restGapDays ?? null, t('pcDaysSuffix'))}</span>
-            </div>
-            <div>
-              <span className="lbl">{t('pcTravelGap')}</span>
-              <span className="val tnum">{fmtSigned(pc?.travelGapKm ?? null, t('pcKmSuffix'))}</span>
-            </div>
-            <div>
-              <span className="lbl">{t('suspTitle')}</span>
-              <span className="val tnum">
-                {pc?.home?.suspensions ?? 0} · {pc?.away?.suspensions ?? 0}
-              </span>
-            </div>
-            <div>
-              <span className="lbl">{t('fairPlay')}</span>
-              <span className="val tnum">
-                {pc?.home?.fairPlay ?? 0} · {pc?.away?.fairPlay ?? 0}
-              </span>
-            </div>
-            <div>
-              <span className="lbl">{t('weatherTitle')}</span>
-              <span className="val">
-                {pc?.weatherMatchId ? t('pcForecastAvailable') : t('weatherTypical')}
-              </span>
+              <h4 className="md-pc-section-title">{t('matchFactors')}</h4>
+              <div className="md-pc-metrics">
+                <div>
+                  <span className="lbl">{t('pcRankingEdge')}</span>
+                  <span className="val tnum">
+                    {pc?.home?.ranking && pc.away?.ranking
+                      ? pc.rankingGap !== null && pc.rankingGap > 0
+                        ? pc.home.code
+                        : pc.rankingGap !== null && pc.rankingGap < 0
+                          ? pc.away.code
+                          : t('pcLevel')
+                      : '—'}
+                  </span>
+                </div>
+                <div>
+                  <span className="lbl">{t('pcRestGap')}</span>
+                  <span className="val tnum">{fmtSigned(pc?.restGapDays ?? null, t('pcDaysSuffix'))}</span>
+                </div>
+                <div>
+                  <span className="lbl">{t('pcTravelGap')}</span>
+                  <span className="val tnum">{fmtSigned(pc?.travelGapKm ?? null, t('pcKmSuffix'))}</span>
+                </div>
+                <div>
+                  <span className="lbl">{t('suspTitle')}</span>
+                  <span className="val tnum">
+                    {pc?.home?.suspensions ?? 0} · {pc?.away?.suspensions ?? 0}
+                  </span>
+                </div>
+                <div>
+                  <span className="lbl">{t('fairPlay')}</span>
+                  <span className="val tnum">
+                    {pc?.home?.fairPlay ?? 0} · {pc?.away?.fairPlay ?? 0}
+                  </span>
+                </div>
+                <div>
+                  <span className="lbl">{t('weatherTitle')}</span>
+                  <span className="val">
+                    {pc?.weatherMatchId ? t('pcForecastAvailable') : t('weatherTypical')}
+                  </span>
+                </div>
+              </div>
             </div>
           </div>
           {oc?.headToHead?.lastMeetings.length ? (
@@ -748,45 +820,56 @@ export default function MatchDetail() {
             subOff={cardInfo.subOff}
             goals={cardInfo.goals}
           />
-          {((lu.home?.subs.length ?? 0) > 0 || (lu.away?.subs.length ?? 0) > 0) && (
-            <div className="md-subs">
+          {((lu.home?.xi.length ?? 0) > 0 ||
+            (lu.away?.xi.length ?? 0) > 0 ||
+            (lu.home?.subs.length ?? 0) > 0 ||
+            (lu.away?.subs.length ?? 0) > 0) && (
+            <div className="md-lineup-lists">
               {(
                 [
                   ['home', lu.home, homeLabel, m.home?.code],
                   ['away', lu.away, awayLabel, m.away?.code],
                 ] as const
               ).map(([k, tl, label, code]) =>
-                tl?.subs.length ? (
-                  <div key={k}>
+                tl && (tl.xi.length || tl.subs.length) ? (
+                  <div key={k} className="md-lineup-team">
                     <div className="md-subhead">
                       {code && teams[code] ? <TeamName code={code} flagSize={20} bold /> : label}
                     </div>
-                    <h4>{t('substitutes')}</h4>
-                    {tl.subs.map((p) => (
-                      <div className="md-sub" key={p.id}>
-                        <span className="no tnum">{p.number ?? ''}</span>
-                        {code && p.number != null ? (
-                          <Link className="nm md-plink" to={`/team/${code}?p=${p.number}`}>
-                            {p.name}
-                          </Link>
-                        ) : (
-                          <span className="nm">{p.name}</span>
-                        )}
-                        {p.captain && (
-                          <span className="md-cap" title={t('captain')}>
-                            C
-                          </span>
-                        )}
-                        {cardInfo.subOn[p.id] && (
-                          <span className="md-sub-on tnum">↑ {cardInfo.subOn[p.id]}</span>
-                        )}
-                        {cardInfo.goals[p.id] && (
-                          <span className="md-sub-goal tnum">⚽ {cardInfo.goals[p.id]}</span>
-                        )}
-                        {cardInfo.marks[p.id]?.card === 'y' && <span aria-hidden="true">🟨</span>}
-                        {cardInfo.marks[p.id]?.card === 'r' && <span aria-hidden="true">🟥</span>}
+                    {tl.xi.length > 0 && (
+                      <div className="md-lineup-group">
+                        <h4>{t('startingLineup')}</h4>
+                        {tl.xi.map((p) => (
+                          <LineupPlayerRow
+                            key={p.id}
+                            p={p}
+                            code={code}
+                            kind="starter"
+                            t={t}
+                            subOff={cardInfo.subOff[p.id]}
+                            goalMins={cardInfo.goals[p.id]}
+                            card={cardInfo.marks[p.id]?.card}
+                          />
+                        ))}
                       </div>
-                    ))}
+                    )}
+                    {tl.subs.length > 0 && (
+                      <div className="md-lineup-group">
+                        <h4>{t('substitutes')}</h4>
+                        {tl.subs.map((p) => (
+                          <LineupPlayerRow
+                            key={p.id}
+                            p={p}
+                            code={code}
+                            kind="sub"
+                            t={t}
+                            subOn={cardInfo.subOn[p.id]}
+                            goalMins={cardInfo.goals[p.id]}
+                            card={cardInfo.marks[p.id]?.card}
+                          />
+                        ))}
+                      </div>
+                    )}
                   </div>
                 ) : (
                   <div key={k} />

@@ -236,9 +236,20 @@ a.md-side {
   margin: 8px 0 0;
 }
 
-/* open-data context */
+/* match background */
 .md-pc-card {
   margin-top: 14px;
+}
+.md-pc-section-title {
+  margin: 12px 0 8px;
+  color: var(--text-2);
+  font-size: 0.8rem;
+  font-weight: 750;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+.md-pc-card .md-info-title + .md-pc-section-title {
+  margin-top: 0;
 }
 .md-pc-head {
   display: grid;
@@ -293,11 +304,15 @@ a.md-side {
   font-weight: 800;
   text-transform: uppercase;
 }
+.md-pc-groups {
+  display: grid;
+  gap: 4px;
+  margin-top: 2px;
+}
 .md-pc-metrics {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 8px;
-  margin-top: 14px;
 }
 .md-pc-metrics > div {
   min-width: 0;
@@ -408,7 +423,7 @@ a.md-side {
 .md-pitch-card {
   padding: 14px 10px 16px;
 }
-.md-subs {
+.md-lineup-lists {
   display: grid;
   /* minmax(0,…) lets the tracks shrink below their content's min-content width;
      without it a long (unbreakable) name forces the 1fr track wider than the card */
@@ -416,6 +431,12 @@ a.md-side {
   gap: 16px;
   margin-top: 16px;
   padding: 0 6px;
+}
+.md-lineup-team {
+  min-width: 0;
+}
+.md-lineup-group + .md-lineup-group {
+  margin-top: 12px;
 }
 .md-subhead {
   display: flex;
@@ -425,7 +446,7 @@ a.md-side {
   font-size: 0.88rem;
   margin: 0 0 2px;
 }
-.md-subs h4,
+.md-lineup-lists h4,
 .md-goals h4 {
   margin: 0 0 4px;
   font-size: 0.8rem;
@@ -434,7 +455,7 @@ a.md-side {
   text-transform: uppercase;
   letter-spacing: 0.04em;
 }
-.md-sub {
+.md-player {
   display: flex;
   align-items: baseline;
   gap: 8px;
@@ -442,17 +463,25 @@ a.md-side {
   font-size: 0.85rem;
   min-width: 0;
 }
-.md-sub .no {
+.md-player-starter {
+  font-weight: 560;
+}
+.md-player .no {
   color: var(--text-3);
   min-width: 18px;
   text-align: end;
   flex: none;
 }
-.md-sub .nm {
+.md-player .nm {
   /* wrap long names onto a second line (like the goals list) instead of
      overflowing; `anywhere` also breaks a single over-long token */
   min-width: 0;
   overflow-wrap: anywhere;
+}
+.md-pos-chip {
+  padding-inline: 5px;
+  font-size: 0.62rem;
+  line-height: 1.45;
 }
 a.md-plink {
   color: inherit;
@@ -550,9 +579,23 @@ a.md-plink:hover {
   font-weight: 650;
   white-space: nowrap;
 }
+/* starter: subbed-off minute */
+.md-sub-off {
+  color: var(--accent-text);
+  font-size: 0.74rem;
+  font-weight: 650;
+  white-space: nowrap;
+}
 /* bench: goal minutes */
 .md-sub-goal {
   font-size: 0.74rem;
   font-weight: 650;
   white-space: nowrap;
+}
+
+@media (max-width: 680px) {
+  .md-lineup-lists {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
 }
