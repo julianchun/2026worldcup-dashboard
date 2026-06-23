@@ -15370,7 +15370,7 @@
     "clubWiki": "https://en.wikipedia.org/wiki/Chelsea_F.C.",
     "captain": false,
     "wiki": "https://en.wikipedia.org/wiki/Malo_Gusto",
-    "wcApps": 0,
+    "wcApps": 1,
     "wcGoals": 0,
     "wcYellow": 0,
     "wcRed": 0
@@ -15640,7 +15640,7 @@
     "clubWiki": "https://en.wikipedia.org/wiki/AS_Monaco_FC",
     "captain": false,
     "wiki": "https://en.wikipedia.org/wiki/Maghnes_Akliouche",
-    "wcApps": 0,
+    "wcApps": 1,
     "wcGoals": 0,
     "wcYellow": 0,
     "wcRed": 0
@@ -15676,7 +15676,7 @@
     "clubWiki": "https://en.wikipedia.org/wiki/Inter_Milan",
     "captain": false,
     "wiki": "https://en.wikipedia.org/wiki/Marcus_Thuram",
-    "wcApps": 0,
+    "wcApps": 1,
     "wcGoals": 0,
     "wcYellow": 0,
     "wcRed": 0
@@ -16399,7 +16399,7 @@
     "captain": false,
     "wiki": "https://en.wikipedia.org/wiki/Marcus_Holmgren_Pedersen",
     "wcApps": 1,
-    "wcGoals": 0,
+    "wcGoals": 1,
     "wcYellow": 0,
     "wcRed": 0
    },
@@ -16506,7 +16506,7 @@
     "clubWiki": "https://en.wikipedia.org/wiki/FK_Bod%C3%B8%2FGlimt",
     "captain": false,
     "wiki": "https://en.wikipedia.org/wiki/Patrick_Berg",
-    "wcApps": 1,
+    "wcApps": 2,
     "wcGoals": 0,
     "wcYellow": 0,
     "wcRed": 0
@@ -16705,7 +16705,7 @@
     "captain": false,
     "wiki": "https://en.wikipedia.org/wiki/Erling_Haaland",
     "wcApps": 2,
-    "wcGoals": 2,
+    "wcGoals": 4,
     "wcYellow": 0,
     "wcRed": 0
    },
@@ -16858,7 +16858,7 @@
     "clubWiki": "https://en.wikipedia.org/wiki/Galatasaray_S.K._(football)",
     "captain": false,
     "wiki": "https://en.wikipedia.org/wiki/Ismail_Jakobs",
-    "wcApps": 0,
+    "wcApps": 1,
     "wcGoals": 0,
     "wcYellow": 0,
     "wcRed": 0
@@ -17183,7 +17183,7 @@
     "captain": false,
     "wiki": "https://en.wikipedia.org/wiki/Isma%C3%AFla_Sarr",
     "wcApps": 2,
-    "wcGoals": 0,
+    "wcGoals": 1,
     "wcYellow": 0,
     "wcRed": 0
    },
@@ -17200,7 +17200,7 @@
     "clubWiki": "https://en.wikipedia.org/wiki/Paris_Saint-Germain_FC",
     "captain": false,
     "wiki": "https://en.wikipedia.org/wiki/Ibrahim_Mbaye",
-    "wcApps": 1,
+    "wcApps": 2,
     "wcGoals": 1,
     "wcYellow": 0,
     "wcRed": 0
