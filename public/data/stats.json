@@ -105,6 +105,14 @@
    "ownGoals": 0
   },
   {
+   "id": "401889",
+   "name": "Ismaila SARR",
+   "code": "SEN",
+   "no": 18,
+   "goals": 2,
+   "ownGoals": 0
+  },
+  {
    "id": "502727",
    "name": "Johan MANZAMBI",
    "code": "SUI",
@@ -311,14 +319,6 @@
    "no": 7,
    "goals": 1,
    "ownGoals": 0
-  },
-  {
-   "id": "522846",
-   "name": "Ermin MAHMIC",
-   "code": "BIH",
-   "no": 26,
-   "goals": 1,
-   "ownGoals": 0
   }
  ],
  "cards": {
@@ -486,7 +486,7 @@
    }
   ]
  },
- "attAvg": 64235,
+ "attAvg": 64627,
  "biggestWin": {
   "diff": 6,
   "id": "400021464",
