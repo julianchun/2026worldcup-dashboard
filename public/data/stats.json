@@ -241,6 +241,14 @@
    "ownGoals": 0
   },
   {
+   "id": "405877",
+   "name": "Amine GOUIRI",
+   "code": "ALG",
+   "no": 9,
+   "goals": 1,
+   "ownGoals": 0
+  },
+  {
    "id": "441137",
    "name": "Anthony ELANGA",
    "code": "SWE",
@@ -311,18 +319,10 @@
    "no": 8,
    "goals": 1,
    "ownGoals": 0
-  },
-  {
-   "id": "393480",
-   "name": "EMBOLO",
-   "code": "SUI",
-   "no": 7,
-   "goals": 1,
-   "ownGoals": 0
   }
  ],
  "cards": {
-  "yellow": 106,
+  "yellow": 107,
   "red": 8,
   "players": [
    {
@@ -486,7 +486,7 @@
    }
   ]
  },
- "attAvg": 64627,
+ "attAvg": 64714,
  "biggestWin": {
   "diff": 6,
   "id": "400021464",
@@ -541,9 +541,9 @@
    "IRQ": -2,
    "NOR": 0,
    "ARG": -2,
-   "ALG": 0,
+   "ALG": -1,
    "AUT": -3,
-   "JOR": 0,
+   "JOR": -1,
    "GHA": -1,
    "PAN": -2,
    "ENG": 0,
@@ -591,9 +591,9 @@
    "IRQ": -2,
    "NOR": 0,
    "ARG": -2,
-   "ALG": 0,
+   "ALG": -1,
    "AUT": -3,
-   "JOR": 0,
+   "JOR": -1,
    "GHA": -1,
    "PAN": -2,
    "ENG": 0,
