@@ -25,10 +25,26 @@
    "ownGoals": 0
   },
   {
+   "id": "405742",
+   "name": "VINICIUS JUNIOR",
+   "code": "BRA",
+   "no": 7,
+   "goals": 4,
+   "ownGoals": 0
+  },
+  {
    "id": "484851",
    "name": "Deniz UNDAV",
    "code": "GER",
    "no": 26,
+   "goals": 3,
+   "ownGoals": 0
+  },
+  {
+   "id": "448598",
+   "name": "Ismael SAIBARI",
+   "code": "MAR",
+   "no": 11,
    "goals": 3,
    "ownGoals": 0
   },
@@ -45,14 +61,6 @@
    "name": "Jonathan DAVID",
    "code": "CAN",
    "no": 10,
-   "goals": 3,
-   "ownGoals": 0
-  },
-  {
-   "id": "405742",
-   "name": "VINICIUS JUNIOR",
-   "code": "BRA",
-   "no": 7,
    "goals": 3,
    "ownGoals": 0
   },
@@ -137,14 +145,6 @@
    "ownGoals": 0
   },
   {
-   "id": "448598",
-   "name": "Ismael SAIBARI",
-   "code": "MAR",
-   "no": 11,
-   "goals": 2,
-   "ownGoals": 0
-  },
-  {
    "id": "401889",
    "name": "Ismaila SARR",
    "code": "SEN",
@@ -217,18 +217,18 @@
    "ownGoals": 0
   },
   {
-   "id": "356956",
-   "name": "#356956",
-   "code": "HAI",
-   "no": 1,
-   "goals": 1,
-   "ownGoals": 1
-  },
-  {
    "id": "464933",
    "name": "Abbosbek FAYZULLAEV",
    "code": "UZB",
    "no": 22,
+   "goals": 1,
+   "ownGoals": 0
+  },
+  {
+   "id": "400721",
+   "name": "Achraf HAKIMI",
+   "code": "MAR",
+   "no": 2,
    "goals": 1,
    "ownGoals": 0
   },
