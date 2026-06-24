@@ -105,6 +105,14 @@
    "ownGoals": 0
   },
   {
+   "id": "522846",
+   "name": "Ermin MAHMIC",
+   "code": "BIH",
+   "no": 26,
+   "goals": 2,
+   "ownGoals": 0
+  },
+  {
    "id": "466624",
    "name": "Folarin BALOGUN",
    "code": "USA",
@@ -311,18 +319,10 @@
    "no": 10,
    "goals": 1,
    "ownGoals": 0
-  },
-  {
-   "id": "385067",
-   "name": "BOUALEM KHOUKHI",
-   "code": "QAT",
-   "no": 16,
-   "goals": 1,
-   "ownGoals": 0
   }
  ],
  "cards": {
-  "yellow": 118,
+  "yellow": 121,
   "red": 8,
   "players": [
    {
@@ -397,6 +397,14 @@
     "r": 0
    },
    {
+    "id": "433394",
+    "name": "AHMED FATHY",
+    "code": "QAT",
+    "no": 20,
+    "y": 2,
+    "r": 0
+   },
+   {
     "id": "403616",
     "name": "MOKOENA",
     "code": "RSA",
@@ -417,14 +425,6 @@
     "name": "Aaron HICKEY",
     "code": "SCO",
     "no": 2,
-    "y": 1,
-    "r": 0
-   },
-   {
-    "id": "433394",
-    "name": "AHMED FATHY",
-    "code": "QAT",
-    "no": 20,
     "y": 1,
     "r": 0
    },
@@ -486,7 +486,7 @@
    }
   ]
  },
- "attAvg": 64003,
+ "attAvg": 63769,
  "biggestWin": {
   "diff": 6,
   "id": "400021464",
@@ -508,7 +508,7 @@
    "RSA": -12,
    "KOR": -3,
    "CZE": -1,
-   "CAN": -3,
+   "CAN": -5,
    "BIH": -9,
    "USA": -4,
    "PAR": -11,
@@ -519,7 +519,7 @@
    "BRA": -3,
    "MAR": -1,
    "QAT": -11,
-   "SUI": -2,
+   "SUI": -3,
    "CIV": -3,
    "ECU": -2,
    "GER": 0,
@@ -558,7 +558,7 @@
    "RSA": -12,
    "KOR": -3,
    "CZE": -1,
-   "CAN": -3,
+   "CAN": -5,
    "BIH": -9,
    "USA": -4,
    "PAR": -11,
@@ -569,7 +569,7 @@
    "BRA": -3,
    "MAR": -1,
    "QAT": -11,
-   "SUI": -2,
+   "SUI": -3,
    "CIV": -3,
    "ECU": -2,
    "GER": 0,
