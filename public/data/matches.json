@@ -3111,10 +3111,10 @@
    "date": "2026-06-24T02:00:00Z",
    "venueId": "400252150",
    "status": "live",
-   "time": "75'",
+   "time": "89'",
    "home": {
     "code": "COL",
-    "score": 0,
+    "score": 1,
     "pen": null
    },
    "away": {
