@@ -209,6 +209,14 @@
    "ownGoals": 0
   },
   {
+   "id": "402261",
+   "name": "Nicolas PEPE",
+   "code": "CIV",
+   "no": 19,
+   "goals": 2,
+   "ownGoals": 0
+  },
+  {
    "id": "448131",
    "name": "VARGAS",
    "code": "SUI",
@@ -311,18 +319,10 @@
    "no": 11,
    "goals": 1,
    "ownGoals": 0
-  },
-  {
-   "id": "441137",
-   "name": "Anthony ELANGA",
-   "code": "SWE",
-   "no": 11,
-   "goals": 1,
-   "ownGoals": 0
   }
  ],
  "cards": {
-  "yellow": 134,
+  "yellow": 135,
   "red": 8,
   "players": [
    {
@@ -405,6 +405,14 @@
     "r": 0
    },
    {
+    "id": "466317",
+    "name": "Juninho BACUNA",
+    "code": "CUW",
+    "no": 7,
+    "y": 2,
+    "r": 0
+   },
+   {
     "id": "403616",
     "name": "MOKOENA",
     "code": "RSA",
@@ -473,14 +481,6 @@
     "name": "Alex ARCE",
     "code": "PAR",
     "no": 18,
-    "y": 1,
-    "r": 0
-   },
-   {
-    "id": "441252",
-    "name": "Alistair JOHNSTON",
-    "code": "CAN",
-    "no": 2,
     "y": 1,
     "r": 0
    }
