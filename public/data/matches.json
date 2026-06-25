@@ -3203,7 +3203,7 @@
    "date": "2026-06-24T22:00:00Z",
    "venueId": "400257525",
    "status": "finished",
-   "time": "90'",
+   "time": "97'",
    "home": {
     "code": "SCO",
     "score": 0,
@@ -3498,7 +3498,7 @@
    "date": "2026-06-25T01:00:00Z",
    "venueId": "400238450",
    "status": "scheduled",
-   "time": "0'",
+   "time": null,
    "home": {
     "code": "RSA",
     "score": null,
