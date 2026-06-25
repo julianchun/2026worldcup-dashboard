@@ -3438,16 +3438,16 @@
    "group": "A",
    "date": "2026-06-25T01:00:00Z",
    "venueId": "400222084",
-   "status": "scheduled",
-   "time": "0'",
+   "status": "live",
+   "time": "22'",
    "home": {
     "code": "CZE",
-    "score": null,
+    "score": 0,
     "pen": null
    },
    "away": {
     "code": "MEX",
-    "score": null,
+    "score": 0,
     "pen": null
    },
    "phA": "A4",
@@ -3497,16 +3497,16 @@
    "group": "A",
    "date": "2026-06-25T01:00:00Z",
    "venueId": "400238450",
-   "status": "scheduled",
-   "time": null,
+   "status": "live",
+   "time": "23'",
    "home": {
     "code": "RSA",
-    "score": null,
+    "score": 0,
     "pen": null
    },
    "away": {
     "code": "KOR",
-    "score": null,
+    "score": 0,
     "pen": null
    },
    "phA": "A2",
@@ -4591,7 +4591,11 @@
    "status": "scheduled",
    "time": null,
    "home": null,
-   "away": null,
+   "away": {
+    "code": "MAR",
+    "score": null,
+    "pen": null
+   },
    "phA": "1F",
    "phB": "2C",
    "winner": null,
@@ -4607,7 +4611,11 @@
    "venueId": "400249385",
    "status": "scheduled",
    "time": null,
-   "home": null,
+   "home": {
+    "code": "BRA",
+    "score": null,
+    "pen": null
+   },
    "away": null,
    "phA": "1C",
    "phB": "2F",

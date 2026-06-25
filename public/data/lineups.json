@@ -3281,8 +3281,8 @@
    "bookings": [],
    "substitutions": []
   },
-  "matchTime": "0'",
-  "period": 0,
+  "matchTime": "22'",
+  "period": 3,
   "final": false
  },
  "400021445": {
@@ -3561,7 +3561,7 @@
    "substitutions": []
   },
   "away": {
-   "tactics": "3-4-1-2",
+   "tactics": "3-4-3",
    "xi": [
     {
      "id": "274281",
@@ -3856,8 +3856,8 @@
    "bookings": [],
    "substitutions": []
   },
-  "matchTime": "0'",
-  "period": 0,
+  "matchTime": "23'",
+  "period": 3,
   "final": false
  },
  "400021446": {
