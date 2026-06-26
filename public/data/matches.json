@@ -3774,10 +3774,10 @@
    "date": "2026-06-25T23:00:00Z",
    "venueId": "400257526",
    "status": "live",
-   "time": null,
+   "time": "59'",
    "home": {
     "code": "JPN",
-    "score": 0,
+    "score": 1,
     "pen": null
    },
    "away": {
@@ -3788,7 +3788,7 @@
    "phA": "F2",
    "phB": "F3",
    "winner": null,
-   "attendance": null,
+   "attendance": 70137,
    "officials": [
     {
      "id": "408378",
@@ -3833,10 +3833,10 @@
    "date": "2026-06-25T23:00:00Z",
    "venueId": "400254717",
    "status": "live",
-   "time": null,
+   "time": "60'",
    "home": {
     "code": "TUN",
-    "score": 0,
+    "score": 1,
     "pen": null
    },
    "away": {
