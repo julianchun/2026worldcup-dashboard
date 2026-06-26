@@ -233,6 +233,14 @@
    "ownGoals": 0
   },
   {
+   "id": "431788",
+   "name": "Pape GUEYE",
+   "code": "SEN",
+   "no": 26,
+   "goals": 2,
+   "ownGoals": 0
+  },
+  {
    "id": "448131",
    "name": "VARGAS",
    "code": "SUI",
@@ -311,18 +319,10 @@
    "no": 8,
    "goals": 1,
    "ownGoals": 0
-  },
-  {
-   "id": "430822",
-   "name": "Amad DIALLO",
-   "code": "CIV",
-   "no": 15,
-   "goals": 1,
-   "ownGoals": 0
   }
  ],
  "cards": {
-  "yellow": 145,
+  "yellow": 148,
   "red": 9,
   "players": [
    {
@@ -413,6 +413,14 @@
     "r": 0
    },
    {
+    "id": "433074",
+    "name": "AMIR ALAMMARI",
+    "code": "IRQ",
+    "no": 16,
+    "y": 2,
+    "r": 0
+   },
+   {
     "id": "463128",
     "name": "Diego GOMEZ",
     "code": "PAR",
@@ -473,14 +481,6 @@
     "name": "AHMED FATOUH",
     "code": "EGY",
     "no": 13,
-    "y": 1,
-    "r": 0
-   },
-   {
-    "id": "403312",
-    "name": "ALAMRI",
-    "code": "KSA",
-    "no": 4,
     "y": 1,
     "r": 0
    }
