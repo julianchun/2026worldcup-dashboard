@@ -15622,7 +15622,7 @@
     "clubWiki": "https://en.wikipedia.org/wiki/Manchester_City_F.C.",
     "captain": false,
     "wiki": "https://en.wikipedia.org/wiki/Rayan_Cherki",
-    "wcApps": 2,
+    "wcApps": 3,
     "wcGoals": 0,
     "wcYellow": 0,
     "wcRed": 0
@@ -15730,7 +15730,7 @@
     "clubWiki": "https://en.wikipedia.org/wiki/Paris_Saint-Germain_FC",
     "captain": false,
     "wiki": "https://en.wikipedia.org/wiki/Bradley_Barcola",
-    "wcApps": 2,
+    "wcApps": 3,
     "wcGoals": 1,
     "wcYellow": 0,
     "wcRed": 0
@@ -15938,7 +15938,7 @@
     "clubWiki": "https://en.wikipedia.org/wiki/Al-Karma_SC",
     "captain": false,
     "wiki": "https://en.wikipedia.org/wiki/Ahmed_Maknzi",
-    "wcApps": 0,
+    "wcApps": 1,
     "wcGoals": 0,
     "wcYellow": 0,
     "wcRed": 0
@@ -16190,7 +16190,7 @@
     "clubWiki": "https://en.wikipedia.org/wiki/Al-Talaba_SC",
     "captain": false,
     "wiki": "https://en.wikipedia.org/wiki/Ali_Yousif",
-    "wcApps": 0,
+    "wcApps": 1,
     "wcGoals": 0,
     "wcYellow": 0,
     "wcRed": 0
@@ -16966,7 +16966,7 @@
     "clubWiki": "https://en.wikipedia.org/wiki/Rayo_Vallecano",
     "captain": false,
     "wiki": "https://en.wikipedia.org/wiki/Path%C3%A9_Ciss",
-    "wcApps": 2,
+    "wcApps": 3,
     "wcGoals": 0,
     "wcYellow": 0,
     "wcRed": 0
@@ -17056,8 +17056,8 @@
     "clubWiki": "https://en.wikipedia.org/wiki/Villarreal_CF",
     "captain": false,
     "wiki": "https://en.wikipedia.org/wiki/Pape_Gueye",
-    "wcApps": 2,
-    "wcGoals": 0,
+    "wcApps": 3,
+    "wcGoals": 1,
     "wcYellow": 0,
     "wcRed": 0
    },
@@ -17128,7 +17128,7 @@
     "clubWiki": "https://en.wikipedia.org/wiki/FC_Bayern_Munich",
     "captain": false,
     "wiki": "https://en.wikipedia.org/wiki/Nicolas_Jackson",
-    "wcApps": 2,
+    "wcApps": 3,
     "wcGoals": 0,
     "wcYellow": 0,
     "wcRed": 0
@@ -17164,7 +17164,7 @@
     "clubWiki": "https://en.wikipedia.org/wiki/Everton_F.C.",
     "captain": false,
     "wiki": "https://en.wikipedia.org/wiki/Iliman_Ndiaye",
-    "wcApps": 1,
+    "wcApps": 2,
     "wcGoals": 0,
     "wcYellow": 0,
     "wcRed": 0
@@ -17183,7 +17183,7 @@
     "captain": false,
     "wiki": "https://en.wikipedia.org/wiki/Isma%C3%AFla_Sarr",
     "wcApps": 3,
-    "wcGoals": 2,
+    "wcGoals": 3,
     "wcYellow": 0,
     "wcRed": 0
    },
