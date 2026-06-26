@@ -4076,15 +4076,15 @@
    "date": "2026-06-26T19:00:00Z",
    "venueId": "400248623",
    "status": "live",
-   "time": "2'",
+   "time": "24'",
    "home": {
     "code": "NOR",
-    "score": 0,
+    "score": 1,
     "pen": null
    },
    "away": {
     "code": "FRA",
-    "score": 0,
+    "score": 2,
     "pen": null
    },
    "phA": "I4",
@@ -4135,10 +4135,10 @@
    "date": "2026-06-26T19:00:00Z",
    "venueId": "400242032",
    "status": "live",
-   "time": "1'",
+   "time": "23'",
    "home": {
     "code": "SEN",
-    "score": 0,
+    "score": 1,
     "pen": null
    },
    "away": {
