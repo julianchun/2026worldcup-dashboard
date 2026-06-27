@@ -40064,7 +40064,14 @@
     }
    ],
    "goals": [],
-   "bookings": [],
+   "bookings": [
+    {
+     "player": "486147",
+     "minute": "21'",
+     "card": 1,
+     "period": 3
+    }
+   ],
    "substitutions": []
   },
   "away": {
@@ -40370,7 +40377,7 @@
    "bookings": [],
    "substitutions": []
   },
-  "matchTime": "15'",
+  "matchTime": "28'",
   "period": 3,
   "final": false
  },
@@ -43737,7 +43744,7 @@
    "bookings": [],
    "substitutions": []
   },
-  "matchTime": "15'",
+  "matchTime": "28'",
   "period": 3,
   "final": false
  },
