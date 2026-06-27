@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-06-27T01:34:34.014Z",
+ "generatedAt": "2026-06-27T02:12:29.841Z",
  "sources": [
   {
    "name": "International football results from 1872",
@@ -11,7 +11,7 @@
  "matches": {
   "400021440": {
    "id": "400021440",
-   "generatedAt": "2026-06-27T01:34:34.014Z",
+   "generatedAt": "2026-06-27T02:12:29.841Z",
    "source": "open-data",
    "home": {
     "code": "CZE",
@@ -285,7 +285,7 @@
   },
   "400021441": {
    "id": "400021441",
-   "generatedAt": "2026-06-27T01:34:34.014Z",
+   "generatedAt": "2026-06-27T02:12:29.841Z",
    "source": "open-data",
    "home": {
     "code": "KOR",
@@ -603,7 +603,7 @@
   },
   "400021442": {
    "id": "400021442",
-   "generatedAt": "2026-06-27T01:34:34.014Z",
+   "generatedAt": "2026-06-27T02:12:29.841Z",
    "source": "open-data",
    "home": {
     "code": "MEX",
@@ -921,7 +921,7 @@
   },
   "400021443": {
    "id": "400021443",
-   "generatedAt": "2026-06-27T01:34:34.014Z",
+   "generatedAt": "2026-06-27T02:12:29.841Z",
    "source": "open-data",
    "home": {
     "code": "MEX",
@@ -1228,7 +1228,7 @@
   },
   "400021444": {
    "id": "400021444",
-   "generatedAt": "2026-06-27T01:34:34.014Z",
+   "generatedAt": "2026-06-27T02:12:29.841Z",
    "source": "open-data",
    "home": {
     "code": "CZE",
@@ -1535,7 +1535,7 @@
   },
   "400021445": {
    "id": "400021445",
-   "generatedAt": "2026-06-27T01:34:34.014Z",
+   "generatedAt": "2026-06-27T02:12:29.841Z",
    "source": "open-data",
    "home": {
     "code": "RSA",
@@ -1809,7 +1809,7 @@
   },
   "400021446": {
    "id": "400021446",
-   "generatedAt": "2026-06-27T01:34:34.014Z",
+   "generatedAt": "2026-06-27T02:12:29.841Z",
    "source": "open-data",
    "home": {
     "code": "SUI",
@@ -2083,7 +2083,7 @@
   },
   "400021447": {
    "id": "400021447",
-   "generatedAt": "2026-06-27T01:34:34.014Z",
+   "generatedAt": "2026-06-27T02:12:29.841Z",
    "source": "open-data",
    "home": {
     "code": "QAT",
@@ -2357,7 +2357,7 @@
   },
   "400021448": {
    "id": "400021448",
-   "generatedAt": "2026-06-27T01:34:34.014Z",
+   "generatedAt": "2026-06-27T02:12:29.841Z",
    "source": "open-data",
    "home": {
     "code": "BIH",
@@ -2642,7 +2642,7 @@
   },
   "400021449": {
    "id": "400021449",
-   "generatedAt": "2026-06-27T01:34:34.014Z",
+   "generatedAt": "2026-06-27T02:12:29.841Z",
    "source": "open-data",
    "home": {
     "code": "CAN",
@@ -2904,7 +2904,7 @@
   },
   "400021450": {
    "id": "400021450",
-   "generatedAt": "2026-06-27T01:34:34.014Z",
+   "generatedAt": "2026-06-27T02:12:29.841Z",
    "source": "open-data",
    "home": {
     "code": "CAN",
@@ -3178,7 +3178,7 @@
   },
   "400021451": {
    "id": "400021451",
-   "generatedAt": "2026-06-27T01:34:34.014Z",
+   "generatedAt": "2026-06-27T02:12:29.841Z",
    "source": "open-data",
    "home": {
     "code": "SUI",
@@ -3452,7 +3452,7 @@
   },
   "400021452": {
    "id": "400021452",
-   "generatedAt": "2026-06-27T01:34:34.014Z",
+   "generatedAt": "2026-06-27T02:12:29.841Z",
    "source": "open-data",
    "home": {
     "code": "MAR",
@@ -3714,7 +3714,7 @@
   },
   "400021453": {
    "id": "400021453",
-   "generatedAt": "2026-06-27T01:34:34.014Z",
+   "generatedAt": "2026-06-27T02:12:29.841Z",
    "source": "open-data",
    "home": {
     "code": "HAI",
@@ -3988,7 +3988,7 @@
   },
   "400021454": {
    "id": "400021454",
-   "generatedAt": "2026-06-27T01:34:34.014Z",
+   "generatedAt": "2026-06-27T02:12:29.841Z",
    "source": "open-data",
    "home": {
     "code": "SCO",
@@ -4262,7 +4262,7 @@
   },
   "400021455": {
    "id": "400021455",
-   "generatedAt": "2026-06-27T01:34:34.014Z",
+   "generatedAt": "2026-06-27T02:12:29.841Z",
    "source": "open-data",
    "home": {
     "code": "SCO",
@@ -4580,7 +4580,7 @@
   },
   "400021456": {
    "id": "400021456",
-   "generatedAt": "2026-06-27T01:34:34.014Z",
+   "generatedAt": "2026-06-27T02:12:29.841Z",
    "source": "open-data",
    "home": {
     "code": "BRA",
@@ -4876,7 +4876,7 @@
   },
   "400021457": {
    "id": "400021457",
-   "generatedAt": "2026-06-27T01:34:34.014Z",
+   "generatedAt": "2026-06-27T02:12:29.841Z",
    "source": "open-data",
    "home": {
     "code": "BRA",
@@ -5183,7 +5183,7 @@
   },
   "400021458": {
    "id": "400021458",
-   "generatedAt": "2026-06-27T01:34:34.014Z",
+   "generatedAt": "2026-06-27T02:12:29.841Z",
    "source": "open-data",
    "home": {
     "code": "USA",
@@ -5501,7 +5501,7 @@
   },
   "400021459": {
    "id": "400021459",
-   "generatedAt": "2026-06-27T01:34:34.014Z",
+   "generatedAt": "2026-06-27T02:12:29.841Z",
    "source": "open-data",
    "home": {
     "code": "TUR",
@@ -5819,7 +5819,7 @@
   },
   "400021460": {
    "id": "400021460",
-   "generatedAt": "2026-06-27T01:34:34.014Z",
+   "generatedAt": "2026-06-27T02:12:29.841Z",
    "source": "open-data",
    "home": {
     "code": "TUR",
@@ -6093,7 +6093,7 @@
   },
   "400021461": {
    "id": "400021461",
-   "generatedAt": "2026-06-27T01:34:34.014Z",
+   "generatedAt": "2026-06-27T02:12:29.841Z",
    "source": "open-data",
    "home": {
     "code": "PAR",
@@ -6411,7 +6411,7 @@
   },
   "400021462": {
    "id": "400021462",
-   "generatedAt": "2026-06-27T01:34:34.014Z",
+   "generatedAt": "2026-06-27T02:12:29.841Z",
    "source": "open-data",
    "home": {
     "code": "USA",
@@ -6718,7 +6718,7 @@
   },
   "400021463": {
    "id": "400021463",
-   "generatedAt": "2026-06-27T01:34:34.014Z",
+   "generatedAt": "2026-06-27T02:12:29.841Z",
    "source": "open-data",
    "home": {
     "code": "AUS",
@@ -7014,7 +7014,7 @@
   },
   "400021464": {
    "id": "400021464",
-   "generatedAt": "2026-06-27T01:34:34.014Z",
+   "generatedAt": "2026-06-27T02:12:29.841Z",
    "source": "open-data",
    "home": {
     "code": "GER",
@@ -7276,7 +7276,7 @@
   },
   "400021465": {
    "id": "400021465",
-   "generatedAt": "2026-06-27T01:34:34.014Z",
+   "generatedAt": "2026-06-27T02:12:29.841Z",
    "source": "open-data",
    "home": {
     "code": "ECU",
@@ -7550,7 +7550,7 @@
   },
   "400021466": {
    "id": "400021466",
-   "generatedAt": "2026-06-27T01:34:34.014Z",
+   "generatedAt": "2026-06-27T02:12:29.841Z",
    "source": "open-data",
    "home": {
     "code": "ECU",
@@ -7835,7 +7835,7 @@
   },
   "400021467": {
    "id": "400021467",
-   "generatedAt": "2026-06-27T01:34:34.014Z",
+   "generatedAt": "2026-06-27T02:12:29.841Z",
    "source": "open-data",
    "home": {
     "code": "CIV",
@@ -8097,7 +8097,7 @@
   },
   "400021468": {
    "id": "400021468",
-   "generatedAt": "2026-06-27T01:34:34.014Z",
+   "generatedAt": "2026-06-27T02:12:29.841Z",
    "source": "open-data",
    "home": {
     "code": "CUW",
@@ -8359,7 +8359,7 @@
   },
   "400021469": {
    "id": "400021469",
-   "generatedAt": "2026-06-27T01:34:34.014Z",
+   "generatedAt": "2026-06-27T02:12:29.841Z",
    "source": "open-data",
    "home": {
     "code": "GER",
@@ -8633,7 +8633,7 @@
   },
   "400021470": {
    "id": "400021470",
-   "generatedAt": "2026-06-27T01:34:34.014Z",
+   "generatedAt": "2026-06-27T02:12:29.841Z",
    "source": "open-data",
    "home": {
     "code": "NED",
@@ -8929,7 +8929,7 @@
   },
   "400021471": {
    "id": "400021471",
-   "generatedAt": "2026-06-27T01:34:34.014Z",
+   "generatedAt": "2026-06-27T02:12:29.841Z",
    "source": "open-data",
    "home": {
     "code": "JPN",
@@ -9236,7 +9236,7 @@
   },
   "400021472": {
    "id": "400021472",
-   "generatedAt": "2026-06-27T01:34:34.014Z",
+   "generatedAt": "2026-06-27T02:12:29.841Z",
    "source": "open-data",
    "home": {
     "code": "NED",
@@ -9554,7 +9554,7 @@
   },
   "400021473": {
    "id": "400021473",
-   "generatedAt": "2026-06-27T01:34:34.014Z",
+   "generatedAt": "2026-06-27T02:12:29.841Z",
    "source": "open-data",
    "home": {
     "code": "TUN",
@@ -9850,7 +9850,7 @@
   },
   "400021474": {
    "id": "400021474",
-   "generatedAt": "2026-06-27T01:34:34.014Z",
+   "generatedAt": "2026-06-27T02:12:29.841Z",
    "source": "open-data",
    "home": {
     "code": "SWE",
@@ -10168,7 +10168,7 @@
   },
   "400021475": {
    "id": "400021475",
-   "generatedAt": "2026-06-27T01:34:34.014Z",
+   "generatedAt": "2026-06-27T02:12:29.841Z",
    "source": "open-data",
    "home": {
     "code": "TUN",
@@ -10486,7 +10486,7 @@
   },
   "400021476": {
    "id": "400021476",
-   "generatedAt": "2026-06-27T01:34:34.014Z",
+   "generatedAt": "2026-06-27T02:12:29.841Z",
    "source": "open-data",
    "home": {
     "code": "IRN",
@@ -10782,7 +10782,7 @@
   },
   "400021477": {
    "id": "400021477",
-   "generatedAt": "2026-06-27T01:34:34.014Z",
+   "generatedAt": "2026-06-27T02:12:29.841Z",
    "source": "open-data",
    "home": {
     "code": "BEL",
@@ -11044,7 +11044,7 @@
   },
   "400021478": {
    "id": "400021478",
-   "generatedAt": "2026-06-27T01:34:34.014Z",
+   "generatedAt": "2026-06-27T02:12:29.841Z",
    "source": "open-data",
    "home": {
     "code": "BEL",
@@ -11351,7 +11351,7 @@
   },
   "400021479": {
    "id": "400021479",
-   "generatedAt": "2026-06-27T01:34:34.014Z",
+   "generatedAt": "2026-06-27T02:12:29.841Z",
    "source": "open-data",
    "home": {
     "code": "EGY",
@@ -11625,7 +11625,7 @@
   },
   "400021480": {
    "id": "400021480",
-   "generatedAt": "2026-06-27T01:34:34.014Z",
+   "generatedAt": "2026-06-27T02:12:29.841Z",
    "source": "open-data",
    "home": {
     "code": "NZL",
@@ -11932,7 +11932,7 @@
   },
   "400021481": {
    "id": "400021481",
-   "generatedAt": "2026-06-27T01:34:34.014Z",
+   "generatedAt": "2026-06-27T02:12:29.841Z",
    "source": "open-data",
    "home": {
     "code": "NZL",
@@ -12194,7 +12194,7 @@
   },
   "400021482": {
    "id": "400021482",
-   "generatedAt": "2026-06-27T01:34:34.014Z",
+   "generatedAt": "2026-06-27T02:12:29.841Z",
    "source": "open-data",
    "home": {
     "code": "ESP",
@@ -12456,7 +12456,7 @@
   },
   "400021483": {
    "id": "400021483",
-   "generatedAt": "2026-06-27T01:34:34.014Z",
+   "generatedAt": "2026-06-27T02:12:29.841Z",
    "source": "open-data",
    "home": {
     "code": "ESP",
@@ -12752,7 +12752,7 @@
   },
   "400021484": {
    "id": "400021484",
-   "generatedAt": "2026-06-27T01:34:34.014Z",
+   "generatedAt": "2026-06-27T02:12:29.841Z",
    "source": "open-data",
    "home": {
     "code": "URU",
@@ -13070,7 +13070,7 @@
   },
   "400021485": {
    "id": "400021485",
-   "generatedAt": "2026-06-27T01:34:34.014Z",
+   "generatedAt": "2026-06-27T02:12:29.841Z",
    "source": "open-data",
    "home": {
     "code": "CPV",
@@ -13332,7 +13332,7 @@
   },
   "400021486": {
    "id": "400021486",
-   "generatedAt": "2026-06-27T01:34:34.014Z",
+   "generatedAt": "2026-06-27T02:12:29.841Z",
    "source": "open-data",
    "home": {
     "code": "KSA",
@@ -13628,7 +13628,7 @@
   },
   "400021487": {
    "id": "400021487",
-   "generatedAt": "2026-06-27T01:34:34.014Z",
+   "generatedAt": "2026-06-27T02:12:29.841Z",
    "source": "open-data",
    "home": {
     "code": "URU",
@@ -13890,7 +13890,7 @@
   },
   "400021488": {
    "id": "400021488",
-   "generatedAt": "2026-06-27T01:34:34.014Z",
+   "generatedAt": "2026-06-27T02:12:29.841Z",
    "source": "open-data",
    "home": {
     "code": "IRQ",
@@ -14152,7 +14152,7 @@
   },
   "400021489": {
    "id": "400021489",
-   "generatedAt": "2026-06-27T01:34:34.014Z",
+   "generatedAt": "2026-06-27T02:12:29.841Z",
    "source": "open-data",
    "home": {
     "code": "NOR",
@@ -14470,7 +14470,7 @@
   },
   "400021490": {
    "id": "400021490",
-   "generatedAt": "2026-06-27T01:34:34.014Z",
+   "generatedAt": "2026-06-27T02:12:29.841Z",
    "source": "open-data",
    "home": {
     "code": "FRA",
@@ -14755,7 +14755,7 @@
   },
   "400021491": {
    "id": "400021491",
-   "generatedAt": "2026-06-27T01:34:34.014Z",
+   "generatedAt": "2026-06-27T02:12:29.841Z",
    "source": "open-data",
    "home": {
     "code": "NOR",
@@ -15040,7 +15040,7 @@
   },
   "400021492": {
    "id": "400021492",
-   "generatedAt": "2026-06-27T01:34:34.014Z",
+   "generatedAt": "2026-06-27T02:12:29.841Z",
    "source": "open-data",
    "home": {
     "code": "FRA",
@@ -15302,7 +15302,7 @@
   },
   "400021493": {
    "id": "400021493",
-   "generatedAt": "2026-06-27T01:34:34.014Z",
+   "generatedAt": "2026-06-27T02:12:29.841Z",
    "source": "open-data",
    "home": {
     "code": "SEN",
@@ -15564,7 +15564,7 @@
   },
   "400021494": {
    "id": "400021494",
-   "generatedAt": "2026-06-27T01:34:34.014Z",
+   "generatedAt": "2026-06-27T02:12:29.841Z",
    "source": "open-data",
    "home": {
     "code": "ARG",
@@ -15849,7 +15849,7 @@
   },
   "400021495": {
    "id": "400021495",
-   "generatedAt": "2026-06-27T01:34:34.014Z",
+   "generatedAt": "2026-06-27T02:12:29.841Z",
    "source": "open-data",
    "home": {
     "code": "JOR",
@@ -16111,7 +16111,7 @@
   },
   "400021496": {
    "id": "400021496",
-   "generatedAt": "2026-06-27T01:34:34.014Z",
+   "generatedAt": "2026-06-27T02:12:29.841Z",
    "source": "open-data",
    "home": {
     "code": "ARG",
@@ -16396,7 +16396,7 @@
   },
   "400021497": {
    "id": "400021497",
-   "generatedAt": "2026-06-27T01:34:34.014Z",
+   "generatedAt": "2026-06-27T02:12:29.841Z",
    "source": "open-data",
    "home": {
     "code": "ALG",
@@ -16670,7 +16670,7 @@
   },
   "400021498": {
    "id": "400021498",
-   "generatedAt": "2026-06-27T01:34:34.014Z",
+   "generatedAt": "2026-06-27T02:12:29.841Z",
    "source": "open-data",
    "home": {
     "code": "AUT",
@@ -16944,7 +16944,7 @@
   },
   "400021499": {
    "id": "400021499",
-   "generatedAt": "2026-06-27T01:34:34.014Z",
+   "generatedAt": "2026-06-27T02:12:29.841Z",
    "source": "open-data",
    "home": {
     "code": "JOR",
@@ -17240,7 +17240,7 @@
   },
   "400021500": {
    "id": "400021500",
-   "generatedAt": "2026-06-27T01:34:34.014Z",
+   "generatedAt": "2026-06-27T02:12:29.841Z",
    "source": "open-data",
    "home": {
     "code": "COD",
@@ -17502,7 +17502,7 @@
   },
   "400021501": {
    "id": "400021501",
-   "generatedAt": "2026-06-27T01:34:34.014Z",
+   "generatedAt": "2026-06-27T02:12:29.841Z",
    "source": "open-data",
    "home": {
     "code": "COL",
@@ -17776,7 +17776,7 @@
   },
   "400021502": {
    "id": "400021502",
-   "generatedAt": "2026-06-27T01:34:34.014Z",
+   "generatedAt": "2026-06-27T02:12:29.841Z",
    "source": "open-data",
    "home": {
     "code": "POR",
@@ -18038,7 +18038,7 @@
   },
   "400021503": {
    "id": "400021503",
-   "generatedAt": "2026-06-27T01:34:34.014Z",
+   "generatedAt": "2026-06-27T02:12:29.841Z",
    "source": "open-data",
    "home": {
     "code": "POR",
@@ -18300,7 +18300,7 @@
   },
   "400021504": {
    "id": "400021504",
-   "generatedAt": "2026-06-27T01:34:34.014Z",
+   "generatedAt": "2026-06-27T02:12:29.841Z",
    "source": "open-data",
    "home": {
     "code": "UZB",
@@ -18574,7 +18574,7 @@
   },
   "400021505": {
    "id": "400021505",
-   "generatedAt": "2026-06-27T01:34:34.014Z",
+   "generatedAt": "2026-06-27T02:12:29.841Z",
    "source": "open-data",
    "home": {
     "code": "COL",
@@ -18836,7 +18836,7 @@
   },
   "400021506": {
    "id": "400021506",
-   "generatedAt": "2026-06-27T01:34:34.014Z",
+   "generatedAt": "2026-06-27T02:12:29.841Z",
    "source": "open-data",
    "home": {
     "code": "ENG",
@@ -19110,7 +19110,7 @@
   },
   "400021507": {
    "id": "400021507",
-   "generatedAt": "2026-06-27T01:34:34.014Z",
+   "generatedAt": "2026-06-27T02:12:29.841Z",
    "source": "open-data",
    "home": {
     "code": "ENG",
@@ -19428,7 +19428,7 @@
   },
   "400021508": {
    "id": "400021508",
-   "generatedAt": "2026-06-27T01:34:34.014Z",
+   "generatedAt": "2026-06-27T02:12:29.841Z",
    "source": "open-data",
    "home": {
     "code": "PAN",
@@ -19702,7 +19702,7 @@
   },
   "400021509": {
    "id": "400021509",
-   "generatedAt": "2026-06-27T01:34:34.014Z",
+   "generatedAt": "2026-06-27T02:12:29.841Z",
    "source": "open-data",
    "home": {
     "code": "CRO",
@@ -19964,7 +19964,7 @@
   },
   "400021510": {
    "id": "400021510",
-   "generatedAt": "2026-06-27T01:34:34.014Z",
+   "generatedAt": "2026-06-27T02:12:29.841Z",
    "source": "open-data",
    "home": {
     "code": "GHA",
@@ -20226,7 +20226,7 @@
   },
   "400021511": {
    "id": "400021511",
-   "generatedAt": "2026-06-27T01:34:34.014Z",
+   "generatedAt": "2026-06-27T02:12:29.841Z",
    "source": "open-data",
    "home": {
     "code": "PAN",
@@ -20488,7 +20488,7 @@
   },
   "400021512": {
    "id": "400021512",
-   "generatedAt": "2026-06-27T01:34:34.014Z",
+   "generatedAt": "2026-06-27T02:12:29.841Z",
    "source": "open-data",
    "home": null,
    "away": null,
@@ -20500,7 +20500,7 @@
   },
   "400021513": {
    "id": "400021513",
-   "generatedAt": "2026-06-27T01:34:34.014Z",
+   "generatedAt": "2026-06-27T02:12:29.841Z",
    "source": "open-data",
    "home": {
     "code": "GER",
@@ -20624,16 +20624,168 @@
      "ga": 13
     }
    },
-   "away": null,
-   "headToHead": null,
+   "away": {
+    "code": "PAR",
+    "matches": [
+     {
+      "date": "2026-06-25",
+      "homeCode": "PAR",
+      "awayCode": "AUS",
+      "homeScore": 0,
+      "awayScore": 0,
+      "tournament": "FIFA World Cup",
+      "city": "Santa Clara",
+      "country": "United States",
+      "neutral": true
+     },
+     {
+      "date": "2026-06-19",
+      "homeCode": "TUR",
+      "awayCode": "PAR",
+      "homeScore": 0,
+      "awayScore": 1,
+      "tournament": "FIFA World Cup",
+      "city": "Santa Clara",
+      "country": "United States",
+      "neutral": true
+     },
+     {
+      "date": "2026-06-12",
+      "homeCode": "USA",
+      "awayCode": "PAR",
+      "homeScore": 4,
+      "awayScore": 1,
+      "tournament": "FIFA World Cup",
+      "city": "Inglewood",
+      "country": "United States",
+      "neutral": false
+     },
+     {
+      "date": "2026-03-31",
+      "homeCode": "MAR",
+      "awayCode": "PAR",
+      "homeScore": 2,
+      "awayScore": 1,
+      "tournament": "Friendly",
+      "city": "Lens",
+      "country": "France",
+      "neutral": true
+     },
+     {
+      "date": "2025-11-18",
+      "homeCode": "MEX",
+      "awayCode": "PAR",
+      "homeScore": 1,
+      "awayScore": 2,
+      "tournament": "Friendly",
+      "city": "San Antonio",
+      "country": "United States",
+      "neutral": true
+     },
+     {
+      "date": "2025-11-15",
+      "homeCode": "USA",
+      "awayCode": "PAR",
+      "homeScore": 2,
+      "awayScore": 1,
+      "tournament": "Friendly",
+      "city": "Chester",
+      "country": "United States",
+      "neutral": false
+     },
+     {
+      "date": "2025-10-14",
+      "homeCode": "KOR",
+      "awayCode": "PAR",
+      "homeScore": 2,
+      "awayScore": 0,
+      "tournament": "Friendly",
+      "city": "Seoul",
+      "country": "South Korea",
+      "neutral": false
+     },
+     {
+      "date": "2025-10-10",
+      "homeCode": "JPN",
+      "awayCode": "PAR",
+      "homeScore": 2,
+      "awayScore": 2,
+      "tournament": "Kirin Cup",
+      "city": "Osaka",
+      "country": "Japan",
+      "neutral": false
+     },
+     {
+      "date": "2025-09-04",
+      "homeCode": "PAR",
+      "awayCode": "ECU",
+      "homeScore": 0,
+      "awayScore": 0,
+      "tournament": "FIFA World Cup qualification",
+      "city": "Asunción",
+      "country": "Paraguay",
+      "neutral": false
+     },
+     {
+      "date": "2025-06-10",
+      "homeCode": "BRA",
+      "awayCode": "PAR",
+      "homeScore": 1,
+      "awayScore": 0,
+      "tournament": "FIFA World Cup qualification",
+      "city": "São Paulo",
+      "country": "Brazil",
+      "neutral": false
+     }
+    ],
+    "record": {
+     "wins": 2,
+     "draws": 3,
+     "losses": 5,
+     "gf": 8,
+     "ga": 14
+    }
+   },
+   "headToHead": {
+    "total": 2,
+    "homeWins": 1,
+    "draws": 1,
+    "awayWins": 0,
+    "homeGoals": 4,
+    "awayGoals": 3,
+    "worldCupMeetings": 1,
+    "competitiveMeetings": 1,
+    "lastMeetings": [
+     {
+      "date": "2013-08-14",
+      "homeCode": "GER",
+      "awayCode": "PAR",
+      "homeScore": 3,
+      "awayScore": 3,
+      "tournament": "Friendly",
+      "city": "Kaiserslautern",
+      "country": "Germany",
+      "neutral": false
+     },
+     {
+      "date": "2002-06-15",
+      "homeCode": "GER",
+      "awayCode": "PAR",
+      "homeScore": 1,
+      "awayScore": 0,
+      "tournament": "FIFA World Cup",
+      "city": "Seogwipo",
+      "country": "South Korea",
+      "neutral": true
+     }
+    ]
+   },
    "availabilityNotes": [],
-   "warnings": [
-    "teams-not-known"
-   ]
+   "warnings": []
   },
   "400021514": {
    "id": "400021514",
-   "generatedAt": "2026-06-27T01:34:34.014Z",
+   "generatedAt": "2026-06-27T02:12:29.841Z",
    "source": "open-data",
    "home": {
     "code": "CIV",
@@ -20895,7 +21047,7 @@
   },
   "400021515": {
    "id": "400021515",
-   "generatedAt": "2026-06-27T01:34:34.014Z",
+   "generatedAt": "2026-06-27T02:12:29.841Z",
    "source": "open-data",
    "home": {
     "code": "AUS",
@@ -21028,7 +21180,7 @@
   },
   "400021516": {
    "id": "400021516",
-   "generatedAt": "2026-06-27T01:34:34.014Z",
+   "generatedAt": "2026-06-27T02:12:29.841Z",
    "source": "open-data",
    "home": {
     "code": "BRA",
@@ -21346,7 +21498,7 @@
   },
   "400021517": {
    "id": "400021517",
-   "generatedAt": "2026-06-27T01:34:34.014Z",
+   "generatedAt": "2026-06-27T02:12:29.841Z",
    "source": "open-data",
    "home": null,
    "away": null,
@@ -21358,7 +21510,7 @@
   },
   "400021518": {
    "id": "400021518",
-   "generatedAt": "2026-06-27T01:34:34.014Z",
+   "generatedAt": "2026-06-27T02:12:29.841Z",
    "source": "open-data",
    "home": {
     "code": "RSA",
@@ -21632,9 +21784,130 @@
   },
   "400021519": {
    "id": "400021519",
-   "generatedAt": "2026-06-27T01:34:34.014Z",
+   "generatedAt": "2026-06-27T02:12:29.841Z",
    "source": "open-data",
-   "home": null,
+   "home": {
+    "code": "ESP",
+    "matches": [
+     {
+      "date": "2026-06-21",
+      "homeCode": "ESP",
+      "awayCode": "KSA",
+      "homeScore": 4,
+      "awayScore": 0,
+      "tournament": "FIFA World Cup",
+      "city": "Atlanta",
+      "country": "United States",
+      "neutral": true
+     },
+     {
+      "date": "2026-06-15",
+      "homeCode": "ESP",
+      "awayCode": "CPV",
+      "homeScore": 0,
+      "awayScore": 0,
+      "tournament": "FIFA World Cup",
+      "city": "Atlanta",
+      "country": "United States",
+      "neutral": true
+     },
+     {
+      "date": "2026-06-04",
+      "homeCode": "ESP",
+      "awayCode": "IRQ",
+      "homeScore": 1,
+      "awayScore": 1,
+      "tournament": "Friendly",
+      "city": "A Coruña",
+      "country": "Spain",
+      "neutral": false
+     },
+     {
+      "date": "2026-03-31",
+      "homeCode": "ESP",
+      "awayCode": "EGY",
+      "homeScore": 0,
+      "awayScore": 0,
+      "tournament": "Friendly",
+      "city": "Barcelona",
+      "country": "Spain",
+      "neutral": false
+     },
+     {
+      "date": "2025-11-18",
+      "homeCode": "ESP",
+      "awayCode": "TUR",
+      "homeScore": 2,
+      "awayScore": 2,
+      "tournament": "FIFA World Cup qualification",
+      "city": "Seville",
+      "country": "Spain",
+      "neutral": false
+     },
+     {
+      "date": "2025-09-07",
+      "homeCode": "TUR",
+      "awayCode": "ESP",
+      "homeScore": 0,
+      "awayScore": 6,
+      "tournament": "FIFA World Cup qualification",
+      "city": "Konya",
+      "country": "Turkey",
+      "neutral": false
+     },
+     {
+      "date": "2025-06-08",
+      "homeCode": "POR",
+      "awayCode": "ESP",
+      "homeScore": 2,
+      "awayScore": 2,
+      "tournament": "UEFA Nations League",
+      "city": "Munich",
+      "country": "Germany",
+      "neutral": true
+     },
+     {
+      "date": "2025-06-05",
+      "homeCode": "ESP",
+      "awayCode": "FRA",
+      "homeScore": 5,
+      "awayScore": 4,
+      "tournament": "UEFA Nations League",
+      "city": "Stuttgart",
+      "country": "Germany",
+      "neutral": true
+     },
+     {
+      "date": "2025-03-23",
+      "homeCode": "ESP",
+      "awayCode": "NED",
+      "homeScore": 3,
+      "awayScore": 3,
+      "tournament": "UEFA Nations League",
+      "city": "Valencia",
+      "country": "Spain",
+      "neutral": false
+     },
+     {
+      "date": "2025-03-20",
+      "homeCode": "NED",
+      "awayCode": "ESP",
+      "homeScore": 2,
+      "awayScore": 2,
+      "tournament": "UEFA Nations League",
+      "city": "Rotterdam",
+      "country": "Netherlands",
+      "neutral": false
+     }
+    ],
+    "record": {
+     "wins": 3,
+     "draws": 7,
+     "losses": 0,
+     "gf": 25,
+     "ga": 14
+    }
+   },
    "away": null,
    "headToHead": null,
    "availabilityNotes": [],
@@ -21644,7 +21917,7 @@
   },
   "400021520": {
    "id": "400021520",
-   "generatedAt": "2026-06-27T01:34:34.014Z",
+   "generatedAt": "2026-06-27T02:12:29.841Z",
    "source": "open-data",
    "home": {
     "code": "MEX",
@@ -21777,7 +22050,7 @@
   },
   "400021521": {
    "id": "400021521",
-   "generatedAt": "2026-06-27T01:34:34.014Z",
+   "generatedAt": "2026-06-27T02:12:29.841Z",
    "source": "open-data",
    "home": {
     "code": "ARG",
@@ -21901,16 +22174,145 @@
      "ga": 7
     }
    },
-   "away": null,
-   "headToHead": null,
+   "away": {
+    "code": "CPV",
+    "matches": [
+     {
+      "date": "2026-06-21",
+      "homeCode": "URU",
+      "awayCode": "CPV",
+      "homeScore": 2,
+      "awayScore": 2,
+      "tournament": "FIFA World Cup",
+      "city": "Miami Gardens",
+      "country": "United States",
+      "neutral": true
+     },
+     {
+      "date": "2026-06-15",
+      "homeCode": "ESP",
+      "awayCode": "CPV",
+      "homeScore": 0,
+      "awayScore": 0,
+      "tournament": "FIFA World Cup",
+      "city": "Atlanta",
+      "country": "United States",
+      "neutral": true
+     },
+     {
+      "date": "2025-11-17",
+      "homeCode": "CPV",
+      "awayCode": "EGY",
+      "homeScore": 1,
+      "awayScore": 1,
+      "tournament": "Al Ain International Cup",
+      "city": "Al Ain",
+      "country": "United Arab Emirates",
+      "neutral": true
+     },
+     {
+      "date": "2025-11-13",
+      "homeCode": "IRN",
+      "awayCode": "CPV",
+      "homeScore": 0,
+      "awayScore": 0,
+      "tournament": "Al Ain International Cup",
+      "city": "Al Ain",
+      "country": "United Arab Emirates",
+      "neutral": true
+     },
+     {
+      "date": "2024-11-15",
+      "homeCode": "CPV",
+      "awayCode": "EGY",
+      "homeScore": 1,
+      "awayScore": 1,
+      "tournament": "African Cup of Nations qualification",
+      "city": "Praia",
+      "country": "Cape Verde",
+      "neutral": false
+     },
+     {
+      "date": "2024-09-06",
+      "homeCode": "EGY",
+      "awayCode": "CPV",
+      "homeScore": 3,
+      "awayScore": 0,
+      "tournament": "African Cup of Nations qualification",
+      "city": "Cairo",
+      "country": "Egypt",
+      "neutral": false
+     },
+     {
+      "date": "2024-02-03",
+      "homeCode": "CPV",
+      "awayCode": "RSA",
+      "homeScore": 0,
+      "awayScore": 0,
+      "tournament": "African Cup of Nations",
+      "city": "Yamoussoukro",
+      "country": "Ivory Coast",
+      "neutral": true
+     },
+     {
+      "date": "2024-01-22",
+      "homeCode": "CPV",
+      "awayCode": "EGY",
+      "homeScore": 2,
+      "awayScore": 2,
+      "tournament": "African Cup of Nations",
+      "city": "Abidjan",
+      "country": "Ivory Coast",
+      "neutral": true
+     },
+     {
+      "date": "2024-01-14",
+      "homeCode": "GHA",
+      "awayCode": "CPV",
+      "homeScore": 1,
+      "awayScore": 2,
+      "tournament": "African Cup of Nations",
+      "city": "Abidjan",
+      "country": "Ivory Coast",
+      "neutral": true
+     },
+     {
+      "date": "2024-01-10",
+      "homeCode": "TUN",
+      "awayCode": "CPV",
+      "homeScore": 2,
+      "awayScore": 0,
+      "tournament": "Friendly",
+      "city": "Radès",
+      "country": "Tunisia",
+      "neutral": false
+     }
+    ],
+    "record": {
+     "wins": 1,
+     "draws": 7,
+     "losses": 2,
+     "gf": 8,
+     "ga": 12
+    }
+   },
+   "headToHead": {
+    "total": 0,
+    "homeWins": 0,
+    "draws": 0,
+    "awayWins": 0,
+    "homeGoals": 0,
+    "awayGoals": 0,
+    "worldCupMeetings": 0,
+    "competitiveMeetings": 0,
+    "lastMeetings": []
+   },
    "availabilityNotes": [],
-   "warnings": [
-    "teams-not-known"
-   ]
+   "warnings": []
   },
   "400021522": {
    "id": "400021522",
-   "generatedAt": "2026-06-27T01:34:34.014Z",
+   "generatedAt": "2026-06-27T02:12:29.841Z",
    "source": "open-data",
    "home": {
     "code": "NED",
@@ -22206,7 +22608,7 @@
   },
   "400021523": {
    "id": "400021523",
-   "generatedAt": "2026-06-27T01:34:34.014Z",
+   "generatedAt": "2026-06-27T02:12:29.841Z",
    "source": "open-data",
    "home": {
     "code": "FRA",
@@ -22330,16 +22732,201 @@
      "ga": 13
     }
    },
-   "away": null,
-   "headToHead": null,
+   "away": {
+    "code": "SWE",
+    "matches": [
+     {
+      "date": "2026-06-25",
+      "homeCode": "JPN",
+      "awayCode": "SWE",
+      "homeScore": 1,
+      "awayScore": 1,
+      "tournament": "FIFA World Cup",
+      "city": "Arlington",
+      "country": "United States",
+      "neutral": true
+     },
+     {
+      "date": "2026-06-20",
+      "homeCode": "NED",
+      "awayCode": "SWE",
+      "homeScore": 5,
+      "awayScore": 1,
+      "tournament": "FIFA World Cup",
+      "city": "Houston",
+      "country": "United States",
+      "neutral": true
+     },
+     {
+      "date": "2026-06-14",
+      "homeCode": "SWE",
+      "awayCode": "TUN",
+      "homeScore": 5,
+      "awayScore": 1,
+      "tournament": "FIFA World Cup",
+      "city": "Guadalupe",
+      "country": "Mexico",
+      "neutral": true
+     },
+     {
+      "date": "2026-06-01",
+      "homeCode": "NOR",
+      "awayCode": "SWE",
+      "homeScore": 3,
+      "awayScore": 1,
+      "tournament": "Friendly",
+      "city": "Oslo",
+      "country": "Norway",
+      "neutral": false
+     },
+     {
+      "date": "2025-11-15",
+      "homeCode": "SUI",
+      "awayCode": "SWE",
+      "homeScore": 4,
+      "awayScore": 1,
+      "tournament": "FIFA World Cup qualification",
+      "city": "Geneva",
+      "country": "Switzerland",
+      "neutral": false
+     },
+     {
+      "date": "2025-10-10",
+      "homeCode": "SWE",
+      "awayCode": "SUI",
+      "homeScore": 0,
+      "awayScore": 2,
+      "tournament": "FIFA World Cup qualification",
+      "city": "Solna",
+      "country": "Sweden",
+      "neutral": false
+     },
+     {
+      "date": "2025-06-10",
+      "homeCode": "SWE",
+      "awayCode": "ALG",
+      "homeScore": 4,
+      "awayScore": 3,
+      "tournament": "Friendly",
+      "city": "Solna",
+      "country": "Sweden",
+      "neutral": false
+     },
+     {
+      "date": "2024-03-21",
+      "homeCode": "POR",
+      "awayCode": "SWE",
+      "homeScore": 5,
+      "awayScore": 2,
+      "tournament": "Friendly",
+      "city": "Guimarães",
+      "country": "Portugal",
+      "neutral": false
+     },
+     {
+      "date": "2023-10-16",
+      "homeCode": "BEL",
+      "awayCode": "SWE",
+      "homeScore": 1,
+      "awayScore": 1,
+      "tournament": "UEFA Euro qualification",
+      "city": "Brussels",
+      "country": "Belgium",
+      "neutral": false
+     },
+     {
+      "date": "2023-09-12",
+      "homeCode": "SWE",
+      "awayCode": "AUT",
+      "homeScore": 1,
+      "awayScore": 3,
+      "tournament": "UEFA Euro qualification",
+      "city": "Stockholm",
+      "country": "Sweden",
+      "neutral": false
+     }
+    ],
+    "record": {
+     "wins": 2,
+     "draws": 2,
+     "losses": 6,
+     "gf": 17,
+     "ga": 28
+    }
+   },
+   "headToHead": {
+    "total": 23,
+    "homeWins": 12,
+    "draws": 5,
+    "awayWins": 6,
+    "homeGoals": 34,
+    "awayGoals": 23,
+    "worldCupMeetings": 0,
+    "competitiveMeetings": 12,
+    "lastMeetings": [
+     {
+      "date": "2020-11-17",
+      "homeCode": "FRA",
+      "awayCode": "SWE",
+      "homeScore": 4,
+      "awayScore": 2,
+      "tournament": "UEFA Nations League",
+      "city": "Paris",
+      "country": "France",
+      "neutral": false
+     },
+     {
+      "date": "2020-09-05",
+      "homeCode": "SWE",
+      "awayCode": "FRA",
+      "homeScore": 0,
+      "awayScore": 1,
+      "tournament": "UEFA Nations League",
+      "city": "Stockholm",
+      "country": "Sweden",
+      "neutral": false
+     },
+     {
+      "date": "2017-06-09",
+      "homeCode": "SWE",
+      "awayCode": "FRA",
+      "homeScore": 2,
+      "awayScore": 1,
+      "tournament": "FIFA World Cup qualification",
+      "city": "Solna",
+      "country": "Sweden",
+      "neutral": false
+     },
+     {
+      "date": "2016-11-11",
+      "homeCode": "FRA",
+      "awayCode": "SWE",
+      "homeScore": 2,
+      "awayScore": 1,
+      "tournament": "FIFA World Cup qualification",
+      "city": "Saint-Denis",
+      "country": "France",
+      "neutral": false
+     },
+     {
+      "date": "2014-11-18",
+      "homeCode": "FRA",
+      "awayCode": "SWE",
+      "homeScore": 1,
+      "awayScore": 0,
+      "tournament": "Friendly",
+      "city": "Marseille",
+      "country": "France",
+      "neutral": false
+     }
+    ]
+   },
    "availabilityNotes": [],
-   "warnings": [
-    "teams-not-known"
-   ]
+   "warnings": []
   },
   "400021524": {
    "id": "400021524",
-   "generatedAt": "2026-06-27T01:34:34.014Z",
+   "generatedAt": "2026-06-27T02:12:29.841Z",
    "source": "open-data",
    "home": {
     "code": "USA",
@@ -22635,7 +23222,7 @@
   },
   "400021525": {
    "id": "400021525",
-   "generatedAt": "2026-06-27T01:34:34.014Z",
+   "generatedAt": "2026-06-27T02:12:29.841Z",
    "source": "open-data",
    "home": null,
    "away": null,
@@ -22647,7 +23234,7 @@
   },
   "400021526": {
    "id": "400021526",
-   "generatedAt": "2026-06-27T01:34:34.014Z",
+   "generatedAt": "2026-06-27T02:12:29.841Z",
    "source": "open-data",
    "home": null,
    "away": null,
@@ -22659,7 +23246,7 @@
   },
   "400021527": {
    "id": "400021527",
-   "generatedAt": "2026-06-27T01:34:34.014Z",
+   "generatedAt": "2026-06-27T02:12:29.841Z",
    "source": "open-data",
    "home": {
     "code": "SUI",
@@ -22792,7 +23379,7 @@
   },
   "400021528": {
    "id": "400021528",
-   "generatedAt": "2026-06-27T01:34:34.014Z",
+   "generatedAt": "2026-06-27T02:12:29.841Z",
    "source": "open-data",
    "home": null,
    "away": null,
@@ -22804,7 +23391,7 @@
   },
   "400021529": {
    "id": "400021529",
-   "generatedAt": "2026-06-27T01:34:34.014Z",
+   "generatedAt": "2026-06-27T02:12:29.841Z",
    "source": "open-data",
    "home": null,
    "away": null,
@@ -22816,7 +23403,7 @@
   },
   "400021530": {
    "id": "400021530",
-   "generatedAt": "2026-06-27T01:34:34.014Z",
+   "generatedAt": "2026-06-27T02:12:29.841Z",
    "source": "open-data",
    "home": null,
    "away": null,
@@ -22828,7 +23415,7 @@
   },
   "400021531": {
    "id": "400021531",
-   "generatedAt": "2026-06-27T01:34:34.014Z",
+   "generatedAt": "2026-06-27T02:12:29.841Z",
    "source": "open-data",
    "home": null,
    "away": null,
@@ -22840,7 +23427,7 @@
   },
   "400021532": {
    "id": "400021532",
-   "generatedAt": "2026-06-27T01:34:34.014Z",
+   "generatedAt": "2026-06-27T02:12:29.841Z",
    "source": "open-data",
    "home": null,
    "away": null,
@@ -22852,7 +23439,7 @@
   },
   "400021533": {
    "id": "400021533",
-   "generatedAt": "2026-06-27T01:34:34.014Z",
+   "generatedAt": "2026-06-27T02:12:29.841Z",
    "source": "open-data",
    "home": null,
    "away": null,
@@ -22864,7 +23451,7 @@
   },
   "400021534": {
    "id": "400021534",
-   "generatedAt": "2026-06-27T01:34:34.014Z",
+   "generatedAt": "2026-06-27T02:12:29.841Z",
    "source": "open-data",
    "home": null,
    "away": null,
@@ -22876,7 +23463,7 @@
   },
   "400021535": {
    "id": "400021535",
-   "generatedAt": "2026-06-27T01:34:34.014Z",
+   "generatedAt": "2026-06-27T02:12:29.841Z",
    "source": "open-data",
    "home": null,
    "away": null,
@@ -22888,7 +23475,7 @@
   },
   "400021536": {
    "id": "400021536",
-   "generatedAt": "2026-06-27T01:34:34.014Z",
+   "generatedAt": "2026-06-27T02:12:29.841Z",
    "source": "open-data",
    "home": null,
    "away": null,
@@ -22900,7 +23487,7 @@
   },
   "400021537": {
    "id": "400021537",
-   "generatedAt": "2026-06-27T01:34:34.014Z",
+   "generatedAt": "2026-06-27T02:12:29.841Z",
    "source": "open-data",
    "home": null,
    "away": null,
@@ -22912,7 +23499,7 @@
   },
   "400021538": {
    "id": "400021538",
-   "generatedAt": "2026-06-27T01:34:34.014Z",
+   "generatedAt": "2026-06-27T02:12:29.841Z",
    "source": "open-data",
    "home": null,
    "away": null,
@@ -22924,7 +23511,7 @@
   },
   "400021539": {
    "id": "400021539",
-   "generatedAt": "2026-06-27T01:34:34.014Z",
+   "generatedAt": "2026-06-27T02:12:29.841Z",
    "source": "open-data",
    "home": null,
    "away": null,
@@ -22936,7 +23523,7 @@
   },
   "400021540": {
    "id": "400021540",
-   "generatedAt": "2026-06-27T01:34:34.014Z",
+   "generatedAt": "2026-06-27T02:12:29.841Z",
    "source": "open-data",
    "home": null,
    "away": null,
@@ -22948,7 +23535,7 @@
   },
   "400021541": {
    "id": "400021541",
-   "generatedAt": "2026-06-27T01:34:34.014Z",
+   "generatedAt": "2026-06-27T02:12:29.841Z",
    "source": "open-data",
    "home": null,
    "away": null,
@@ -22960,7 +23547,7 @@
   },
   "400021542": {
    "id": "400021542",
-   "generatedAt": "2026-06-27T01:34:34.014Z",
+   "generatedAt": "2026-06-27T02:12:29.841Z",
    "source": "open-data",
    "home": null,
    "away": null,
@@ -22972,7 +23559,7 @@
   },
   "400021543": {
    "id": "400021543",
-   "generatedAt": "2026-06-27T01:34:34.014Z",
+   "generatedAt": "2026-06-27T02:12:29.841Z",
    "source": "open-data",
    "home": null,
    "away": null,
