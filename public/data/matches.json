@@ -4193,8 +4193,8 @@
    "group": "G",
    "date": "2026-06-27T03:00:00Z",
    "venueId": "400216606",
-   "status": "live",
-   "time": "90'+6'",
+   "status": "finished",
+   "time": "99'",
    "home": {
     "code": "EGY",
     "score": 1,
@@ -5324,7 +5324,11 @@
     "score": null,
     "pen": null
    },
-   "away": null,
+   "away": {
+    "code": "EGY",
+    "score": null,
+    "pen": null
+   },
    "phA": "2D",
    "phB": "2G",
    "winner": null,
