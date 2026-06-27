@@ -26970,6 +26970,12 @@
      "minute": "19'",
      "card": 1,
      "period": 3
+    },
+    {
+     "player": "369267",
+     "minute": "41'",
+     "card": 1,
+     "period": 3
     }
    ],
    "substitutions": [
@@ -27287,11 +27293,17 @@
      "minute": "18'",
      "card": 1,
      "period": 3
+    },
+    {
+     "player": "489603",
+     "minute": "43'",
+     "card": 1,
+     "period": 3
     }
    ],
    "substitutions": []
   },
-  "matchTime": "35'",
+  "matchTime": "45'+4'",
   "period": 3,
   "final": false
  },
@@ -28584,7 +28596,7 @@
    "bookings": [],
    "substitutions": []
   },
-  "matchTime": "35'",
+  "matchTime": "45'+3'",
   "period": 3,
   "final": false
  },
