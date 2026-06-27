@@ -39730,7 +39730,7 @@
  },
  "400021500": {
   "home": {
-   "tactics": null,
+   "tactics": "4-4-2",
    "xi": [
     {
      "id": "441313",
@@ -40026,7 +40026,7 @@
    "substitutions": []
   },
   "away": {
-   "tactics": null,
+   "tactics": "3-4-3",
    "xi": [
     {
      "id": "479110",
@@ -43097,7 +43097,7 @@
  },
  "400021505": {
   "home": {
-   "tactics": null,
+   "tactics": "4-1-2-3",
    "xi": [
     {
      "id": "360642",
@@ -43393,7 +43393,7 @@
    "substitutions": []
   },
   "away": {
-   "tactics": null,
+   "tactics": "4-2-3-1",
    "xi": [
     {
      "id": "403001",
@@ -45353,6 +45353,18 @@
      "on": "411174",
      "minute": "",
      "period": 4
+    },
+    {
+     "off": "400416",
+     "on": "372342",
+     "minute": "71'",
+     "period": 5
+    },
+    {
+     "off": "411176",
+     "on": "466669",
+     "minute": "71'",
+     "period": 5
     }
    ]
   },
@@ -45637,11 +45649,50 @@
      "y": null
     }
    ],
-   "goals": [],
-   "bookings": [],
-   "substitutions": []
+   "goals": [
+    {
+     "player": "448202",
+     "minute": "62'",
+     "type": 2,
+     "period": 5
+    },
+    {
+     "player": "369419",
+     "minute": "67'",
+     "type": 2,
+     "period": 5
+    }
+   ],
+   "bookings": [
+    {
+     "player": "463809",
+     "minute": "60'",
+     "card": 1,
+     "period": 5
+    }
+   ],
+   "substitutions": [
+    {
+     "off": "463809",
+     "on": "506329",
+     "minute": "63'",
+     "period": 5
+    },
+    {
+     "off": "448196",
+     "on": "489732",
+     "minute": "63'",
+     "period": 5
+    },
+    {
+     "off": "448202",
+     "on": "473113",
+     "minute": "71'",
+     "period": 5
+    }
+   ]
   },
-  "matchTime": "55'",
+  "matchTime": "73'",
   "period": 5,
   "final": false
  },
@@ -45946,8 +45997,22 @@
      "period": 3
     }
    ],
-   "bookings": [],
-   "substitutions": []
+   "bookings": [
+    {
+     "player": "359381",
+     "minute": "68'",
+     "card": 1,
+     "period": 5
+    }
+   ],
+   "substitutions": [
+    {
+     "off": "430070",
+     "on": "485068",
+     "minute": "66'",
+     "period": 5
+    }
+   ]
   },
   "away": {
    "tactics": "4-1-2-3",
@@ -46255,10 +46320,22 @@
      "on": "441342",
      "minute": "",
      "period": 4
+    },
+    {
+     "off": "486213",
+     "on": "353235",
+     "minute": "71'",
+     "period": 5
+    },
+    {
+     "off": "448525",
+     "on": "448523",
+     "minute": "71'",
+     "period": 5
     }
    ]
   },
-  "matchTime": "53'",
+  "matchTime": "72'",
   "period": 5,
   "final": false
  },
