@@ -289,6 +289,14 @@
    "ownGoals": 0
   },
   {
+   "id": "447860",
+   "name": "Alex BAENA",
+   "code": "ESP",
+   "no": 15,
+   "goals": 1,
+   "ownGoals": 0
+  },
+  {
    "id": "464542",
    "name": "Alex FREEMAN",
    "code": "USA",
@@ -311,18 +319,10 @@
    "no": 9,
    "goals": 1,
    "ownGoals": 0
-  },
-  {
-   "id": "416576",
-   "name": "Alvaro FIDALGO",
-   "code": "MEX",
-   "no": 8,
-   "goals": 1,
-   "ownGoals": 0
   }
  ],
  "cards": {
-  "yellow": 151,
+  "yellow": 153,
   "red": 9,
   "players": [
    {
