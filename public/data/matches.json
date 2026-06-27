@@ -4496,7 +4496,7 @@
    "date": "2026-06-27T21:00:00Z",
    "venueId": "400257536",
    "status": "live",
-   "time": "73'",
+   "time": "87'",
    "home": {
     "code": "PAN",
     "score": 0,
@@ -4555,15 +4555,15 @@
    "date": "2026-06-27T21:00:00Z",
    "venueId": "400248622",
    "status": "live",
-   "time": "68'",
+   "time": "85'",
    "home": {
     "code": "CRO",
-    "score": 1,
+    "score": 2,
     "pen": null
    },
    "away": {
     "code": "GHA",
-    "score": 0,
+    "score": 1,
     "pen": null
    },
    "phA": "L2",
