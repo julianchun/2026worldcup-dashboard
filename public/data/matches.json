@@ -4495,8 +4495,8 @@
    "group": "L",
    "date": "2026-06-27T21:00:00Z",
    "venueId": "400257536",
-   "status": "live",
-   "time": "87'",
+   "status": "finished",
+   "time": "98'",
    "home": {
     "code": "PAN",
     "score": 0,
@@ -4509,7 +4509,7 @@
    },
    "phA": "L4",
    "phB": "L1",
-   "winner": null,
+   "winner": "ENG",
    "attendance": 80663,
    "officials": [
     {
@@ -4554,8 +4554,8 @@
    "group": "L",
    "date": "2026-06-27T21:00:00Z",
    "venueId": "400248622",
-   "status": "live",
-   "time": "85'",
+   "status": "finished",
+   "time": "98'",
    "home": {
     "code": "CRO",
     "score": 2,
@@ -4568,7 +4568,7 @@
    },
    "phA": "L2",
    "phB": "L3",
-   "winner": null,
+   "winner": "CRO",
    "attendance": 68324,
    "officials": [
     {
