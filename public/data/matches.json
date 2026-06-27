@@ -4798,7 +4798,7 @@
    "date": "2026-06-27T23:30:00Z",
    "venueId": "400257525",
    "status": "live",
-   "time": "1'",
+   "time": "15'",
    "home": {
     "code": "COL",
     "score": 0,
@@ -4856,16 +4856,16 @@
    "group": "K",
    "date": "2026-06-27T23:30:00Z",
    "venueId": "400098290",
-   "status": "scheduled",
-   "time": "0'",
+   "status": "live",
+   "time": "15'",
    "home": {
     "code": "COD",
-    "score": null,
+    "score": 0,
     "pen": null
    },
    "away": {
     "code": "UZB",
-    "score": null,
+    "score": 1,
     "pen": null
    },
    "phA": "K2",
