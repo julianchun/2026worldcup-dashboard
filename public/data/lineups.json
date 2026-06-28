@@ -49907,8 +49907,8 @@
    "bookings": [],
    "substitutions": []
   },
-  "matchTime": "36'",
-  "period": 3,
+  "matchTime": null,
+  "period": 4,
   "final": false
  }
 }
