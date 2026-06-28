@@ -281,6 +281,14 @@
    "ownGoals": 0
   },
   {
+   "id": "441316",
+   "name": "Yoane WISSA",
+   "code": "COD",
+   "no": 20,
+   "goals": 2,
+   "ownGoals": 0
+  },
+  {
    "id": "464933",
    "name": "Abbosbek FAYZULLAEV",
    "code": "UZB",
@@ -311,18 +319,10 @@
    "no": 4,
    "goals": 1,
    "ownGoals": 0
-  },
-  {
-   "id": "447860",
-   "name": "Alex BAENA",
-   "code": "ESP",
-   "no": 15,
-   "goals": 1,
-   "ownGoals": 0
   }
  ],
  "cards": {
-  "yellow": 172,
+  "yellow": 177,
   "red": 10,
   "players": [
    {
@@ -413,6 +413,14 @@
     "r": 0
    },
    {
+    "id": "464924",
+    "name": "Abdukodir KHUSANOV",
+    "code": "UZB",
+    "no": 2,
+    "y": 2,
+    "r": 0
+   },
+   {
     "id": "433394",
     "name": "AHMED FATHY",
     "code": "QAT",
@@ -473,14 +481,6 @@
     "name": "Saeid EZATOLAHI",
     "code": "IRN",
     "no": 6,
-    "y": 2,
-    "r": 0
-   },
-   {
-    "id": "477832",
-    "name": "SIDNY LOPES CABRAL",
-    "code": "CPV",
-    "no": 13,
     "y": 2,
     "r": 0
    }
