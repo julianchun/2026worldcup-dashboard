@@ -49922,7 +49922,14 @@
      "y": null
     }
    ],
-   "goals": [],
+   "goals": [
+    {
+     "player": "433635",
+     "minute": "90'+2'",
+     "type": 2,
+     "period": 5
+    }
+   ],
    "bookings": [
     {
      "player": "423941",
@@ -49970,8 +49977,8 @@
     }
    ]
   },
-  "matchTime": "90'+1'",
-  "period": 5,
-  "final": false
+  "matchTime": "97'",
+  "period": 10,
+  "final": true
  }
 }
