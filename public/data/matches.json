@@ -4613,16 +4613,16 @@
    "group": "J",
    "date": "2026-06-28T02:00:00Z",
    "venueId": "400254717",
-   "status": "live",
-   "time": "88'",
+   "status": "finished",
+   "time": "97'",
    "home": {
     "code": "ALG",
-    "score": 2,
+    "score": 3,
     "pen": null
    },
    "away": {
     "code": "AUT",
-    "score": 2,
+    "score": 3,
     "pen": null
    },
    "phA": "J2",
@@ -4635,18 +4635,18 @@
      "country": "UZB",
      "role": "referee",
      "name": {
-      "en": "I. Tantashev",
-      "fr": "I. Tantashev",
-      "zh": "坦塔舍夫",
-      "ar": "I. Tantashev",
-      "es": "I. Tantashev",
-      "de": "I. Tantashev",
-      "pt": "I. Tantashev",
-      "it": "I. Tantashev",
-      "ja": "I. Tantashev",
-      "ko": "I. Tantashev",
-      "id": "I. Tantashev",
-      "ru": "I. Tantashev"
+      "en": "Ilgiz TANTASHEV",
+      "fr": "Ilgiz TANTASHEV",
+      "zh": "Ilgiz TANTASHEV",
+      "ar": "Ilgiz TANTASHEV",
+      "es": "Ilgiz TANTASHEV",
+      "de": "Ilgiz TANTASHEV",
+      "pt": "Ilgiz TANTASHEV",
+      "it": "Ilgiz TANTASHEV",
+      "ja": "Ilgiz TANTASHEV",
+      "ko": "Ilgiz TANTASHEV",
+      "id": "Ilgiz TANTASHEV",
+      "ru": "Ilgiz TANTASHEV"
      },
      "typeName": {
       "en": "Referee",
@@ -4672,8 +4672,8 @@
    "group": "J",
    "date": "2026-06-28T02:00:00Z",
    "venueId": "400257526",
-   "status": "live",
-   "time": "88'",
+   "status": "finished",
+   "time": "96'",
    "home": {
     "code": "JOR",
     "score": 1,
@@ -4686,7 +4686,7 @@
    },
    "phA": "J4",
    "phB": "J1",
-   "winner": null,
+   "winner": "ARG",
    "attendance": 70649,
    "officials": [
     {
@@ -4694,18 +4694,18 @@
      "country": "ROU",
      "role": "referee",
      "name": {
-      "en": "I. Kovács",
-      "fr": "I. Kovács",
-      "zh": "科瓦奇",
-      "ar": "إ. كوفاتش",
-      "es": "I. Kovács",
-      "de": "I. Kovács",
-      "pt": "I. Kovács",
-      "it": "I. Kovács",
-      "ja": "I. Kovács",
-      "ko": "I. Kovács",
-      "id": "I. Kovács",
-      "ru": "I. Kovács"
+      "en": "Istvan KOVACS",
+      "fr": "Istvan KOVACS",
+      "zh": "Istvan KOVACS",
+      "ar": "Istvan KOVACS",
+      "es": "Istvan KOVACS",
+      "de": "Istvan KOVACS",
+      "pt": "Istvan KOVACS",
+      "it": "Istvan KOVACS",
+      "ja": "Istvan KOVACS",
+      "ko": "Istvan KOVACS",
+      "id": "Istvan KOVACS",
+      "ru": "Istvan KOVACS"
      },
      "typeName": {
       "en": "Referee",
@@ -4753,18 +4753,18 @@
      "country": "AUS",
      "role": "referee",
      "name": {
-      "en": "A. Faghani",
-      "fr": "A. Faghani",
-      "zh": "法加尼",
-      "ar": "A. Faghani",
-      "es": "A. Faghani",
-      "de": "A. Faghani",
-      "pt": "A. Faghani",
-      "it": "A. Faghani",
-      "ja": "A. ファガニ",
-      "ko": "A. Faghani",
-      "id": "A. Faghani",
-      "ru": "A. Faghani"
+      "en": "Alireza FAGHANI",
+      "fr": "Alireza FAGHANI",
+      "zh": "Alireza FAGHANI",
+      "ar": "Alireza FAGHANI",
+      "es": "Alireza FAGHANI",
+      "de": "Alireza FAGHANI",
+      "pt": "Alireza FAGHANI",
+      "it": "Alireza FAGHANI",
+      "ja": "Alireza FAGHANI",
+      "ko": "Alireza FAGHANI",
+      "id": "Alireza FAGHANI",
+      "ru": "Alireza FAGHANI"
      },
      "typeName": {
       "en": "Referee",
@@ -4812,18 +4812,18 @@
      "country": "GER",
      "role": "referee",
      "name": {
-      "en": "F. Zwayer",
-      "fr": "F. Zwayer",
-      "zh": "茨韦尔",
-      "ar": "ف. تسفايير",
-      "es": "F. Zwayer",
-      "de": "F. Zwayer",
-      "pt": "F. Zwayer",
-      "it": "F. Zwayer",
-      "ja": "F. Zwayer",
-      "ko": "F.제이어",
-      "id": "F. Zwayer",
-      "ru": "F. Zwayer"
+      "en": "Felix ZWAYER",
+      "fr": "Felix ZWAYER",
+      "zh": "Felix ZWAYER",
+      "ar": "Felix ZWAYER",
+      "es": "Felix ZWAYER",
+      "de": "Felix ZWAYER",
+      "pt": "Felix ZWAYER",
+      "it": "Felix ZWAYER",
+      "ja": "Felix ZWAYER",
+      "ko": "Felix ZWAYER",
+      "id": "Felix ZWAYER",
+      "ru": "Felix ZWAYER"
      },
      "typeName": {
       "en": "Referee",
@@ -5198,7 +5198,11 @@
     "score": null,
     "pen": null
    },
-   "away": null,
+   "away": {
+    "code": "AUT",
+    "score": null,
+    "pen": null
+   },
    "phA": "1H",
    "phB": "2J",
    "winner": null,
@@ -5219,7 +5223,11 @@
     "score": null,
     "pen": null
    },
-   "away": null,
+   "away": {
+    "code": "ALG",
+    "score": null,
+    "pen": null
+   },
    "phA": "1B",
    "phB": "3EFGIJ",
    "winner": null,
