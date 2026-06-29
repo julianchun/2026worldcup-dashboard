@@ -1,12 +1,12 @@
 {
- "updatedAt": "2026-06-28T22:32:10.039Z",
+ "updatedAt": "2026-06-29T16:36:06.536Z",
  "season": "285023",
  "counts": {
   "matches": 104,
   "teams": 48,
   "squads": 48,
-  "weather": 100,
-  "lineups": 73,
+  "weather": 101,
+  "lineups": 74,
   "predictionContext": 104,
   "openDataContext": 104,
   "flags": 178
