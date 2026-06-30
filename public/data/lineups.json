@@ -51432,7 +51432,7 @@
  },
  "400021522": {
   "home": {
-   "tactics": "5-2-3",
+   "tactics": "3-4-3",
    "xi": [
     {
      "id": "424081",
@@ -52023,8 +52023,8 @@
    "bookings": [],
    "substitutions": []
   },
-  "matchTime": "0'",
-  "period": 0,
+  "matchTime": "14'",
+  "period": 3,
   "final": false
  }
 }
