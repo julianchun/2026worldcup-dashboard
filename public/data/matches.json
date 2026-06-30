@@ -5133,21 +5133,21 @@
    "date": "2026-06-30T01:00:00Z",
    "venueId": "400238450",
    "status": "live",
-   "time": "60'",
+   "time": "119'",
    "home": {
     "code": "NED",
-    "score": 0,
+    "score": 1,
     "pen": null
    },
    "away": {
     "code": "MAR",
-    "score": 0,
+    "score": 1,
     "pen": null
    },
    "phA": "1F",
    "phB": "2C",
    "winner": null,
-   "attendance": null,
+   "attendance": 51243,
    "officials": [
     {
      "id": "361561",
