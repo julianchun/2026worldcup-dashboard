@@ -53140,6 +53140,12 @@
      "minute": "45'",
      "type": 2,
      "period": 3
+    },
+    {
+     "player": "484860",
+     "minute": "53'",
+     "type": 2,
+     "period": 5
     }
    ],
    "bookings": [],
@@ -53430,7 +53436,7 @@
    "bookings": [],
    "substitutions": []
   },
-  "matchTime": "45'",
+  "matchTime": "59'",
   "period": 5,
   "final": false
  }
