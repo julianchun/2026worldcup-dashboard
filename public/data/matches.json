@@ -6028,7 +6028,11 @@
     "score": null,
     "pen": null
    },
-   "away": null,
+   "away": {
+    "code": "FRA",
+    "score": null,
+    "pen": null
+   },
    "phA": "W74",
    "phB": "W77",
    "winner": null,
