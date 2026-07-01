@@ -52744,6 +52744,24 @@
      "minute": "45'+1'",
      "card": 1,
      "period": 3
+    },
+    {
+     "player": "463495",
+     "minute": "90'+3'",
+     "card": 1,
+     "period": 5
+    },
+    {
+     "player": "424031",
+     "minute": "90'+5'",
+     "card": 2,
+     "period": 5
+    },
+    {
+     "player": "428885",
+     "minute": "90'+9'",
+     "card": 1,
+     "period": 5
     }
    ],
    "substitutions": [
@@ -52779,9 +52797,9 @@
     }
    ]
   },
-  "matchTime": "87'",
-  "period": 5,
-  "final": false
+  "matchTime": "99'",
+  "period": 10,
+  "final": true
  },
  "400021522": {
   "home": {
