@@ -1,5 +1,5 @@
 {
- "updatedAt": "2026-07-01T00:18:51.736Z",
+ "updatedAt": "2026-07-01T01:20:52.603Z",
  "season": "285023",
  "counts": {
   "matches": 104,
@@ -12,6 +12,7 @@
   "flags": 178
  },
  "errors": [
+  "unknown MatchStatus 10 on match 400021520",
   "geocode New Tecumseth: no usable result — not cached, will retry next run"
  ],
  "sources": [
