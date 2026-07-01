@@ -1,5 +1,5 @@
 {
- "updatedAt": "2026-07-01T22:46:23.867Z",
+ "updatedAt": "2026-07-01T23:00:20.116Z",
  "season": "285023",
  "counts": {
   "matches": 104,
@@ -12,18 +12,7 @@
   "flags": 178
  },
  "errors": [
-  "geocode New Tecumseth: no usable result — not cached, will retry next run",
-  "weather SoFi Stadium: fetch failed",
-  "weather Mercedes-Benz Stadium: fetch failed",
-  "weather Lumen Field: fetch failed",
-  "weather Estadio Azteca (Estadio Banorte): fetch failed",
-  "weather Estadio BBVA: fetch failed",
-  "weather BMO Field: fetch failed",
-  "weather BC Place: fetch failed",
-  "weather Lincoln Financial Field: fetch failed",
-  "weather Gillette Stadium: fetch failed",
-  "weather NRG Stadium: fetch failed",
-  "weather Estadio Akron: fetch failed"
+  "geocode New Tecumseth: no usable result — not cached, will retry next run"
  ],
  "sources": [
   "api.fifa.com",

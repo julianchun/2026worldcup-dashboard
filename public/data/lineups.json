@@ -54873,7 +54873,7 @@
  },
  "400021524": {
   "home": {
-   "tactics": null,
+   "tactics": "3-5-2",
    "xi": [
     {
      "id": "499913",
@@ -55147,7 +55147,7 @@
    "substitutions": []
   },
   "away": {
-   "tactics": null,
+   "tactics": "5-3-2",
    "xi": [
     {
      "id": "482978",
@@ -55740,6 +55740,12 @@
      "minute": "89'",
      "type": 2,
      "period": 5
+    },
+    {
+     "player": "401444",
+     "minute": "120'+5'",
+     "type": 1,
+     "period": 9
     }
    ],
    "bookings": [
@@ -56137,8 +56143,8 @@
     }
    ]
   },
-  "matchTime": "120'+1'",
-  "period": 9,
-  "final": false
+  "matchTime": "132'",
+  "period": 10,
+  "final": true
  }
 }
