@@ -6325,7 +6325,11 @@
    "status": "scheduled",
    "time": null,
    "home": null,
-   "away": null,
+   "away": {
+    "code": "ESP",
+    "score": null,
+    "pen": null
+   },
    "phA": "W83",
    "phB": "W84",
    "winner": null,
