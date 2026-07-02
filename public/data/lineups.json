@@ -55150,7 +55150,14 @@
      "period": 3
     }
    ],
-   "bookings": [],
+   "bookings": [
+    {
+     "player": "466624",
+     "minute": "64'",
+     "card": 2,
+     "period": 5
+    }
+   ],
    "substitutions": []
   },
   "away": {
@@ -55468,7 +55475,7 @@
     }
    ]
   },
-  "matchTime": "56'",
+  "matchTime": "69'",
   "period": 5,
   "final": false
  },
