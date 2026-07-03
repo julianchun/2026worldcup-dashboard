@@ -51762,6 +51762,12 @@
      "on": "498421",
      "minute": "",
      "period": 17
+    },
+    {
+     "off": "494557",
+     "on": "339117",
+     "minute": "119'",
+     "period": 9
     }
    ]
   },
@@ -52044,6 +52050,12 @@
      "minute": "104'",
      "card": 1,
      "period": 7
+    },
+    {
+     "player": "369267",
+     "minute": "120'",
+     "card": 1,
+     "period": 9
     }
    ],
    "substitutions": [
@@ -52070,11 +52082,17 @@
      "on": "495488",
      "minute": "",
      "period": 8
+    },
+    {
+     "off": "461788",
+     "on": "483183",
+     "minute": "120'+1'",
+     "period": 9
     }
    ]
   },
-  "matchTime": "118'",
-  "period": 9,
+  "matchTime": null,
+  "period": 11,
   "final": false
  },
  "400021516": {
@@ -54800,7 +54818,7 @@
  },
  "400021521": {
   "home": {
-   "tactics": null,
+   "tactics": "4-1-2-3",
    "xi": [
     {
      "id": "308300",
@@ -55096,7 +55114,7 @@
    "substitutions": []
   },
   "away": {
-   "tactics": null,
+   "tactics": "4-1-4-1",
    "xi": [
     {
      "id": "364752",
