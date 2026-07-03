@@ -5803,21 +5803,21 @@
    "date": "2026-07-02T23:00:00Z",
    "venueId": "400242032",
    "status": "live",
-   "time": "69'",
+   "time": "90'+13'",
    "home": {
     "code": "POR",
-    "score": 1,
+    "score": 2,
     "pen": null
    },
    "away": {
     "code": "CRO",
-    "score": 1,
+    "score": 2,
     "pen": null
    },
    "phA": "2K",
    "phB": "2L",
    "winner": null,
-   "attendance": null,
+   "attendance": 43036,
    "officials": [
     {
      "id": "400227",
