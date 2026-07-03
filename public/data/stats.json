@@ -81,6 +81,14 @@
    "ownGoals": 0
   },
   {
+   "id": "201200",
+   "name": "CRISTIANO RONALDO",
+   "code": "POR",
+   "no": 7,
+   "goals": 3,
+   "ownGoals": 0
+  },
+  {
    "id": "484851",
    "name": "Deniz UNDAV",
    "code": "GER",
@@ -201,14 +209,6 @@
    "ownGoals": 0
   },
   {
-   "id": "201200",
-   "name": "CRISTIANO RONALDO",
-   "code": "POR",
-   "no": 7,
-   "goals": 2,
-   "ownGoals": 0
-  },
-  {
    "id": "489518",
    "name": "Crysencio SUMMERVILLE",
    "code": "NED",
@@ -322,7 +322,7 @@
   }
  ],
  "cards": {
-  "yellow": 210,
+  "yellow": 211,
   "red": 12,
   "players": [
    {
