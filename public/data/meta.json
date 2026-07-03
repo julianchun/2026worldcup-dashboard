@@ -1,34 +1,18 @@
 {
- "updatedAt": "2026-07-03T05:47:35.978Z",
+ "updatedAt": "2026-07-03T17:36:04.837Z",
  "season": "285023",
  "counts": {
   "matches": 104,
   "teams": 48,
   "squads": 48,
   "weather": 103,
-  "lineups": 85,
+  "lineups": 86,
   "predictionContext": 104,
   "openDataContext": 104,
   "flags": 178
  },
  "errors": [
-  "geocode New Tecumseth: no usable result — not cached, will retry next run",
-  "weather SoFi Stadium: fetch failed",
-  "weather Mercedes-Benz Stadium: fetch failed",
-  "weather Lumen Field: fetch failed",
-  "weather Estadio Azteca (Estadio Banorte): fetch failed",
-  "weather Estadio BBVA: fetch failed",
-  "weather BMO Field: fetch failed",
-  "weather BC Place: fetch failed",
-  "weather Lincoln Financial Field: fetch failed",
-  "weather Gillette Stadium: fetch failed",
-  "weather NRG Stadium: fetch failed",
-  "weather Estadio Akron: fetch failed",
-  "weather Arrowhead Stadium (GEHA Field): fetch failed",
-  "weather Levi's Stadium: fetch failed",
-  "weather Hard Rock Stadium: fetch failed",
-  "weather AT&T Stadium: fetch failed",
-  "weather MetLife Stadium: fetch failed"
+  "geocode New Tecumseth: no usable result — not cached, will retry next run"
  ],
  "sources": [
   "api.fifa.com",
