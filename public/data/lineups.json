@@ -52009,9 +52009,22 @@
     }
    ],
    "bookings": [],
-   "substitutions": []
+   "substitutions": [
+    {
+     "off": "483161",
+     "on": "424106",
+     "minute": "67'",
+     "period": 5
+    },
+    {
+     "off": "429095",
+     "on": "483182",
+     "minute": "67'",
+     "period": 5
+    }
+   ]
   },
-  "matchTime": "58'",
+  "matchTime": "72'",
   "period": 5,
   "final": false
  },
