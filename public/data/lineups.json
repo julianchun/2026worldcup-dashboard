@@ -61382,6 +61382,12 @@
      "on": "429392",
      "minute": "67'",
      "period": 5
+    },
+    {
+     "off": "430605",
+     "on": "485069",
+     "minute": "79'",
+     "period": 5
     }
    ]
   },
@@ -61666,7 +61672,14 @@
      "y": null
     }
    ],
-   "goals": [],
+   "goals": [
+    {
+     "player": "419652",
+     "minute": "79'",
+     "type": 2,
+     "period": 5
+    }
+   ],
    "bookings": [],
    "substitutions": [
     {
@@ -61689,7 +61702,7 @@
     }
    ]
   },
-  "matchTime": "67'",
+  "matchTime": "79'",
   "period": 5,
   "final": false
  },
