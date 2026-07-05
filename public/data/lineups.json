@@ -61678,6 +61678,12 @@
      "minute": "79'",
      "type": 2,
      "period": 5
+    },
+    {
+     "player": "419652",
+     "minute": "90'",
+     "type": 2,
+     "period": 5
     }
    ],
    "bookings": [],
@@ -61702,7 +61708,7 @@
     }
    ]
   },
-  "matchTime": "79'",
+  "matchTime": "90'+3'",
   "period": 5,
   "final": false
  },
