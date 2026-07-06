@@ -61358,15 +61358,58 @@
      "minute": "42'",
      "type": 2,
      "period": 3
+    },
+    {
+     "player": "356731",
+     "minute": "69'",
+     "type": 1,
+     "period": 5
     }
    ],
-   "bookings": [],
+   "bookings": [
+    {
+     "player": "403596",
+     "minute": "71'",
+     "card": 1,
+     "period": 5
+    },
+    {
+     "player": "425701",
+     "minute": "90'+8'",
+     "card": 1,
+     "period": 5
+    }
+   ],
    "substitutions": [
     {
      "off": "395516",
      "on": "400634",
      "minute": "",
      "period": 4
+    },
+    {
+     "off": "500037",
+     "on": "430759",
+     "minute": "61'",
+     "period": 5
+    },
+    {
+     "off": "430763",
+     "on": "464533",
+     "minute": "61'",
+     "period": 5
+    },
+    {
+     "off": "403596",
+     "on": "416576",
+     "minute": "79'",
+     "period": 5
+    },
+    {
+     "off": "429157",
+     "on": "386339",
+     "minute": "81'",
+     "period": 5
     }
    ]
   },
@@ -61674,6 +61717,12 @@
      "minute": "38'",
      "type": 2,
      "period": 3
+    },
+    {
+     "player": "369419",
+     "minute": "60'",
+     "type": 1,
+     "period": 5
     }
    ],
    "bookings": [
@@ -61688,6 +61737,24 @@
      "minute": "54'",
      "card": 2,
      "period": 5
+    },
+    {
+     "player": "405841",
+     "minute": "68'",
+     "card": 1,
+     "period": 5
+    },
+    {
+     "player": "463780",
+     "minute": "72'",
+     "card": 1,
+     "period": 5
+    },
+    {
+     "player": "356189",
+     "minute": "90'+8'",
+     "card": 1,
+     "period": 5
     }
    ],
    "substitutions": [
@@ -61696,12 +61763,30 @@
      "on": "369434",
      "minute": "57'",
      "period": 5
+    },
+    {
+     "off": "481610",
+     "on": "494345",
+     "minute": "75'",
+     "period": 5
+    },
+    {
+     "off": "463780",
+     "on": "506329",
+     "minute": "75'",
+     "period": 5
+    },
+    {
+     "off": "369419",
+     "on": "492716",
+     "minute": "90'",
+     "period": 5
     }
    ]
   },
-  "matchTime": "58'",
-  "period": 5,
-  "final": false
+  "matchTime": "103'",
+  "period": 10,
+  "final": true
  },
  "400021532": {
   "home": {

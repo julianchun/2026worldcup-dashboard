@@ -29,7 +29,7 @@
    "name": "KANE",
    "code": "ENG",
    "no": 9,
-   "goals": 5,
+   "goals": 6,
    "ownGoals": 0
   },
   {
@@ -164,6 +164,14 @@
    "id": "430609",
    "name": "MATHEUS CUNHA",
    "code": "BRA",
+   "no": 9,
+   "goals": 3,
+   "ownGoals": 0
+  },
+  {
+   "id": "356731",
+   "name": "RAÚL",
+   "code": "MEX",
    "no": 9,
    "goals": 3,
    "ownGoals": 0
@@ -311,18 +319,10 @@
    "no": 19,
    "goals": 2,
    "ownGoals": 0
-  },
-  {
-   "id": "431788",
-   "name": "Pape GUEYE",
-   "code": "SEN",
-   "no": 26,
-   "goals": 2,
-   "ownGoals": 0
   }
  ],
  "cards": {
-  "yellow": 238,
+  "yellow": 243,
   "red": 13,
   "players": [
    {
@@ -486,7 +486,7 @@
    }
   ]
  },
- "attAvg": 65060,
+ "attAvg": 65231,
  "biggestWin": {
   "diff": 6,
   "id": "400021464",
@@ -554,7 +554,7 @@
    "COL": -4
   },
   "all": {
-   "MEX": -6,
+   "MEX": -8,
    "RSA": -13,
    "KOR": -4,
    "CZE": -1,
@@ -596,7 +596,7 @@
    "JOR": -4,
    "GHA": -6,
    "PAN": -5,
-   "ENG": -3,
+   "ENG": -11,
    "CRO": -4,
    "POR": -5,
    "COD": -6,
@@ -632,6 +632,35 @@
        "400021515"
       ],
       "banned": "400021528"
+     }
+    ]
+   }
+  ],
+  "ENG": [
+   {
+    "id": "433097",
+    "name": "Declan RICE",
+    "bans": [
+     {
+      "type": "yellows",
+      "due": [
+       "400021506",
+       "400021531"
+      ],
+      "banned": "400021539"
+     }
+    ]
+   },
+   {
+    "id": "463809",
+    "name": "Jarell QUANSAH",
+    "bans": [
+     {
+      "type": "red",
+      "due": [
+       "400021531"
+      ],
+      "banned": "400021539"
      }
     ]
    }

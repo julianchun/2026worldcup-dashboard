@@ -554,7 +554,7 @@
     "wiki": "https://en.wikipedia.org/wiki/Jorge_S%C3%A1nchez_(footballer%2C_born_1997)",
     "wcApps": 4,
     "wcGoals": 0,
-    "wcYellow": 0,
+    "wcYellow": 1,
     "wcRed": 0
    },
    {
@@ -608,7 +608,7 @@
     "wiki": "https://en.wikipedia.org/wiki/Johan_V%C3%A1squez_(footballer%2C_born_1998)",
     "wcApps": 4,
     "wcGoals": 0,
-    "wcYellow": 0,
+    "wcYellow": 1,
     "wcRed": 0
    },
    {
@@ -714,7 +714,7 @@
     "clubWiki": "https://en.wikipedia.org/wiki/Real_Betis",
     "captain": false,
     "wiki": "https://en.wikipedia.org/wiki/%C3%81lvaro_Fidalgo",
-    "wcApps": 2,
+    "wcApps": 3,
     "wcGoals": 1,
     "wcYellow": 0,
     "wcRed": 0
@@ -804,7 +804,7 @@
     "clubWiki": "https://en.wikipedia.org/wiki/C.D._Guadalajara",
     "captain": false,
     "wiki": "https://en.wikipedia.org/wiki/Brian_Guti%C3%A9rrez",
-    "wcApps": 3,
+    "wcApps": 4,
     "wcGoals": 0,
     "wcYellow": 1,
     "wcRed": 0
@@ -823,7 +823,7 @@
     "captain": false,
     "wiki": "https://en.wikipedia.org/wiki/Ra%C3%BAl_Jim%C3%A9nez",
     "wcApps": 4,
-    "wcGoals": 2,
+    "wcGoals": 3,
     "wcYellow": 0,
     "wcRed": 0
    },
@@ -858,7 +858,7 @@
     "clubWiki": "https://en.wikipedia.org/wiki/AC_Milan",
     "captain": false,
     "wiki": "https://en.wikipedia.org/wiki/Santiago_Gim%C3%A9nez",
-    "wcApps": 3,
+    "wcApps": 4,
     "wcGoals": 0,
     "wcYellow": 0,
     "wcRed": 0
@@ -930,7 +930,7 @@
     "clubWiki": "https://en.wikipedia.org/wiki/Pumas_UNAM",
     "captain": false,
     "wiki": "https://en.wikipedia.org/wiki/Guillermo_Mart%C3%ADnez_(footballer)",
-    "wcApps": 1,
+    "wcApps": 2,
     "wcGoals": 0,
     "wcYellow": 0,
     "wcRed": 0
@@ -21604,7 +21604,7 @@
     "wiki": "https://en.wikipedia.org/wiki/Nico_O'Reilly",
     "wcApps": 5,
     "wcGoals": 0,
-    "wcYellow": 0,
+    "wcYellow": 1,
     "wcRed": 0
    },
    {
@@ -21640,7 +21640,7 @@
     "wiki": "https://en.wikipedia.org/wiki/Marc_Gu%C3%A9hi",
     "wcApps": 5,
     "wcGoals": 0,
-    "wcYellow": 0,
+    "wcYellow": 1,
     "wcRed": 0
    },
    {
@@ -21674,7 +21674,7 @@
     "clubWiki": "https://en.wikipedia.org/wiki/Newcastle_United_F.C.",
     "captain": false,
     "wiki": "https://en.wikipedia.org/wiki/Dan_Burn",
-    "wcApps": 0,
+    "wcApps": 1,
     "wcGoals": 0,
     "wcYellow": 0,
     "wcRed": 0
@@ -21710,7 +21710,7 @@
     "clubWiki": "https://en.wikipedia.org/wiki/Tottenham_Hotspur_F.C.",
     "captain": false,
     "wiki": "https://en.wikipedia.org/wiki/Djed_Spence",
-    "wcApps": 4,
+    "wcApps": 5,
     "wcGoals": 0,
     "wcYellow": 0,
     "wcRed": 0
@@ -21802,7 +21802,7 @@
     "wiki": "https://en.wikipedia.org/wiki/Jordan_Henderson",
     "wcApps": 1,
     "wcGoals": 0,
-    "wcYellow": 0,
+    "wcYellow": 1,
     "wcRed": 0
    },
    {
@@ -21836,7 +21836,7 @@
     "clubWiki": "https://en.wikipedia.org/wiki/Aston_Villa_F.C.",
     "captain": false,
     "wiki": "https://en.wikipedia.org/wiki/Morgan_Rogers",
-    "wcApps": 3,
+    "wcApps": 4,
     "wcGoals": 0,
     "wcYellow": 0,
     "wcRed": 0
@@ -21891,7 +21891,7 @@
     "captain": false,
     "wiki": "https://en.wikipedia.org/wiki/Harry_Kane",
     "wcApps": 5,
-    "wcGoals": 5,
+    "wcGoals": 6,
     "wcYellow": 0,
     "wcRed": 0
    },
