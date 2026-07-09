@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-07-09T20:04:39.941Z",
+ "generatedAt": "2026-07-09T20:18:34.714Z",
  "sources": [
   {
    "name": "International football results from 1872",
@@ -11,7 +11,7 @@
  "matches": {
   "400021440": {
    "id": "400021440",
-   "generatedAt": "2026-07-09T20:04:39.941Z",
+   "generatedAt": "2026-07-09T20:18:34.714Z",
    "source": "open-data",
    "home": {
     "code": "CZE",
@@ -285,7 +285,7 @@
   },
   "400021441": {
    "id": "400021441",
-   "generatedAt": "2026-07-09T20:04:39.941Z",
+   "generatedAt": "2026-07-09T20:18:34.714Z",
    "source": "open-data",
    "home": {
     "code": "KOR",
@@ -603,7 +603,7 @@
   },
   "400021442": {
    "id": "400021442",
-   "generatedAt": "2026-07-09T20:04:39.941Z",
+   "generatedAt": "2026-07-09T20:18:34.714Z",
    "source": "open-data",
    "home": {
     "code": "MEX",
@@ -921,7 +921,7 @@
   },
   "400021443": {
    "id": "400021443",
-   "generatedAt": "2026-07-09T20:04:39.941Z",
+   "generatedAt": "2026-07-09T20:18:34.714Z",
    "source": "open-data",
    "home": {
     "code": "MEX",
@@ -1228,7 +1228,7 @@
   },
   "400021444": {
    "id": "400021444",
-   "generatedAt": "2026-07-09T20:04:39.941Z",
+   "generatedAt": "2026-07-09T20:18:34.714Z",
    "source": "open-data",
    "home": {
     "code": "CZE",
@@ -1535,7 +1535,7 @@
   },
   "400021445": {
    "id": "400021445",
-   "generatedAt": "2026-07-09T20:04:39.941Z",
+   "generatedAt": "2026-07-09T20:18:34.714Z",
    "source": "open-data",
    "home": {
     "code": "RSA",
@@ -1809,7 +1809,7 @@
   },
   "400021446": {
    "id": "400021446",
-   "generatedAt": "2026-07-09T20:04:39.941Z",
+   "generatedAt": "2026-07-09T20:18:34.714Z",
    "source": "open-data",
    "home": {
     "code": "SUI",
@@ -2083,7 +2083,7 @@
   },
   "400021447": {
    "id": "400021447",
-   "generatedAt": "2026-07-09T20:04:39.941Z",
+   "generatedAt": "2026-07-09T20:18:34.714Z",
    "source": "open-data",
    "home": {
     "code": "QAT",
@@ -2357,7 +2357,7 @@
   },
   "400021448": {
    "id": "400021448",
-   "generatedAt": "2026-07-09T20:04:39.941Z",
+   "generatedAt": "2026-07-09T20:18:34.714Z",
    "source": "open-data",
    "home": {
     "code": "BIH",
@@ -2642,7 +2642,7 @@
   },
   "400021449": {
    "id": "400021449",
-   "generatedAt": "2026-07-09T20:04:39.941Z",
+   "generatedAt": "2026-07-09T20:18:34.714Z",
    "source": "open-data",
    "home": {
     "code": "CAN",
@@ -2904,7 +2904,7 @@
   },
   "400021450": {
    "id": "400021450",
-   "generatedAt": "2026-07-09T20:04:39.941Z",
+   "generatedAt": "2026-07-09T20:18:34.714Z",
    "source": "open-data",
    "home": {
     "code": "CAN",
@@ -3178,7 +3178,7 @@
   },
   "400021451": {
    "id": "400021451",
-   "generatedAt": "2026-07-09T20:04:39.941Z",
+   "generatedAt": "2026-07-09T20:18:34.714Z",
    "source": "open-data",
    "home": {
     "code": "SUI",
@@ -3452,7 +3452,7 @@
   },
   "400021452": {
    "id": "400021452",
-   "generatedAt": "2026-07-09T20:04:39.941Z",
+   "generatedAt": "2026-07-09T20:18:34.714Z",
    "source": "open-data",
    "home": {
     "code": "MAR",
@@ -3714,7 +3714,7 @@
   },
   "400021453": {
    "id": "400021453",
-   "generatedAt": "2026-07-09T20:04:39.941Z",
+   "generatedAt": "2026-07-09T20:18:34.714Z",
    "source": "open-data",
    "home": {
     "code": "HAI",
@@ -3988,7 +3988,7 @@
   },
   "400021454": {
    "id": "400021454",
-   "generatedAt": "2026-07-09T20:04:39.941Z",
+   "generatedAt": "2026-07-09T20:18:34.714Z",
    "source": "open-data",
    "home": {
     "code": "SCO",
@@ -4262,7 +4262,7 @@
   },
   "400021455": {
    "id": "400021455",
-   "generatedAt": "2026-07-09T20:04:39.941Z",
+   "generatedAt": "2026-07-09T20:18:34.714Z",
    "source": "open-data",
    "home": {
     "code": "SCO",
@@ -4580,7 +4580,7 @@
   },
   "400021456": {
    "id": "400021456",
-   "generatedAt": "2026-07-09T20:04:39.941Z",
+   "generatedAt": "2026-07-09T20:18:34.714Z",
    "source": "open-data",
    "home": {
     "code": "BRA",
@@ -4876,7 +4876,7 @@
   },
   "400021457": {
    "id": "400021457",
-   "generatedAt": "2026-07-09T20:04:39.941Z",
+   "generatedAt": "2026-07-09T20:18:34.714Z",
    "source": "open-data",
    "home": {
     "code": "BRA",
@@ -5183,7 +5183,7 @@
   },
   "400021458": {
    "id": "400021458",
-   "generatedAt": "2026-07-09T20:04:39.941Z",
+   "generatedAt": "2026-07-09T20:18:34.714Z",
    "source": "open-data",
    "home": {
     "code": "USA",
@@ -5501,7 +5501,7 @@
   },
   "400021459": {
    "id": "400021459",
-   "generatedAt": "2026-07-09T20:04:39.941Z",
+   "generatedAt": "2026-07-09T20:18:34.714Z",
    "source": "open-data",
    "home": {
     "code": "TUR",
@@ -5819,7 +5819,7 @@
   },
   "400021460": {
    "id": "400021460",
-   "generatedAt": "2026-07-09T20:04:39.941Z",
+   "generatedAt": "2026-07-09T20:18:34.714Z",
    "source": "open-data",
    "home": {
     "code": "TUR",
@@ -6093,7 +6093,7 @@
   },
   "400021461": {
    "id": "400021461",
-   "generatedAt": "2026-07-09T20:04:39.941Z",
+   "generatedAt": "2026-07-09T20:18:34.714Z",
    "source": "open-data",
    "home": {
     "code": "PAR",
@@ -6411,7 +6411,7 @@
   },
   "400021462": {
    "id": "400021462",
-   "generatedAt": "2026-07-09T20:04:39.941Z",
+   "generatedAt": "2026-07-09T20:18:34.714Z",
    "source": "open-data",
    "home": {
     "code": "USA",
@@ -6718,7 +6718,7 @@
   },
   "400021463": {
    "id": "400021463",
-   "generatedAt": "2026-07-09T20:04:39.941Z",
+   "generatedAt": "2026-07-09T20:18:34.714Z",
    "source": "open-data",
    "home": {
     "code": "AUS",
@@ -7014,7 +7014,7 @@
   },
   "400021464": {
    "id": "400021464",
-   "generatedAt": "2026-07-09T20:04:39.941Z",
+   "generatedAt": "2026-07-09T20:18:34.714Z",
    "source": "open-data",
    "home": {
     "code": "GER",
@@ -7276,7 +7276,7 @@
   },
   "400021465": {
    "id": "400021465",
-   "generatedAt": "2026-07-09T20:04:39.941Z",
+   "generatedAt": "2026-07-09T20:18:34.714Z",
    "source": "open-data",
    "home": {
     "code": "ECU",
@@ -7550,7 +7550,7 @@
   },
   "400021466": {
    "id": "400021466",
-   "generatedAt": "2026-07-09T20:04:39.941Z",
+   "generatedAt": "2026-07-09T20:18:34.714Z",
    "source": "open-data",
    "home": {
     "code": "ECU",
@@ -7835,7 +7835,7 @@
   },
   "400021467": {
    "id": "400021467",
-   "generatedAt": "2026-07-09T20:04:39.941Z",
+   "generatedAt": "2026-07-09T20:18:34.714Z",
    "source": "open-data",
    "home": {
     "code": "CIV",
@@ -8097,7 +8097,7 @@
   },
   "400021468": {
    "id": "400021468",
-   "generatedAt": "2026-07-09T20:04:39.941Z",
+   "generatedAt": "2026-07-09T20:18:34.714Z",
    "source": "open-data",
    "home": {
     "code": "CUW",
@@ -8359,7 +8359,7 @@
   },
   "400021469": {
    "id": "400021469",
-   "generatedAt": "2026-07-09T20:04:39.941Z",
+   "generatedAt": "2026-07-09T20:18:34.714Z",
    "source": "open-data",
    "home": {
     "code": "GER",
@@ -8633,7 +8633,7 @@
   },
   "400021470": {
    "id": "400021470",
-   "generatedAt": "2026-07-09T20:04:39.941Z",
+   "generatedAt": "2026-07-09T20:18:34.714Z",
    "source": "open-data",
    "home": {
     "code": "NED",
@@ -8929,7 +8929,7 @@
   },
   "400021471": {
    "id": "400021471",
-   "generatedAt": "2026-07-09T20:04:39.941Z",
+   "generatedAt": "2026-07-09T20:18:34.714Z",
    "source": "open-data",
    "home": {
     "code": "JPN",
@@ -9236,7 +9236,7 @@
   },
   "400021472": {
    "id": "400021472",
-   "generatedAt": "2026-07-09T20:04:39.941Z",
+   "generatedAt": "2026-07-09T20:18:34.714Z",
    "source": "open-data",
    "home": {
     "code": "NED",
@@ -9554,7 +9554,7 @@
   },
   "400021473": {
    "id": "400021473",
-   "generatedAt": "2026-07-09T20:04:39.941Z",
+   "generatedAt": "2026-07-09T20:18:34.714Z",
    "source": "open-data",
    "home": {
     "code": "TUN",
@@ -9850,7 +9850,7 @@
   },
   "400021474": {
    "id": "400021474",
-   "generatedAt": "2026-07-09T20:04:39.941Z",
+   "generatedAt": "2026-07-09T20:18:34.714Z",
    "source": "open-data",
    "home": {
     "code": "SWE",
@@ -10168,7 +10168,7 @@
   },
   "400021475": {
    "id": "400021475",
-   "generatedAt": "2026-07-09T20:04:39.941Z",
+   "generatedAt": "2026-07-09T20:18:34.714Z",
    "source": "open-data",
    "home": {
     "code": "TUN",
@@ -10486,7 +10486,7 @@
   },
   "400021476": {
    "id": "400021476",
-   "generatedAt": "2026-07-09T20:04:39.941Z",
+   "generatedAt": "2026-07-09T20:18:34.714Z",
    "source": "open-data",
    "home": {
     "code": "IRN",
@@ -10782,7 +10782,7 @@
   },
   "400021477": {
    "id": "400021477",
-   "generatedAt": "2026-07-09T20:04:39.941Z",
+   "generatedAt": "2026-07-09T20:18:34.714Z",
    "source": "open-data",
    "home": {
     "code": "BEL",
@@ -11044,7 +11044,7 @@
   },
   "400021478": {
    "id": "400021478",
-   "generatedAt": "2026-07-09T20:04:39.941Z",
+   "generatedAt": "2026-07-09T20:18:34.714Z",
    "source": "open-data",
    "home": {
     "code": "BEL",
@@ -11351,7 +11351,7 @@
   },
   "400021479": {
    "id": "400021479",
-   "generatedAt": "2026-07-09T20:04:39.941Z",
+   "generatedAt": "2026-07-09T20:18:34.714Z",
    "source": "open-data",
    "home": {
     "code": "EGY",
@@ -11636,7 +11636,7 @@
   },
   "400021480": {
    "id": "400021480",
-   "generatedAt": "2026-07-09T20:04:39.941Z",
+   "generatedAt": "2026-07-09T20:18:34.714Z",
    "source": "open-data",
    "home": {
     "code": "NZL",
@@ -11943,7 +11943,7 @@
   },
   "400021481": {
    "id": "400021481",
-   "generatedAt": "2026-07-09T20:04:39.941Z",
+   "generatedAt": "2026-07-09T20:18:34.714Z",
    "source": "open-data",
    "home": {
     "code": "NZL",
@@ -12217,7 +12217,7 @@
   },
   "400021482": {
    "id": "400021482",
-   "generatedAt": "2026-07-09T20:04:39.941Z",
+   "generatedAt": "2026-07-09T20:18:34.714Z",
    "source": "open-data",
    "home": {
     "code": "ESP",
@@ -12479,7 +12479,7 @@
   },
   "400021483": {
    "id": "400021483",
-   "generatedAt": "2026-07-09T20:04:39.941Z",
+   "generatedAt": "2026-07-09T20:18:34.714Z",
    "source": "open-data",
    "home": {
     "code": "ESP",
@@ -12775,7 +12775,7 @@
   },
   "400021484": {
    "id": "400021484",
-   "generatedAt": "2026-07-09T20:04:39.941Z",
+   "generatedAt": "2026-07-09T20:18:34.714Z",
    "source": "open-data",
    "home": {
     "code": "URU",
@@ -13093,7 +13093,7 @@
   },
   "400021485": {
    "id": "400021485",
-   "generatedAt": "2026-07-09T20:04:39.941Z",
+   "generatedAt": "2026-07-09T20:18:34.714Z",
    "source": "open-data",
    "home": {
     "code": "CPV",
@@ -13367,7 +13367,7 @@
   },
   "400021486": {
    "id": "400021486",
-   "generatedAt": "2026-07-09T20:04:39.941Z",
+   "generatedAt": "2026-07-09T20:18:34.714Z",
    "source": "open-data",
    "home": {
     "code": "KSA",
@@ -13663,7 +13663,7 @@
   },
   "400021487": {
    "id": "400021487",
-   "generatedAt": "2026-07-09T20:04:39.941Z",
+   "generatedAt": "2026-07-09T20:18:34.714Z",
    "source": "open-data",
    "home": {
     "code": "URU",
@@ -13925,7 +13925,7 @@
   },
   "400021488": {
    "id": "400021488",
-   "generatedAt": "2026-07-09T20:04:39.941Z",
+   "generatedAt": "2026-07-09T20:18:34.714Z",
    "source": "open-data",
    "home": {
     "code": "IRQ",
@@ -14187,7 +14187,7 @@
   },
   "400021489": {
    "id": "400021489",
-   "generatedAt": "2026-07-09T20:04:39.941Z",
+   "generatedAt": "2026-07-09T20:18:34.714Z",
    "source": "open-data",
    "home": {
     "code": "NOR",
@@ -14505,7 +14505,7 @@
   },
   "400021490": {
    "id": "400021490",
-   "generatedAt": "2026-07-09T20:04:39.941Z",
+   "generatedAt": "2026-07-09T20:18:34.714Z",
    "source": "open-data",
    "home": {
     "code": "FRA",
@@ -14790,7 +14790,7 @@
   },
   "400021491": {
    "id": "400021491",
-   "generatedAt": "2026-07-09T20:04:39.941Z",
+   "generatedAt": "2026-07-09T20:18:34.714Z",
    "source": "open-data",
    "home": {
     "code": "NOR",
@@ -15075,7 +15075,7 @@
   },
   "400021492": {
    "id": "400021492",
-   "generatedAt": "2026-07-09T20:04:39.941Z",
+   "generatedAt": "2026-07-09T20:18:34.714Z",
    "source": "open-data",
    "home": {
     "code": "FRA",
@@ -15337,7 +15337,7 @@
   },
   "400021493": {
    "id": "400021493",
-   "generatedAt": "2026-07-09T20:04:39.941Z",
+   "generatedAt": "2026-07-09T20:18:34.714Z",
    "source": "open-data",
    "home": {
     "code": "SEN",
@@ -15599,7 +15599,7 @@
   },
   "400021494": {
    "id": "400021494",
-   "generatedAt": "2026-07-09T20:04:39.941Z",
+   "generatedAt": "2026-07-09T20:18:34.714Z",
    "source": "open-data",
    "home": {
     "code": "ARG",
@@ -15884,7 +15884,7 @@
   },
   "400021495": {
    "id": "400021495",
-   "generatedAt": "2026-07-09T20:04:39.941Z",
+   "generatedAt": "2026-07-09T20:18:34.714Z",
    "source": "open-data",
    "home": {
     "code": "JOR",
@@ -16158,7 +16158,7 @@
   },
   "400021496": {
    "id": "400021496",
-   "generatedAt": "2026-07-09T20:04:39.941Z",
+   "generatedAt": "2026-07-09T20:18:34.714Z",
    "source": "open-data",
    "home": {
     "code": "ARG",
@@ -16443,7 +16443,7 @@
   },
   "400021497": {
    "id": "400021497",
-   "generatedAt": "2026-07-09T20:04:39.941Z",
+   "generatedAt": "2026-07-09T20:18:34.714Z",
    "source": "open-data",
    "home": {
     "code": "ALG",
@@ -16728,7 +16728,7 @@
   },
   "400021498": {
    "id": "400021498",
-   "generatedAt": "2026-07-09T20:04:39.941Z",
+   "generatedAt": "2026-07-09T20:18:34.714Z",
    "source": "open-data",
    "home": {
     "code": "AUT",
@@ -17002,7 +17002,7 @@
   },
   "400021499": {
    "id": "400021499",
-   "generatedAt": "2026-07-09T20:04:39.941Z",
+   "generatedAt": "2026-07-09T20:18:34.714Z",
    "source": "open-data",
    "home": {
     "code": "JOR",
@@ -17298,7 +17298,7 @@
   },
   "400021500": {
    "id": "400021500",
-   "generatedAt": "2026-07-09T20:04:39.941Z",
+   "generatedAt": "2026-07-09T20:18:34.714Z",
    "source": "open-data",
    "home": {
     "code": "COD",
@@ -17560,7 +17560,7 @@
   },
   "400021501": {
    "id": "400021501",
-   "generatedAt": "2026-07-09T20:04:39.941Z",
+   "generatedAt": "2026-07-09T20:18:34.714Z",
    "source": "open-data",
    "home": {
     "code": "COL",
@@ -17834,7 +17834,7 @@
   },
   "400021502": {
    "id": "400021502",
-   "generatedAt": "2026-07-09T20:04:39.941Z",
+   "generatedAt": "2026-07-09T20:18:34.714Z",
    "source": "open-data",
    "home": {
     "code": "POR",
@@ -18096,7 +18096,7 @@
   },
   "400021503": {
    "id": "400021503",
-   "generatedAt": "2026-07-09T20:04:39.941Z",
+   "generatedAt": "2026-07-09T20:18:34.714Z",
    "source": "open-data",
    "home": {
     "code": "POR",
@@ -18358,7 +18358,7 @@
   },
   "400021504": {
    "id": "400021504",
-   "generatedAt": "2026-07-09T20:04:39.941Z",
+   "generatedAt": "2026-07-09T20:18:34.714Z",
    "source": "open-data",
    "home": {
     "code": "UZB",
@@ -18632,7 +18632,7 @@
   },
   "400021505": {
    "id": "400021505",
-   "generatedAt": "2026-07-09T20:04:39.941Z",
+   "generatedAt": "2026-07-09T20:18:34.714Z",
    "source": "open-data",
    "home": {
     "code": "COL",
@@ -18894,7 +18894,7 @@
   },
   "400021506": {
    "id": "400021506",
-   "generatedAt": "2026-07-09T20:04:39.941Z",
+   "generatedAt": "2026-07-09T20:18:34.714Z",
    "source": "open-data",
    "home": {
     "code": "ENG",
@@ -19168,7 +19168,7 @@
   },
   "400021507": {
    "id": "400021507",
-   "generatedAt": "2026-07-09T20:04:39.941Z",
+   "generatedAt": "2026-07-09T20:18:34.714Z",
    "source": "open-data",
    "home": {
     "code": "ENG",
@@ -19486,7 +19486,7 @@
   },
   "400021508": {
    "id": "400021508",
-   "generatedAt": "2026-07-09T20:04:39.941Z",
+   "generatedAt": "2026-07-09T20:18:34.714Z",
    "source": "open-data",
    "home": {
     "code": "PAN",
@@ -19760,7 +19760,7 @@
   },
   "400021509": {
    "id": "400021509",
-   "generatedAt": "2026-07-09T20:04:39.941Z",
+   "generatedAt": "2026-07-09T20:18:34.714Z",
    "source": "open-data",
    "home": {
     "code": "CRO",
@@ -20022,7 +20022,7 @@
   },
   "400021510": {
    "id": "400021510",
-   "generatedAt": "2026-07-09T20:04:39.941Z",
+   "generatedAt": "2026-07-09T20:18:34.714Z",
    "source": "open-data",
    "home": {
     "code": "GHA",
@@ -20284,7 +20284,7 @@
   },
   "400021511": {
    "id": "400021511",
-   "generatedAt": "2026-07-09T20:04:39.941Z",
+   "generatedAt": "2026-07-09T20:18:34.714Z",
    "source": "open-data",
    "home": {
     "code": "PAN",
@@ -20546,7 +20546,7 @@
   },
   "400021512": {
    "id": "400021512",
-   "generatedAt": "2026-07-09T20:04:39.941Z",
+   "generatedAt": "2026-07-09T20:18:34.714Z",
    "source": "open-data",
    "home": {
     "code": "ENG",
@@ -20808,7 +20808,7 @@
   },
   "400021513": {
    "id": "400021513",
-   "generatedAt": "2026-07-09T20:04:39.941Z",
+   "generatedAt": "2026-07-09T20:18:34.714Z",
    "source": "open-data",
    "home": {
     "code": "GER",
@@ -21093,7 +21093,7 @@
   },
   "400021514": {
    "id": "400021514",
-   "generatedAt": "2026-07-09T20:04:39.941Z",
+   "generatedAt": "2026-07-09T20:18:34.714Z",
    "source": "open-data",
    "home": {
     "code": "CIV",
@@ -21355,7 +21355,7 @@
   },
   "400021515": {
    "id": "400021515",
-   "generatedAt": "2026-07-09T20:04:39.941Z",
+   "generatedAt": "2026-07-09T20:18:34.714Z",
    "source": "open-data",
    "home": {
     "code": "AUS",
@@ -21640,7 +21640,7 @@
   },
   "400021516": {
    "id": "400021516",
-   "generatedAt": "2026-07-09T20:04:39.941Z",
+   "generatedAt": "2026-07-09T20:18:34.714Z",
    "source": "open-data",
    "home": {
     "code": "BRA",
@@ -21958,7 +21958,7 @@
   },
   "400021517": {
    "id": "400021517",
-   "generatedAt": "2026-07-09T20:04:39.941Z",
+   "generatedAt": "2026-07-09T20:18:34.714Z",
    "source": "open-data",
    "home": {
     "code": "COL",
@@ -22232,7 +22232,7 @@
   },
   "400021518": {
    "id": "400021518",
-   "generatedAt": "2026-07-09T20:04:39.941Z",
+   "generatedAt": "2026-07-09T20:18:34.714Z",
    "source": "open-data",
    "home": {
     "code": "RSA",
@@ -22506,7 +22506,7 @@
   },
   "400021519": {
    "id": "400021519",
-   "generatedAt": "2026-07-09T20:04:39.941Z",
+   "generatedAt": "2026-07-09T20:18:34.714Z",
    "source": "open-data",
    "home": {
     "code": "ESP",
@@ -22824,7 +22824,7 @@
   },
   "400021520": {
    "id": "400021520",
-   "generatedAt": "2026-07-09T20:04:39.941Z",
+   "generatedAt": "2026-07-09T20:18:34.714Z",
    "source": "open-data",
    "home": {
     "code": "MEX",
@@ -23142,7 +23142,7 @@
   },
   "400021521": {
    "id": "400021521",
-   "generatedAt": "2026-07-09T20:04:39.941Z",
+   "generatedAt": "2026-07-09T20:18:34.714Z",
    "source": "open-data",
    "home": {
     "code": "ARG",
@@ -23404,7 +23404,7 @@
   },
   "400021522": {
    "id": "400021522",
-   "generatedAt": "2026-07-09T20:04:39.941Z",
+   "generatedAt": "2026-07-09T20:18:34.714Z",
    "source": "open-data",
    "home": {
     "code": "NED",
@@ -23711,7 +23711,7 @@
   },
   "400021523": {
    "id": "400021523",
-   "generatedAt": "2026-07-09T20:04:39.941Z",
+   "generatedAt": "2026-07-09T20:18:34.714Z",
    "source": "open-data",
    "home": {
     "code": "FRA",
@@ -24029,7 +24029,7 @@
   },
   "400021524": {
    "id": "400021524",
-   "generatedAt": "2026-07-09T20:04:39.941Z",
+   "generatedAt": "2026-07-09T20:18:34.714Z",
    "source": "open-data",
    "home": {
     "code": "USA",
@@ -24336,7 +24336,7 @@
   },
   "400021525": {
    "id": "400021525",
-   "generatedAt": "2026-07-09T20:04:39.941Z",
+   "generatedAt": "2026-07-09T20:18:34.714Z",
    "source": "open-data",
    "home": {
     "code": "BEL",
@@ -24598,7 +24598,7 @@
   },
   "400021526": {
    "id": "400021526",
-   "generatedAt": "2026-07-09T20:04:39.941Z",
+   "generatedAt": "2026-07-09T20:18:34.714Z",
    "source": "open-data",
    "home": {
     "code": "POR",
@@ -24916,7 +24916,7 @@
   },
   "400021527": {
    "id": "400021527",
-   "generatedAt": "2026-07-09T20:04:39.941Z",
+   "generatedAt": "2026-07-09T20:18:34.714Z",
    "source": "open-data",
    "home": {
     "code": "SUI",
@@ -25212,7 +25212,7 @@
   },
   "400021528": {
    "id": "400021528",
-   "generatedAt": "2026-07-09T20:04:39.941Z",
+   "generatedAt": "2026-07-09T20:18:34.714Z",
    "source": "open-data",
    "home": {
     "code": "ARG",
@@ -25497,7 +25497,7 @@
   },
   "400021529": {
    "id": "400021529",
-   "generatedAt": "2026-07-09T20:04:39.941Z",
+   "generatedAt": "2026-07-09T20:18:34.714Z",
    "source": "open-data",
    "home": {
     "code": "POR",
@@ -25815,7 +25815,7 @@
   },
   "400021530": {
    "id": "400021530",
-   "generatedAt": "2026-07-09T20:04:39.941Z",
+   "generatedAt": "2026-07-09T20:18:34.714Z",
    "source": "open-data",
    "home": {
     "code": "CAN",
@@ -26122,7 +26122,7 @@
   },
   "400021531": {
    "id": "400021531",
-   "generatedAt": "2026-07-09T20:04:39.941Z",
+   "generatedAt": "2026-07-09T20:18:34.714Z",
    "source": "open-data",
    "home": {
     "code": "MEX",
@@ -26440,7 +26440,7 @@
   },
   "400021532": {
    "id": "400021532",
-   "generatedAt": "2026-07-09T20:04:39.941Z",
+   "generatedAt": "2026-07-09T20:18:34.714Z",
    "source": "open-data",
    "home": {
     "code": "BRA",
@@ -26747,7 +26747,7 @@
   },
   "400021533": {
    "id": "400021533",
-   "generatedAt": "2026-07-09T20:04:39.941Z",
+   "generatedAt": "2026-07-09T20:18:34.714Z",
    "source": "open-data",
    "home": {
     "code": "PAR",
@@ -27065,7 +27065,7 @@
   },
   "400021534": {
    "id": "400021534",
-   "generatedAt": "2026-07-09T20:04:39.941Z",
+   "generatedAt": "2026-07-09T20:18:34.714Z",
    "source": "open-data",
    "home": {
     "code": "USA",
@@ -27383,7 +27383,7 @@
   },
   "400021535": {
    "id": "400021535",
-   "generatedAt": "2026-07-09T20:04:39.941Z",
+   "generatedAt": "2026-07-09T20:18:34.714Z",
    "source": "open-data",
    "home": {
     "code": "SUI",
@@ -27690,7 +27690,7 @@
   },
   "400021536": {
    "id": "400021536",
-   "generatedAt": "2026-07-09T20:04:39.941Z",
+   "generatedAt": "2026-07-09T20:18:34.714Z",
    "source": "open-data",
    "home": {
     "code": "FRA",
@@ -28008,7 +28008,7 @@
   },
   "400021537": {
    "id": "400021537",
-   "generatedAt": "2026-07-09T20:04:39.941Z",
+   "generatedAt": "2026-07-09T20:18:34.714Z",
    "source": "open-data",
    "home": {
     "code": "ARG",
@@ -28326,7 +28326,7 @@
   },
   "400021538": {
    "id": "400021538",
-   "generatedAt": "2026-07-09T20:04:39.941Z",
+   "generatedAt": "2026-07-09T20:18:34.714Z",
    "source": "open-data",
    "home": {
     "code": "ESP",
@@ -28644,7 +28644,7 @@
   },
   "400021539": {
    "id": "400021539",
-   "generatedAt": "2026-07-09T20:04:39.941Z",
+   "generatedAt": "2026-07-09T20:18:34.714Z",
    "source": "open-data",
    "home": {
     "code": "NOR",
@@ -28962,7 +28962,7 @@
   },
   "400021540": {
    "id": "400021540",
-   "generatedAt": "2026-07-09T20:04:39.941Z",
+   "generatedAt": "2026-07-09T20:18:34.714Z",
    "source": "open-data",
    "home": null,
    "away": null,
@@ -28974,7 +28974,7 @@
   },
   "400021541": {
    "id": "400021541",
-   "generatedAt": "2026-07-09T20:04:39.941Z",
+   "generatedAt": "2026-07-09T20:18:34.714Z",
    "source": "open-data",
    "home": null,
    "away": null,
@@ -28986,7 +28986,7 @@
   },
   "400021542": {
    "id": "400021542",
-   "generatedAt": "2026-07-09T20:04:39.941Z",
+   "generatedAt": "2026-07-09T20:18:34.714Z",
    "source": "open-data",
    "home": null,
    "away": null,
@@ -28998,7 +28998,7 @@
   },
   "400021543": {
    "id": "400021543",
-   "generatedAt": "2026-07-09T20:04:39.941Z",
+   "generatedAt": "2026-07-09T20:18:34.714Z",
    "source": "open-data",
    "home": null,
    "away": null,
