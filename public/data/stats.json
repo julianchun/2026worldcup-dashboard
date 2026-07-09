@@ -9,18 +9,18 @@
    "ownGoals": 0
   },
   {
-   "id": "419652",
-   "name": "HAALAND",
-   "code": "NOR",
-   "no": 9,
-   "goals": 7,
-   "ownGoals": 0
-  },
-  {
    "id": "389867",
    "name": "MBAPPÉ",
    "code": "FRA",
    "no": 10,
+   "goals": 8,
+   "ownGoals": 0
+  },
+  {
+   "id": "419652",
+   "name": "HAALAND",
+   "code": "NOR",
+   "no": 9,
    "goals": 7,
    "ownGoals": 0
   },
@@ -30,6 +30,14 @@
    "code": "ENG",
    "no": 9,
    "goals": 6,
+   "ownGoals": 0
+  },
+  {
+   "id": "398680",
+   "name": "Ousmane DEMBELE",
+   "code": "FRA",
+   "no": 7,
+   "goals": 5,
    "ownGoals": 0
   },
   {
@@ -61,14 +69,6 @@
    "name": "Mikel OYARZABAL",
    "code": "ESP",
    "no": 21,
-   "goals": 4,
-   "ownGoals": 0
-  },
-  {
-   "id": "398680",
-   "name": "Ousmane DEMBELE",
-   "code": "FRA",
-   "no": 7,
    "goals": 4,
    "ownGoals": 0
   },
@@ -322,7 +322,7 @@
   }
  ],
  "cards": {
-  "yellow": 260,
+  "yellow": 261,
   "red": 14,
   "players": [
    {
@@ -437,6 +437,14 @@
     "r": 1
    },
    {
+    "id": "403083",
+    "name": "Issa DIOP",
+    "code": "MAR",
+    "no": 14,
+    "y": 3,
+    "r": 0
+   },
+   {
     "id": "464924",
     "name": "Abdukodir KHUSANOV",
     "code": "UZB",
@@ -473,14 +481,6 @@
     "name": "BERNARDO",
     "code": "POR",
     "no": 10,
-    "y": 2,
-    "r": 0
-   },
-   {
-    "id": "506279",
-    "name": "Caleb YIRENKYI",
-    "code": "GHA",
-    "no": 3,
     "y": 2,
     "r": 0
    }
