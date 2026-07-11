@@ -67563,7 +67563,14 @@
     }
    ],
    "bookings": [],
-   "substitutions": []
+   "substitutions": [
+    {
+     "off": "483496",
+     "on": "483497",
+     "minute": "60'",
+     "period": 5
+    }
+   ]
   },
   "away": {
    "tactics": "4-2-3-1",
@@ -67870,7 +67877,7 @@
     }
    ]
   },
-  "matchTime": "48'",
+  "matchTime": "63'",
   "period": 5,
   "final": false
  }
