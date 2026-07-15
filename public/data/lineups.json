@@ -69252,9 +69252,16 @@
      "period": 5
     }
    ],
-   "substitutions": []
+   "substitutions": [
+    {
+     "off": "332847",
+     "on": "430631",
+     "minute": "64'",
+     "period": 5
+    }
+   ]
   },
-  "matchTime": "57'",
+  "matchTime": "69'",
   "period": 5,
   "final": false
  },
