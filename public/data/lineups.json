@@ -68943,7 +68943,26 @@
      "period": 3
     }
    ],
-   "substitutions": []
+   "substitutions": [
+    {
+     "off": "448189",
+     "on": "403049",
+     "minute": "72'",
+     "period": 5
+    },
+    {
+     "off": "439641",
+     "on": "494345",
+     "minute": "82'",
+     "period": 5
+    },
+    {
+     "off": "433097",
+     "on": "463780",
+     "minute": "82'",
+     "period": 5
+    }
+   ]
   },
   "away": {
    "tactics": "4-4-2",
@@ -69258,10 +69277,34 @@
      "on": "430631",
      "minute": "64'",
      "period": 5
+    },
+    {
+     "off": "402921",
+     "on": "310116",
+     "minute": "72'",
+     "period": 5
+    },
+    {
+     "off": "402925",
+     "on": "402926",
+     "minute": "72'",
+     "period": 5
+    },
+    {
+     "off": "485595",
+     "on": "428882",
+     "minute": "72'",
+     "period": 5
+    },
+    {
+     "off": "308322",
+     "on": "402920",
+     "minute": "81'",
+     "period": 5
     }
    ]
   },
-  "matchTime": "69'",
+  "matchTime": "83'",
   "period": 5,
   "final": false
  },
