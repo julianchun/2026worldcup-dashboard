@@ -7451,8 +7451,8 @@
    "group": null,
    "date": "2026-07-15T19:00:00Z",
    "venueId": "400098290",
-   "status": "live",
-   "time": "90'+7'",
+   "status": "finished",
+   "time": "102'",
    "home": {
     "code": "ENG",
     "score": 1,
@@ -7465,7 +7465,7 @@
    },
    "phA": "W99",
    "phB": "W100",
-   "winner": null,
+   "winner": "ARG",
    "attendance": null,
    "officials": [
     {
@@ -7517,7 +7517,11 @@
     "score": null,
     "pen": null
    },
-   "away": null,
+   "away": {
+    "code": "ENG",
+    "score": null,
+    "pen": null
+   },
    "phA": "RU101",
    "phB": "RU102",
    "winner": null,
@@ -7538,7 +7542,11 @@
     "score": null,
     "pen": null
    },
-   "away": null,
+   "away": {
+    "code": "ARG",
+    "score": null,
+    "pen": null
+   },
    "phA": "W101",
    "phB": "W102",
    "winner": null,
