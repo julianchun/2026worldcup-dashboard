@@ -70342,6 +70342,12 @@
      "minute": "66'",
      "type": 2,
      "period": 5
+    },
+    {
+     "player": "398680",
+     "minute": "90'+6'",
+     "type": 2,
+     "period": 5
     }
    ],
    "bookings": [],
@@ -70689,6 +70695,12 @@
      "minute": "87'",
      "type": 1,
      "period": 5
+    },
+    {
+     "player": "448202",
+     "minute": "90'+8'",
+     "type": 2,
+     "period": 5
     }
    ],
    "bookings": [],
@@ -70725,8 +70737,8 @@
     }
    ]
   },
-  "matchTime": "90'+3'",
-  "period": 5,
-  "final": false
+  "matchTime": "99'",
+  "period": 10,
+  "final": true
  }
 }
