@@ -70615,12 +70615,18 @@
      "minute": "3'",
      "type": 2,
      "period": 3
+    },
+    {
+     "player": "403049",
+     "minute": "18'",
+     "type": 2,
+     "period": 3
     }
    ],
    "bookings": [],
    "substitutions": []
   },
-  "matchTime": "15'",
+  "matchTime": "26'",
   "period": 3,
   "final": false
  }
