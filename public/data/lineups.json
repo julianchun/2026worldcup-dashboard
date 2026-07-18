@@ -70627,13 +70627,19 @@
      "minute": "37'",
      "type": 2,
      "period": 3
+    },
+    {
+     "player": "448196",
+     "minute": "45'+1'",
+     "type": 2,
+     "period": 3
     }
    ],
    "bookings": [],
    "substitutions": []
   },
-  "matchTime": "40'",
-  "period": 3,
+  "matchTime": null,
+  "period": 4,
   "final": false
  }
 }
