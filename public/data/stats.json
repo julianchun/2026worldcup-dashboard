@@ -1,17 +1,17 @@
 {
  "scorers": [
   {
-   "id": "229397",
-   "name": "Lionel MESSI",
-   "code": "ARG",
-   "no": 10,
-   "goals": 8,
-   "ownGoals": 0
-  },
-  {
    "id": "389867",
    "name": "MBAPPÉ",
    "code": "FRA",
+   "no": 10,
+   "goals": 9,
+   "ownGoals": 0
+  },
+  {
+   "id": "229397",
+   "name": "Lionel MESSI",
+   "code": "ARG",
    "no": 10,
    "goals": 8,
    "ownGoals": 0
@@ -78,6 +78,14 @@
    "code": "BRA",
    "no": 7,
    "goals": 4,
+   "ownGoals": 0
+  },
+  {
+   "id": "484860",
+   "name": "BARCOLA",
+   "code": "FRA",
+   "no": 12,
+   "goals": 3,
    "ownGoals": 0
   },
   {
@@ -237,14 +245,6 @@
    "name": "Azzedine OUNAHI",
    "code": "MAR",
    "no": 8,
-   "goals": 2,
-   "ownGoals": 0
-  },
-  {
-   "id": "484860",
-   "name": "BARCOLA",
-   "code": "FRA",
-   "no": 12,
    "goals": 2,
    "ownGoals": 0
   },
