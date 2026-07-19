@@ -71331,10 +71331,17 @@
     }
    ],
    "goals": [],
-   "bookings": [],
+   "bookings": [
+    {
+     "player": "402921",
+     "minute": "41'",
+     "card": 1,
+     "period": 3
+    }
+   ],
    "substitutions": []
   },
-  "matchTime": "24'",
+  "matchTime": "41'",
   "period": 3,
   "final": false
  }
