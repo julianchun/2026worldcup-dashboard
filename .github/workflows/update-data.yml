@@ -1,21 +1,8 @@
-# Daily data refresh: fetches the latest matches/results/lineups/weather and
-# commits the JSON. If repo variable ENABLE_GITHUB_PAGES=true, it also deploys
-# GitHub Pages with the fresh data. (Bot pushes made with GITHUB_TOKEN do not
-# trigger deploy.yml, so this workflow carries its own gated deploy job.)
+# Data refresh: fetches the latest matches/results/lineups/weather and
+# commits the JSON. Triggered manually via workflow_dispatch.
 name: Update World Cup data
 
 on:
-  schedule:
-    # Coarse grid + in-job gate (scripts/cron-guard.mjs). The previous
-    # 142-entry generated table proved unreliable: GitHub's scheduler drops
-    # entries from very long schedule lists, so all of June 11's match-window
-    # crons silently never fired. Now the workflow wakes every 15 minutes
-    # during the tournament and the guard decides in ~5s whether to proceed.
-    # BEGIN GENERATED SCHEDULE (npm run gencron — coarse grid derived from the match calendar)
-    - cron: '23 4 * * *' # daily full refresh (off-peak minute)
-    - cron: '7,22,37,52 * 11-30 6 *' # June 11-30: 15-min grid, gated
-    - cron: '7,22,37,52 * 1-19 7 *' # July 1-19: 15-min grid, gated
-    # END GENERATED SCHEDULE
   workflow_dispatch:
     inputs:
       relay:
